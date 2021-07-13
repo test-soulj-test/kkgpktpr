@@ -1,0 +1,2105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/pipelines?ref=11.4.0%2Brc3.ee.0&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:55 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '179'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"086d589f3ad0403365595eac94418a7d"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus%2Dgitlab/pipelines?id=gitlab%2Fomnibus-gitlab&order_by=id&page=1&per_page=100&ref=11.4.0%2Brc3.ee.0&scope=tags&sort=desc>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus%2Dgitlab/pipelines?id=gitlab%2Fomnibus-gitlab&order_by=id&page=1&per_page=100&ref=11.4.0%2Brc3.ee.0&scope=tags&sort=desc>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 754a0f1c-f25b-42bb-a1d7-2ba25cb0ff4c
+      X-Runtime:
+      - '0.672515'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '[{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"}]'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:55 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/pipelines/96413/jobs?per_page=100&scope=manual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:56 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '28583'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"104496b2816e2a8522b14150ba3332e8"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus%2Dgitlab/pipelines/96413/jobs?id=gitlab%2Fomnibus-gitlab&page=1&per_page=100&pipeline_id=96413&scope%5B%5D=manual>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus%2Dgitlab/pipelines/96413/jobs?id=gitlab%2Fomnibus-gitlab&page=1&per_page=100&pipeline_id=96413&scope%5B%5D=manual>;
+        rel="last"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 8751192f-a030-4b40-b9ca-e591492d044f
+      X-Runtime:
+      - '0.295661'
+      X-Total:
+      - '19'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '[{"id":3183802,"status":"manual","stage":"trigger-packages","name":"release:packages","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.183Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183802","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183803,"status":"manual","stage":"package-and-image-release","name":"Ubuntu-14.04-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.206Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183803","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183804,"status":"manual","stage":"package-and-image-release","name":"Ubuntu-16.04-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.230Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183804","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183805,"status":"manual","stage":"package-and-image-release","name":"Ubuntu-18.04-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.253Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183805","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183806,"status":"manual","stage":"package-and-image-release","name":"Debian-7-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.275Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183806","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183807,"status":"manual","stage":"package-and-image-release","name":"Debian-8-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.296Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183807","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183808,"status":"manual","stage":"package-and-image-release","name":"Debian-9.1-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.322Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183808","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183809,"status":"manual","stage":"package-and-image-release","name":"CentOS-6-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.344Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183809","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183810,"status":"manual","stage":"package-and-image-release","name":"CentOS-7-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.368Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183810","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183811,"status":"manual","stage":"package-and-image-release","name":"OpenSUSE-42.3-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.391Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183811","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183812,"status":"manual","stage":"package-and-image-release","name":"SLES-12-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.416Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183812","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183813,"status":"manual","stage":"trigger-images","name":"release:images","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.440Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183813","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183814,"status":"manual","stage":"package-and-image-release","name":"Docker-Release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.463Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183814","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183815,"status":"manual","stage":"package-and-image-release","name":"AWS","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.481Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183815","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183816,"status":"manual","stage":"package-and-image-release","name":"QA-Tag","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.504Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183816","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183817,"status":"manual","stage":"metrics","name":"upgrade","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.533Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183817","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183818,"status":"manual","stage":"metrics","name":"license-upload","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.558Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183818","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183822,"status":"manual","stage":"raspbian-release","name":"Raspberry-Pi-2-Jessie-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.659Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183822","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3183823,"status":"manual","stage":"raspbian-release","name":"Raspberry-Pi-2-Stretch-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.682Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183823","artifacts":[],"runner":null,"artifacts_expire_at":null}]'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:56 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183803/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:56 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1515'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"e1577d0e7e0e680770a9ed0a8c979c02"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - e8ab3f7f-c651-4440-85e3-876e2f79b4c3
+      X-Runtime:
+      - '0.143250'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183803,"status":"pending","stage":"package-and-image-release","name":"Ubuntu-14.04-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.206Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183803","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:56 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183804/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:57 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1515'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"814266fb5b2de21a3d2bdc91ba60ac45"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 5843aded-47cd-4a7e-8b72-08f3ff1fcb91
+      X-Runtime:
+      - '0.182945'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183804,"status":"pending","stage":"package-and-image-release","name":"Ubuntu-16.04-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.230Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183804","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:57 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183805/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:57 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1515'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"d3648d6581f673d0949bb9d5bdb66376"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 78bab314-a045-4f95-94a2-95a5af7bb5a8
+      X-Runtime:
+      - '0.093286'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183805,"status":"pending","stage":"package-and-image-release","name":"Ubuntu-18.04-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.253Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183805","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:57 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183806/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:57 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1511'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"b32f26344eb69b5793fc58d4c4d08336"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 2f88051b-97bc-4216-aec3-15c8b04f8581
+      X-Runtime:
+      - '0.136810'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183806,"status":"pending","stage":"package-and-image-release","name":"Debian-7-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.275Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183806","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:57 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183807/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:57 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1511'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"8d22976a13fa73ff7cf71ec37941eead"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 30191ae2-9663-42f2-a2e6-2bb8dd39c866
+      X-Runtime:
+      - '0.119633'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183807,"status":"pending","stage":"package-and-image-release","name":"Debian-8-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.296Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183807","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:57 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183808/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:58 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1513'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"f29f1d3885eb0e8d41ef73a674c34a93"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 35bd522a-5f2d-435e-87fd-c8b9e75119cf
+      X-Runtime:
+      - '0.113891'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183808,"status":"pending","stage":"package-and-image-release","name":"Debian-9.1-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.322Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183808","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:58 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183809/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:58 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1511'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"5987bdc6ddafecb8ce765594d4ff8116"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 036b53d4-8da7-4b1f-a4c7-dd982f052ebe
+      X-Runtime:
+      - '0.115822'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183809,"status":"pending","stage":"package-and-image-release","name":"CentOS-6-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.344Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183809","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:58 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183810/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:58 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1511'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"5cab93f75093cae3e990da0e8fcaff6c"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c80b96e0-aec4-430c-9647-745a59683d5e
+      X-Runtime:
+      - '0.098910'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183810,"status":"pending","stage":"package-and-image-release","name":"CentOS-7-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.368Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183810","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:58 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183811/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:58 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1516'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"d02190d82d82a002896ba8ffadabc65a"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 606609b5-b5b4-4754-a5b3-b4740cc2e868
+      X-Runtime:
+      - '0.094456'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183811,"status":"pending","stage":"package-and-image-release","name":"OpenSUSE-42.3-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.391Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183811","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:58 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183812/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1510'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"ae52aafbd211dce639e84d40cb34e8b6"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 62a2cd73-d69e-469a-bb60-66a49681a80f
+      X-Runtime:
+      - '0.136042'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183812,"status":"pending","stage":"package-and-image-release","name":"SLES-12-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.416Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183812","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:59 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183814/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1507'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"b8a27fc56a4e01bef62c8e795abc64e6"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - b43b0c88-5ac6-459f-b2a8-510ed8867bb3
+      X-Runtime:
+      - '0.163784'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183814,"status":"pending","stage":"package-and-image-release","name":"Docker-Release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.463Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183814","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:59 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183815/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1496'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"73c38cf499ab51fe55a7d486c787288f"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c3eee4c4-86ff-4b29-8937-3f166737806c
+      X-Runtime:
+      - '0.093078'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183815,"status":"pending","stage":"package-and-image-release","name":"AWS","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.481Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183815","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:59 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183816/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:13:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1499'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"352d8128e4f09ad3de8cb5a5827b8b37"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - a6304d13-5c0b-4652-9de6-0f0b3e7f33df
+      X-Runtime:
+      - '0.116339'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183816,"status":"pending","stage":"package-and-image-release","name":"QA-Tag","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.504Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183816","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:13:59 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183822/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1525'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"2fb4799fcfbd1f2dd02481c846c24845"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - be84baad-a1bb-41d2-bcbe-0d9ae53f753e
+      X-Runtime:
+      - '0.118897'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183822,"status":"pending","stage":"raspbian-release","name":"Raspberry-Pi-2-Jessie-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.659Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183822","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:00 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3183823/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1526'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"c13b3052f0e0812ab215765b79983393"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 4757d64c-b291-4983-8c0d-8579459d7f3a
+      X-Runtime:
+      - '0.095388'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3183823,"status":"pending","stage":"raspbian-release","name":"Raspberry-Pi-2-Stretch-release","ref":"11.4.0+rc3.ee.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:06:39.682Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","short_id":"998b771d","title":"Update
+        VERSION to 11.4.0-rc3-ee","created_at":"2018-10-10T23:06:30.000Z","parent_ids":["dad5ea2bbb1c202d2d7add3a5b2062f19fce536a"],"message":"Update
+        VERSION to 11.4.0-rc3-ee\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:06:30.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:06:30.000Z"},"pipeline":{"id":96413,"sha":"998b771d5c706b1a12610aa1fb84d1d8b20af1c2","ref":"11.4.0+rc3.ee.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96413"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3183823","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:00 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/pipelines?ref=11.4.0%2Brc3.ce.0&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '179'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"b30ba3e31f84fe4f0c9205f12df01768"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus%2Dgitlab/pipelines?id=gitlab%2Fomnibus-gitlab&order_by=id&page=1&per_page=100&ref=11.4.0%2Brc3.ce.0&scope=tags&sort=desc>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus%2Dgitlab/pipelines?id=gitlab%2Fomnibus-gitlab&order_by=id&page=1&per_page=100&ref=11.4.0%2Brc3.ce.0&scope=tags&sort=desc>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 3a7f65b8-17f9-4403-a273-1ae7a2d121de
+      X-Runtime:
+      - '0.620174'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '[{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"}]'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:01 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/pipelines/96417/jobs?per_page=100&scope=manual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '28469'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a0923b8cd84b05715fa6b2ca41550e79"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus%2Dgitlab/pipelines/96417/jobs?id=gitlab%2Fomnibus-gitlab&page=1&per_page=100&pipeline_id=96417&scope%5B%5D=manual>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus%2Dgitlab/pipelines/96417/jobs?id=gitlab%2Fomnibus-gitlab&page=1&per_page=100&pipeline_id=96417&scope%5B%5D=manual>;
+        rel="last"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 6d472a6f-71e0-4304-a004-d434546ae535
+      X-Runtime:
+      - '0.305780'
+      X-Total:
+      - '19'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '[{"id":3184034,"status":"manual","stage":"trigger-packages","name":"release:packages","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.394Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184034","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184035,"status":"manual","stage":"package-and-image-release","name":"Ubuntu-14.04-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.416Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184035","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184036,"status":"manual","stage":"package-and-image-release","name":"Ubuntu-16.04-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.437Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184036","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184037,"status":"manual","stage":"package-and-image-release","name":"Ubuntu-18.04-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.461Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184037","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184038,"status":"manual","stage":"package-and-image-release","name":"Debian-7-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.481Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184038","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184039,"status":"manual","stage":"package-and-image-release","name":"Debian-8-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.503Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184039","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184040,"status":"manual","stage":"package-and-image-release","name":"Debian-9.1-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.523Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184040","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184041,"status":"manual","stage":"package-and-image-release","name":"CentOS-6-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.544Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184041","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184042,"status":"manual","stage":"package-and-image-release","name":"CentOS-7-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.566Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184042","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184043,"status":"manual","stage":"package-and-image-release","name":"OpenSUSE-42.3-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.587Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184043","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184044,"status":"manual","stage":"package-and-image-release","name":"SLES-12-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.610Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184044","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184045,"status":"manual","stage":"trigger-images","name":"release:images","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.634Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184045","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184046,"status":"manual","stage":"package-and-image-release","name":"Docker-Release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.657Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184046","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184047,"status":"manual","stage":"package-and-image-release","name":"AWS","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.674Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184047","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184048,"status":"manual","stage":"package-and-image-release","name":"QA-Tag","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.697Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184048","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184049,"status":"manual","stage":"metrics","name":"upgrade","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.727Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184049","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184050,"status":"manual","stage":"metrics","name":"license-upload","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.751Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184050","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184054,"status":"manual","stage":"raspbian-release","name":"Raspberry-Pi-2-Jessie-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.856Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184054","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":3184055,"status":"manual","stage":"raspbian-release","name":"Raspberry-Pi-2-Stretch-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.877Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":443,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/443/ship-it-squirrel.png","web_url":"https://dev.gitlab.org/gitlab-release-tools-bot","created_at":"2018-05-21T19:59:15.157Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184055","artifacts":[],"runner":null,"artifacts_expire_at":null}]'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:01 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184035/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1509'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"f730cd9b47cc3217751cf57a6a584805"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c3a0c548-729f-4608-82d2-2978d956108f
+      X-Runtime:
+      - '0.081166'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184035,"status":"pending","stage":"package-and-image-release","name":"Ubuntu-14.04-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.416Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184035","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:01 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184036/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1509'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"99f0d761c11907e29642d2f17e4dbae1"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 114ed772-a37d-4a81-96ad-deed15f391d1
+      X-Runtime:
+      - '0.076650'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184036,"status":"pending","stage":"package-and-image-release","name":"Ubuntu-16.04-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.437Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184036","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:02 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184037/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1509'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"0d86fd2584a6c45ba5be6071da75145f"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 6e520a4b-75de-43c4-b5c8-73c8f72e0d6b
+      X-Runtime:
+      - '0.078953'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184037,"status":"pending","stage":"package-and-image-release","name":"Ubuntu-18.04-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.461Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184037","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:02 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184038/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1505'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"1b7cf512cbea6d31a4586c4e5bfb1cdb"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 27d5af10-0dec-49d9-8ae6-0b8919cf1d83
+      X-Runtime:
+      - '0.099691'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184038,"status":"pending","stage":"package-and-image-release","name":"Debian-7-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.481Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184038","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:02 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184039/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1505'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"8ad0e33323241e8b08aa12e89f702db6"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - d53f9e27-ce08-4412-9d83-258920bfc1ef
+      X-Runtime:
+      - '0.106713'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184039,"status":"pending","stage":"package-and-image-release","name":"Debian-8-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.503Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184039","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:02 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184040/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1507'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"8b93eb1892b5ce93eb52ce2a293140a5"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - a6ac3f79-4f74-4fa1-bb70-505c67d1e3df
+      X-Runtime:
+      - '0.089055'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184040,"status":"pending","stage":"package-and-image-release","name":"Debian-9.1-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.523Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184040","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:03 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184041/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1505'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"258739489b3f0bfce438b5445afb8c84"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 467831f8-627a-4c31-ba23-3e7a5739e41d
+      X-Runtime:
+      - '0.089574'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184041,"status":"pending","stage":"package-and-image-release","name":"CentOS-6-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.544Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184041","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:03 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184042/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1505'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"77f658cfdb413199954f0adec7688e07"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 78a0a36e-0ce4-4797-aeb5-ae5d29db6303
+      X-Runtime:
+      - '0.087140'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184042,"status":"pending","stage":"package-and-image-release","name":"CentOS-7-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.566Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184042","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:03 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184043/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1510'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"0a64e7fb054f81c1c1affcae27a8b2d2"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 3a17e8dd-dc9e-4333-8981-6948ee2a58d0
+      X-Runtime:
+      - '0.113398'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184043,"status":"pending","stage":"package-and-image-release","name":"OpenSUSE-42.3-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.587Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184043","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:03 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184044/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1504'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a402b4dc8326ebed68d7f3bb6d87fc95"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - f0cf3ad5-89c7-42d8-8b64-df6fbf662655
+      X-Runtime:
+      - '0.085605'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184044,"status":"pending","stage":"package-and-image-release","name":"SLES-12-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.610Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184044","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:04 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184046/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1501'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"cdcc77b7a951a3080f7ee5383597dde4"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 70f567d3-dfe4-4398-9e37-97c362d4cc4f
+      X-Runtime:
+      - '0.079311'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184046,"status":"pending","stage":"package-and-image-release","name":"Docker-Release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.657Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184046","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:04 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184047/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1490'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"c2df7466bd7a518dd8dbb9fecb4b17d3"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 906dcfe5-bf1e-4b1e-ac9d-3ce818a2c634
+      X-Runtime:
+      - '0.107302'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184047,"status":"pending","stage":"package-and-image-release","name":"AWS","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.674Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184047","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:04 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184048/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1493'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"249339fd7036fa895455a784b51b0341"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - cf32236d-539c-463d-9a53-3f87908dd327
+      X-Runtime:
+      - '0.094199'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184048,"status":"pending","stage":"package-and-image-release","name":"QA-Tag","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.697Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184048","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:04 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184054/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:05 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1519'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"da5d636cbe25f7caa59819d18b224b85"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 133cbcbd-3462-4150-b1b8-72dba6c84a41
+      X-Runtime:
+      - '0.084246'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184054,"status":"pending","stage":"raspbian-release","name":"Raspberry-Pi-2-Jessie-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.856Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184054","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:05 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fomnibus-gitlab/jobs/3184055/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 11 Oct 2018 17:14:05 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1520'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"f13c40e372a998cd515bd7c75c030dce"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 39514ae9-9826-47c2-bfdf-6f14d36f5668
+      X-Runtime:
+      - '0.090844'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":3184055,"status":"pending","stage":"raspbian-release","name":"Raspberry-Pi-2-Stretch-release","ref":"11.4.0+rc3.ce.0","tag":true,"coverage":null,"created_at":"2018-10-10T23:09:17.877Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":52,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/rspeicher","created_at":"2015-04-06T05:51:49.138Z","bio":"","location":"Nashville,
+        TN","public_email":"robert@gitlab.com","skype":"","linkedin":"","twitter":"rspeicher","website_url":"","organization":""},"commit":{"id":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","short_id":"9f64a4aa","title":"Update
+        VERSION to 11.4.0-rc3","created_at":"2018-10-10T23:09:09.000Z","parent_ids":["af5469c258d26b43e07d5d90201b67e466fdb236"],"message":"Update
+        VERSION to 11.4.0-rc3\n","author_name":"GitLab Release Tools Bot","author_email":"robert+release-tools@gitlab.com","authored_date":"2018-10-10T23:09:09.000Z","committer_name":"GitLab
+        Release Tools Bot","committer_email":"robert+release-tools@gitlab.com","committed_date":"2018-10-10T23:09:09.000Z"},"pipeline":{"id":96417,"sha":"9f64a4aa4e6cb702c8dc9a0dd5ff90681cb8f1c9","ref":"11.4.0+rc3.ce.0","status":"running","web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/pipelines/96417"},"web_url":"https://dev.gitlab.org/gitlab/omnibus-gitlab/-/jobs/3184055","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Thu, 11 Oct 2018 17:14:05 GMT
+recorded_with: VCR 2.9.3

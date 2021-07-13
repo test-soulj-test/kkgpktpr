@@ -1,0 +1,24 @@
+Release issue: <%= release_issue_url %>
+
+### Summary
+
+This MR prepares `<%= stable_branch %>` for `<%= version %>`.
+
+### Automated cherry-picking
+
+Merge requests labeled <%= PickIntoLabel.reference(version) %> should be
+automatically picked into this MR using the following ChatOps command:
+
+```sh
+# In Slack
+/chatops run release merge <%= version.to_ce %>
+```
+
+### Manual intervention
+
+If merge requests cannot be picked automatically they have to be created
+manually targeting `<%= branch_name %>`.
+
+---
+
+See also [Patch Releases documentation](https://gitlab.com/gitlab-org/release/docs/blob/master/general/patch/process.md).

@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?labels=Release&state=opened"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 26 Jun 2017 11:23:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"d751713988987e9331980363e24189ce"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?id=gitlab-org%2Fgitlab&labels=Release&order_by=created_at&page=1&per_page=20&sort=desc&state=opened>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?id=gitlab-org%2Fgitlab&labels=Release&order_by=created_at&page=0&per_page=20&sort=desc&state=opened>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 96c285ec-6e7e-458a-af76-810b0ac56cc9
+      X-Runtime:
+      - '1.573066'
+      X-Total:
+      - '0'
+      X-Total-Pages:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 26 Jun 2017 11:23:27 GMT
+recorded_with: VCR 2.9.3

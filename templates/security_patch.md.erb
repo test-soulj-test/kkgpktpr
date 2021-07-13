@@ -1,0 +1,132 @@
+## First steps
+
+- [ ] Disable Omnibus nightly builds by setting the schedules to inactive: https://dev.gitlab.org/gitlab/omnibus-gitlab/pipeline_schedules.
+- [ ] Ensure that Canonical, Security and Build repositories are synced:
+   ```sh
+   # In Slack
+   /chatops run mirror status
+   ```
+<% if regular? -%>
+- [ ] Modify the dates below to accurately reflect the plan of action.
+
+## Early-merge phase
+
+Up until the 27th, or one day before the Security Release due date
+
+- Merge the merge requests targeting default branches
+  ```
+  # In Slack
+  /chatops run release merge --security --default-branch
+  ```
+
+## On the 27th (one day before due date)
+
+If this date is on a weekend, do this work on the next working day.
+<% else %>
+## One day before the due date
+<% end %>
+
+- [ ] Notify AppSec Engineers that the Security Release has started. Link to the blog post on security: `https://gitlab.com/gitlab-org/security/www-gitlab-com/-/merge_requests/`
+<% if regular? -%>
+- [ ] Merge security merge requests targeting default branches
+   ```sh
+   # In Slack:
+   /chatops run release merge --security --default-branch
+   ```
+- [ ] Merge backports and any other merge request pending:
+   ```sh
+   # In Slack:
+   /chatops run release merge --security
+   ```
+- [ ] If any merge requests could not be merged, investigate what needs to be done to resolve the issues. Do **not** proceed unless it has been determined safe to do so.
+<% else -%>
+- [ ] Merge critical security merge requests using the UI.
+  - Enable "Squash commits" option when merging.
+- [ ] Cherry-pick the security fixes into the auto-deploy branch that is running on production.
+- [ ] Wait for the tests on the auto-deploy branch to pass. This ensures that when we tag, we tag the security commits; not older commits.
+- [ ] Deploy all the fixes to production.
+<% end -%>
+
+## On the Due Date
+
+### Packaging
+
+- [ ] Ensure tests are green in CE and green in EE
+   ```sh
+   # In Slack:
+   /chatops run release status --security
+   ```
+
+<% versions.each do |version| -%>
+- [ ] Tag the <%= version.to_patch %> security release, and wait for the pipeline to finish: `/chatops run release tag --security <%= version.to_patch %>`
+<% end %>
+
+Waiting between pipelines is necessary as they may othewise fail to
+concurrently push changes to the same project/branch.
+
+- [ ] Check that EE and CE packages are built:
+  <% versions.each do |version| -%>
+  - <%= version.to_patch %>: [EE packages](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus(ee: true) %>) and [CE packages](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus %>)
+  <% end %>
+
+### Deploy
+
+- [ ] Verify that release.gitlab.net is running the latest patch version
+  - Check in Slack `#announcements` channel
+  - Go to https://release.gitlab.net/help
+
+## Release
+
+<% versions.each do |version| -%>
+- [ ] Publish  <%= version.to_patch %> via ChatOps, and wait for the pipeline to finish: `/chatops run publish <%= version %>`
+<% end -%>
+- [ ] Notify AppSec counterparts they can submit the blog post to `https://gitlab.com/gitlab-com/www-gitlab-com/`
+- [ ] Verify that EE packages appear on `packages.gitlab.com`: [EE](https://packages.gitlab.com/app/gitlab/gitlab-ee/search?q=<%= version %>) (should contain 15 packages)
+- [ ] Verify that CE packages appear on `packages.gitlab.com`: [CE](https://packages.gitlab.com/app/gitlab/gitlab-ce/search?q=<%= version %>) (should contain 13 packages)
+- [ ] Verify that Docker images appear on `hub.docker.com`: [EE](https://hub.docker.com/r/gitlab/gitlab-ee/tags) / [CE](https://hub.docker.com/r/gitlab/gitlab-ce/tags)
+- [ ] Deploy the blog post
+- [ ] Create the versions:
+<% versions.each do |version| -%>
+  - [ ] Create `<%= version %>` version on [version.gitlab.com](https://version.gitlab.com/versions/new?version=<%= version %>). **Be sure to mark it as a security release.**
+<% end %>
+
+### Final steps
+
+- [ ] Sync default branches for GitLab, GitLab Foss, Omnibus GitLab and Gitaly, via ChatOps:
+   ```sh
+   # In Slack
+   /chatops run release sync_remotes --security
+   ```
+
+- [ ] Verify all remotes are synced:
+
+   ```sh
+   # In Slack
+   /chatops run mirror status
+   ```
+
+   If conflicts are found, manual intervention will be needed to sync the repositories.
+
+- [ ] Close the security implementation issues
+   ```sh
+   # In Slack
+   /chatops run release close_issues --security
+   ```
+
+- [ ] Notify engineers the security release is out (`blog post link` needs to be replaced with the actual link):
+   ```
+   /chatops run notify ":mega: <%= informative_title %>: <%= versions_title %> has just been released: <blog post link>! Share this release blog post with your network to ensure broader visibility across our community."
+    ```
+
+- [ ] Enable Omnibus nightly builds by setting the schedules to active https://dev.gitlab.org/gitlab/omnibus-gitlab/pipeline_schedules
+
+<% if regular? -%>
+- [ ] Close the old security release tracking issue and create a new one:
+  ```sh
+   # In Slack
+   /chatops run release tracking_issue --security
+   ```
+- [ ] Link the new security release tracking issue on the topic of the #releases channel, next to `Next Security Release`.
+<% else -%>
+- [ ] Close the critical security tracking issue
+<% end -%>

@@ -1,0 +1,53 @@
+auto_deploy:prepare:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake 'auto_deploy:prepare'
+  only:
+    refs:
+      - schedules
+    variables:
+      - $CREATE_AUTO_DEPLOY_BRANCH_SCHEDULE == "true"
+
+auto_deploy:pick:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake 'auto_deploy:pick'
+  only:
+    variables:
+      - $CHERRY_PICK_AUTO_DEPLOY_BRANCH_SCHEDULE == "true"
+
+auto_deploy:tag:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake 'auto_deploy:tag'
+  only:
+    variables:
+      - $PASSING_BUILD_AUTO_DEPLOY_SCHEDULE == "true"
+
+auto_deploy:cleanup:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake 'auto_deploy:cleanup'
+  rules:
+    - if: $AUTO_DEPLOY_CLEANUP == "true"
+      when: always
+
+auto_deploy:check_production:
+  extends: .with-bundle
+  stage: automation
+  tags:
+    # Internal prometheus is only available from specific tagged runners
+    - release
+  script:
+    - bundle exec rake 'auto_deploy:check_production'
+  rules:
+    - if: $CHECK_PRODUCTION == "true"
+  cache:
+    key: 'deployment_notification_ts'
+    paths:
+      - SLACK_DEPLOYMENT_MESSAGE_TS
+      - vendor/ruby

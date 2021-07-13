@@ -1,0 +1,189 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Frelease%2Ftasks/issues?labels=Monthly%20Release,team::Delivery&milestone=11.7&search=Release%2011.7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 10 Jan 2019 17:12:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '11131'
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"1ecbc1cfea8b740e7cf0b98d478a10f9"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Frelease%2Ftasks/issues?id=gitlab-org%2Frelease%2Ftasks&labels=Monthly+Release%2CDelivery&milestone=11.7&order_by=created_at&page=1&per_page=20&search=Release+11.7&sort=desc&state=all>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Frelease%2Ftasks/issues?id=gitlab-org%2Frelease%2Ftasks&labels=Monthly+Release%2CDelivery&milestone=11.7&order_by=created_at&page=1&per_page=20&search=Release+11.7&sort=desc&state=all>;
+        rel="last"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - D15Ve9P3wZ7
+      X-Runtime:
+      - '0.148219'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '3'
+      Ratelimit-Remaining:
+      - '597'
+      Ratelimit-Reset:
+      - '1547140383'
+      Ratelimit-Resettime:
+      - Fri, 10 Jan 2019 17:13:03 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":17030603,"iid":617,"project_id":5064907,"title":"Release 11.7","description":"##
+        First steps\n\nStable branch should be created after the 7th. The 7th is the
+        last date to reliably get things in.\n\n- [x] Assign this issue to all the
+        [release managers and trainees](https://about.gitlab.com/release-managers/)\n-
+        [x] Create a new slack channel `#f_release_11_7`\n- [x] Set the channel topic
+        to `RMs: https://about.gitlab.com/release-managers`\n- [x] Invite all current
+        release managers\n- [x] Inside the old release slack channel, notify about
+        `#f_release_11_7`\n\n     ```\n     Hello :wave:\n     We are starting 11.7
+        into #f_release_11_7\n     Please archive this channel and join #f_release_11_7
+        if interested\n     ```\n- [x] Create the ~\"Pick into 11.7\" group label
+        if it doesn''t exist: https://gitlab.com/groups/gitlab-org/labels/new\n  -
+        Title: `Pick into 11.7`\n  - Description: ``Merge requests to cherry-pick
+        into the `11-7-stable` branch.``\n  - Color: `#00c8ca`\n- [x] Make sure the
+        latest [CE to EE] on `master` branches is merged (it will reduce conflicts
+        in the future). Ask in `#ce-to-ee` when in doubt.\n- [x] Create branch `11-7-stable`
+        from CE `master` manually\n- [x] Create branch `11-7-stable-ee` from EE `master`
+        manually\n- [x] In Omnibus create both `11-7-stable` and `11-7-stable-ee`
+        from `master` manually\n- [x] Merge GitLab CE into EE on stable branches following
+        the [Merging a CE stable branch into its EE counterpart] guide\n- [x] [Sync
+        stable branches](https://gitlab.com/gitlab-org/release/docs/blob/master/general/push-to-multiple-remotes.md)
+        for CE, EE, and Omnibus to `dev`\n- [x] Sync master branches to `dev`, as
+        the CHANGELOG will be automatically updated on master during tagging\n- [
+        ] If needed, sync tags for dependencies (`gitlab-shell`, `gitlab-workhorse`,
+        `gitlab-pages`, `gitaly`) to `dev` (when applicable. Builds should fail if
+        this is needed.)\n\n[CE to EE]: https://gitlab.com/gitlab-org/gitlab/merge_requests?label_name[]=CE+upstream\u0026scope=all\u0026state=opened\n[Merging
+        a CE stable branch into its EE counterpart]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/merge-ce-into-ee.md#merging-a-ce-stable-branch-into-its-ee-counterpart\n\n##
+        RC1\n\n- Follow the [Creating RC1] guide:\n  - [x] Create an MR on **CE**
+        master updating the \"Installation from Source\" guide, creating the \"Update\"
+        guides\n  - [x] Create an MR on **EE** master creating the \"CE to EE\" guides\n  -
+        [x] Ensure the above MRs are merged and marked ~\"Pick into 11.7\"\n  - [x]
+        Create a task list for RC1:\n\n      ```sh\n      # In Slack:\n      /chatops
+        run release_issue 11.7.0-rc1\n      ```\n  - [x] Link the RC1 issue as a related
+        issue in this issue\n\n[Creating RC1]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/release-candidates.md#creating-rc1\n\n##
+        Subsequent RCs\n\n- [ ] Update the blog post `upgrade barometer` section with
+        the migration types for this release, including the time they took to complete.\n-
+        Create additional release candidates as needed:\n\n    ```sh\n    # In Slack
+        (update RC number):\n    /chatops run release_issue 11.7.0-rc2\n    ```\n-
+        [x] Link any subsequent RCs issues as a related issue in this issue\n\nKeep
+        in mind that:\n\n1. After the feature freeze only regression, security, and
+        documentation fixes should be\n   cherry-picked into stable branches.\n2.
+        The final RC should point to the same commit as the final release.\n\n## On
+        the first working day after the 7th\n- [x] Follow the [Feature freeze RC](https://gitlab.com/gitlab-org/release/docs/blob/master/general/release-candidates.md#feature-freeze-rc)
+        guide\n\n## Final RC\n\nThe final RC should be created on the 21st of the
+        month.\n\n### Before 13:00 UTC\n\nIncluding changes at this stage requires
+        signoff from the VP of Engineering.\n\n- [ ] Create a task list for the final
+        RC:\n\n    ```sh\n    # In Slack (update RC number):\n    /chatops run release_issue
+        11.7.0-rc22\n    ```\n\n### At 15:00 UTC\n\nIf the final RC isn''t tagged
+        and deployed by this time, notify the\n[Distribution Lead][getting help].\n\n###
+        At 20:00 UTC\n\nIf the final RC still isn''t tagged and deployed by this time,
+        notify the\n[VP of Engineering][getting help].\n\n## 22nd: release day\n\nNo
+        new code can be added to the release that was not included in the final RC.\n\n-
+        At 08:00 UTC, final release is ready for tagging (Including changes at this
+        stage requires signoff from the [VP of Engineering][getting help]):\n  - [
+        ] Ensure tests are green on [CE stable branch]\n  - [ ] Ensure tests are green
+        on [EE stable branch]\n  - [ ] Ensure tests are green on [Omnibus CE stable
+        branch]\n  - [ ] Ensure tests are green on [Omnibus EE stable branch]\n  -
+        [ ] [Sync stable branches](https://gitlab.com/gitlab-org/release/docs/blob/master/general/push-to-multiple-remotes.md)
+        for CE, EE, and Omnibus to `dev`\n  - [ ] Sync master branches to `dev`, as
+        the CHANGELOG will be automatically updated on master during tagging\n\n-
+        Before 10:00 UTC:\n  - [ ] Tag the `11.7.0` version using the [`release` command]:\n    ```sh\n    #
+        In Slack:\n    /chatops run tag 11.7.0\n    ```\n  - [ ] Check progress of
+        [EE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/11.7.0+ee.0)
+        and [CE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/11.7.0+ce.0)\n-
+        Before 12:00 UTC:\n  - [ ] Notify #production channel about staging deploy.
+        No need to require confirmation.\n  - [ ] On video call, [deploy] `11.7.0`
+        to [staging.gitlab.com]\n    ```sh\n    # In Slack:\n    /chatops run deploy
+        11.7.0-ee.0\n    ```\n  - [ ] Notify #production channel about canary deploy.
+        No need to require confirmation.\n  - [ ] On video call, [deploy] `11.7.0`
+        to the canary VMs on gitlab.com\n    ```sh\n    # In Slack:\n    /chatops
+        run deploy 11.7.0-ee.0 --production --canary\n    ```\n  - [ ] Confirm that
+        there are no errors on canary\n    - [canary errors on sentry.gitlab.net](https://sentry.gitlab.net/gitlab/gitlabcom/?query=server_name%3A%22web-cny-01-sv-gprd%22)\n    -
+        [canary dashboard](https://dashboards.gitlab.net/d/llfd4b2ik/canary)\n\n  -
+        [ ] Get confirmation from a production team member to deploy production. Use
+        `/chatops run oncall production` if needed to find who''s on call. If someone
+        besides the oncall confirms, `@mention` the oncall so they are aware.\n  -
+        [ ] Confirm there are no critical alerts on gitlab.com on the [alerting dashboard](https://dashboards.gitlab.net/d/SOn6MeNmk/alerts)\n  -
+        [ ] On video call, [deploy] `11.7.0` to GitLab.com\n    ```sh\n    # In Slack:\n    /chatops
+        run deploy 11.7.0-ee.0 --production\n    ```\n- At 13:30 UTC:\n  - [ ] Publish
+        the packages via ChatOps:\n    ```\n    # In Slack:\n    /chatops run publish
+        11.7.0\n    ```\n  - Make sure that neither packages nor the blog post get
+        published earlier than\n  planned without approval by the [messaging lead](https://about.gitlab.com/handbook/marketing/blog/release-posts/managers/)\n  of
+        the release post. Mind that you don''t need their approval if you''re on time\n  -
+        If anything goes wrong and the release is delayed, ping the\n  [release post
+        manager](https://about.gitlab.com/handbook/marketing/blog/release-posts/managers/)\n  on
+        Slack to make them aware of the issue. Cross-post the slack message to the
+        #marketing channel to notify them too\n- At 14:10 UTC:\n  - [ ] Verify that
+        packages appear on `packages.gitlab.com`: [EE](https://packages.gitlab.com/app/gitlab/gitlab/search?q=11.7.0)
+        / [CE](https://packages.gitlab.com/app/gitlab/gitlab-foss/search?q=11.7.0)\n  -
+        [ ] Verify that Docker images appear on `hub.docker.com`: [EE](https://hub.docker.com/r/gitlab/gitlab/tags)
+        / [CE](https://hub.docker.com/r/gitlab/gitlab-foss/tags)\n  - [ ] Create the
+        `11.7.0` version on [version.gitlab.com](https://version.gitlab.com/versions/new?version=11.7.0)\n  -
+        [ ] Once all packages are available publicly and GitLab.com is up and running
+        on the release version,\n  ping the [release post manager](https://about.gitlab.com/handbook/marketing/blog/release-posts/managers/)\n  on
+        Slack (#release-post channel) to give them a go to merge the release post
+        at ~14:20 UTC, so that it will be live at 15:00 UTC\n  - [ ] Make sure the
+        release post manager will tweet about the `11.7.0` release.\n  If they don''t
+        respond, ensure someone else tweets from the `#releases` channel\n\n[CE stable
+        branch]: https://gitlab.com/gitlab-org/gitlab-foss/commits/11-7-stable\n[EE
+        stable branch]: https://gitlab.com/gitlab-org/gitlab/commits/11-7-stable-ee\n[Omnibus
+        CE stable branch]: https://gitlab.com/gitlab-org/omnibus-gitlab/commits/11-7-stable\n[Omnibus
+        EE stable branch]: https://gitlab.com/gitlab-org/omnibus-gitlab/commits/11-7-stable-ee\n[announce
+        the deployment]: https://gitlab.com/gitlab-org/takeoff/blob/master/doc/announce-a-deployment.md\n[`release`
+        command]: https://gitlab.com/gitlab-org/release-tools/blob/master/doc/chatops.md#tag\n[deploy]:
+        https://gitlab.com/gitlab-org/takeoff#deploying-gitlab\n[staging.gitlab.com]:
+        https://staging.gitlab.com/\n[getting help]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/monthly.md#getting-help","state":"opened","created_at":"2019-01-02T19:07:23.310Z","updated_at":"2019-01-10T13:15:49.529Z","closed_at":null,"closed_by":null,"labels":["Delivery","Monthly
+        Release"],"milestone":{"id":581385,"iid":22,"group_id":9970,"title":"11.7","description":"","state":"active","created_at":"2018-06-26T15:14:47.054Z","updated_at":"2018-06-26T15:14:47.054Z","due_date":"2019-01-22","start_date":"2018-12-08","web_url":"https://gitlab.com/groups/gitlab-org/-/milestones/22"},"assignees":[{"id":15139,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://gitlab.com/rspeicher"},{"id":209240,"name":"Yorick
+        Peterse","username":"yorickpeterse","state":"active","avatar_url":"https://secure.gravatar.com/avatar/644bcc0c58aa01920c4de4f941afcac9?s=80\u0026d=identicon","web_url":"https://gitlab.com/yorickpeterse"},{"id":2324599,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/2324599/avatar.png","web_url":"https://gitlab.com/gitlab-release-tools-bot"}],"author":{"id":2324599,"name":"GitLab
+        Release Tools Bot","username":"gitlab-release-tools-bot","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/2324599/avatar.png","web_url":"https://gitlab.com/gitlab-release-tools-bot"},"assignee":{"id":15139,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://gitlab.com/rspeicher"},"user_notes_count":2,"upvotes":0,"downvotes":0,"due_date":null,"confidential":false,"discussion_locked":null,"web_url":"https://gitlab.com/gitlab-org/release/tasks/issues/617","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"weight":null}]'
+    http_version: 
+  recorded_at: Thu, 10 Jan 2019 17:12:03 GMT
+recorded_with: VCR 2.9.3

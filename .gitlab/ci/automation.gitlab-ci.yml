@@ -1,0 +1,80 @@
+release-managers:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - source scripts/setup_ssh.sh
+    - bundle exec rake release_managers:sync
+  only:
+    refs:
+      - schedules
+    variables:
+      - $RELEASE_MANAGERS
+  cache:
+    policy: pull
+
+close-expired-qa-issues:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake close_expired_qa_issues
+  only:
+    refs:
+      - schedules
+    variables:
+      - $CLOSE_EXPIRED_QA_ISSUES
+
+validate-security-merge-requests:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake security:validate
+  only:
+    refs:
+      - schedules
+    variables:
+      - $VALIDATE_SECURITY_MERGE_REQUESTS
+
+security:merge-train:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake 'security:merge_train'
+  rules:
+    - if: $SECURITY_MERGE_TRAIN == '1'
+      when: always
+
+components:update_gitaly:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake 'components:update_gitaly'
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" ||  $CI_PIPELINE_SOURCE == "push"
+      when: never    # don't run on code changes, either merge requests on branch pipelines
+    - if: $UPDATE_COMPONENTS == "true"
+
+track-deployment:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - bundle exec rake "release:track_deployment[$DEPLOY_ENVIRONMENT, $DEPLOY_STATUS, $DEPLOY_VERSION]"
+  artifacts:
+    expire_in: 1d
+    paths:
+      - QA_ISSUE_URL
+  only:
+    variables:
+      - $TRACK_DEPLOYMENT == "true"
+
+release:tag_scheduled_rc:
+  extends: .with-bundle
+  stage: automation
+  script:
+    - source scripts/setup_ssh.sh
+    - source scripts/setup_git.sh
+    - bundle exec rake 'release:tag_scheduled_rc'
+  only:
+    refs:
+      - schedules
+    variables:
+      - $TAG_SCHEDULED_RC == "true"

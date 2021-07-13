@@ -1,0 +1,143 @@
+<!--
+
+If you make any changes to this template in Release Tools, also make sure to
+update any existing release issues (if necessary).
+
+-->
+
+## Preparation
+
+- Preparation MR's should already be created
+- [ ] Ensure `<%= version.stable_branch(ee: true) %>` [GitLab branch] is green.
+- [Ensure any backports targeting] <%= version %> are merged to their stable counter part
+  - [ ] [GitLab Backports](https://gitlab.com/gitlab-org/gitlab/merge_requests?scope=all&utf8=%E2%9C%93&state=opened&target_branch=<%= version.stable_branch(ee: true) %>)
+  - [ ] [Omnibus](https://gitlab.com/gitlab-org/omnibus-gitlab/merge_requests?scope=all&utf8=%E2%9C%93&state=opened&target_branch=<%= version.stable_branch(ee: false) %>)
+  - [ ] [Gitaly](https://gitlab.com/gitlab-org/gitaly/-/merge_requests?scope=all&state=opened&target_branch=<%= version.stable_branch(ee: false) %>)
+- [ ] Perform automated merging into the preparation branches:
+    ```sh
+    # In Slack
+    /chatops run release merge <%= version.to_ce %>
+    ```
+- Check for any MR's that might have been created that are targeting our preparation branch
+  - [ ] [GitLab](https://gitlab.com/groups/gitlab-org/-/merge_requests?scope=all&utf8=%E2%9C%93&state=opened&target_branch=<%= version.stable_branch(ee: true) %>-patch-<%= version.patch %>)
+  - [ ] [Omnibus](https://gitlab.com/gitlab-org/omnibus-gitlab/merge_requests?scope=all&utf8=%E2%9C%93&state=opened&target_branch=<%= version.stable_branch(ee: false) %>-patch-<%= version.patch %>)
+  - [ ] [Gitaly](https://gitlab.com/gitlab-org/gitaly/-/merge_requests?scope=all&state=opened&target_branch=<%= version.stable_branch(ee: false) %>-patch-<%= version.patch %>)
+- Merge the preparation [merge requests](#related-merge-requests)
+  - [ ] `gitlab-org/gitlab`
+  - [ ] `gitlab-org/omnibus-gitlab`
+- Check the following list of critical issues/MRs which are to be included in `<%= version %>`.
+  - [ ] REFERENCE_TO_MR_TO_PICK
+- [ ] Ensure builds are green on [Omnibus]
+
+[Ensure any backports targeting]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/faq.md#backports-for-prior-versions
+[preparation MRs]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/picking-into-merge-requests.md
+[remaining merge requests]: https://gitlab.com/gitlab-org/omnibus-gitlab/merge_requests?scope=all&utf8=%E2%9C%93&state=merged&label_name[]=Pick%20into%20<%= version.to_minor %>
+[Omnibus]: https://gitlab.com/gitlab-org/omnibus-gitlab/commits/<%= version.stable_branch %>
+[GitLab branch]: https://gitlab.com/gitlab-org/gitlab/commits/<%= version.stable_branch(ee: true) %>
+
+## Packaging
+
+- [ ] Check if mirroring synced stable branches to dev. If the output is :white_check_mark: for every repo, we can proceed to tag.
+      Note. If GitLab Canonical to Security mirroring has diverged due to security merges this mirror is expected to show as a broken and can be safely ignored.
+
+   ```
+   # In Slack
+   /chatops run mirror status
+   ```
+- [ ] Tag `<%= version %>`:
+   ```sh
+   # In Slack:
+   /chatops run release tag <%= version %>
+   ```
+- [ ] While waiting for packages to build, now is a good time to [prepare the blog post]. Look at previous MRs for examples. => BLOG_POST_MR
+- [ ] Check progress of [EE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus(ee: true) %>) and [CE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus(ee: false) %>).
+    - This might take a while (around 80 min).
+    - We only need the EE packages to finish to continue with next steps.
+
+[prepare the blog post]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/patch/blog-post.md
+
+## Deploy
+
+For patch releases, the only available environment for deploys is `release.gitlab.net`. All GitLab Inc. team members can login to that installation using their email address (through google oauth).
+
+### release.gitlab.net
+
+Deployments to release.gitlab.net are performed automatically.
+
+<details>
+  <summary>Instructions to manually deploy if required.</summary>
+
+If you need to manually run a deployment, you can do so as follows:
+
+```sh
+# In Slack:
+/chatops run deploy <%= version %>-ee.0 --release
+```
+
+</details>
+
+## Release
+
+- [ ] Publish the packages via ChatOps:
+   ```
+   # In Slack:
+   /chatops run publish <%= version %>
+   ```
+- [ ] Verify that EE packages appear on `packages.gitlab.com`: [EE](https://packages.gitlab.com/app/gitlab/gitlab-ee/search?q=<%= version %>) (should contain 15 packages)
+- [ ] Verify that CE packages appear on `packages.gitlab.com`: [CE](https://packages.gitlab.com/app/gitlab/gitlab-ce/search?q=<%= version %>) (should contain 13 packages)
+
+<details><summary>Package Names (expanded)</summary>
+
+| Edition | Package Name | Distro |
+| --- | --- | --- |
+| EE | gitlab-ee-<%= version %>-ee.0.sles12.x86_64.rpm  | sles/12.5	     |
+| EE | gitlab-ee-<%= version %>-ee.0.sles12.x86_64.rpm  | sles/12.2	     |
+| EE | gitlab-ee-<%= version %>-ee.0.sles15.x86_64.rpm  | opensuse/15.1	 |
+| EE | gitlab-ee-<%= version %>-ee.0.sles15.aarch64.rpm	| opensuse/15.1	 |
+| EE | gitlab-ee-<%= version %>-ee.0.el8.x86_64.rpm	    | el/8           |
+| EE | gitlab-ee-<%= version %>-ee.0.el7.x86_64.rpm	    | scientific/7   |
+| EE | gitlab-ee-<%= version %>-ee.0.el8.aarch64.rpm	  | el/8	         |
+| EE | gitlab-ee-<%= version %>-ee.0.el7.x86_64.rpm	    | ol/7	         |
+| EE | gitlab-ee-<%= version %>-ee.0.el7.x86_64.rpm	    | el/7	         |
+| EE | gitlab-ee_<%= version %>-ee.0_amd64.deb	        | ubuntu/xenial	 |
+| EE | gitlab-ee_<%= version %>-ee.0_amd64.deb	        | ubuntu/bionic	 |
+| EE | gitlab-ee_<%= version %>-ee.0_amd64.deb	        | ubuntu/focal	 |
+| EE | gitlab-ee_<%= version %>-ee.0_amd64.deb	        | debian/stretch |
+| EE | gitlab-ee_<%= version %>-ee.0_amd64.deb	        | debian/buster	 |
+| EE | gitlab-ee_<%= version %>-ee.0_arm64.deb	        | ubuntu/focal   |
+| CE | gitlab-ce-<%= version %>-ce.0.sles15.x86_64.rpm	| opensuse/15.1	 |
+| CE | gitlab-ce-<%= version %>-ce.0.sles15.aarch64.rpm	| opensuse/15.1	 |
+| CE | gitlab-ce-<%= version %>-ce.0.el7.x86_64.rpm	    | scientific/7	 |
+| CE | gitlab-ce-<%= version %>-ce.0.el8.x86_64.rpm	    | el/8           |
+| CE | gitlab-ce-<%= version %>-ce.0.el8.aarch64.rpm    |	el/8           |
+| CE | gitlab-ce-<%= version %>-ce.0.el7.x86_64.rpm     |	ol/7           |
+| CE | gitlab-ce-<%= version %>-ce.0.el7.x86_64.rpm     |	el/7           |
+| CE | gitlab-ce_<%= version %>-ce.0_amd64.deb	        | ubuntu/focal	 |
+| CE | gitlab-ce_<%= version %>-ce.0_arm64.deb	        | ubuntu/focal	 |
+| CE | gitlab-ce_<%= version %>-ce.0_amd64.deb	        | ubuntu/bionic	 |
+| CE | gitlab-ce_<%= version %>-ce.0_amd64.deb	        | debian/stretch |
+| CE | gitlab-ce_<%= version %>-ce.0_amd64.deb	        | ubuntu/xenial	 |
+| CE | gitlab-ce_<%= version %>-ce.0_amd64.deb	        | debian/buster	 |
+
+</details>
+
+- [ ] Verify that Docker images appear on `hub.docker.com`: [EE](https://hub.docker.com/r/gitlab/gitlab-ee/tags) / [CE](https://hub.docker.com/r/gitlab/gitlab-ce/tags)
+- [ ] Deploy the blog post
+- [ ] Create the `<%= version %>` version on [version.gitlab.com](https://version.gitlab.com/versions/new?version=<%= version %>)
+
+## References
+
+### gitlab.com
+
+- https://gitlab.com/gitlab-org/gitlab-foss/commits/<%= version.stable_branch %>
+- https://gitlab.com/gitlab-org/gitlab/commits/<%= version.stable_branch(ee: true) %>
+- https://gitlab.com/gitlab-org/omnibus-gitlab/commits/<%= version.stable_branch %>
+
+### dev.gitlab.org
+
+- https://dev.gitlab.org/gitlab/gitlabhq/commits/<%= version.stable_branch %>
+- https://dev.gitlab.org/gitlab/gitlab-ee/commits/<%= version.stable_branch(ee: true) %>
+- https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.stable_branch %>
+
+/milestone %"<%= version.to_minor %>"
+/due in 7 days

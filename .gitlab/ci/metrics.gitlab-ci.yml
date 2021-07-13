@@ -1,0 +1,37 @@
+build:delivery-metrics:
+  stage: build
+  extends:
+    - .ci-image
+    - .delivery-metrics-ops
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD registry.ops.gitlab.net
+    - docker build --build-arg revision=$CI_COMMIT_SHORT_SHA -t registry.ops.gitlab.net/gitlab-org/release/tools/delivery-metrics:$CI_COMMIT_SHORT_SHA -t registry.ops.gitlab.net/gitlab-org/release/tools/delivery-metrics metrics
+    - docker push registry.ops.gitlab.net/gitlab-org/release/tools/delivery-metrics:$CI_COMMIT_SHORT_SHA
+    - docker push registry.ops.gitlab.net/gitlab-org/release/tools/delivery-metrics
+
+deploy:delivery-metrics:
+  stage: metrics:deploy
+  extends:
+    - .delivery-metrics-ops
+  needs:
+    - build:delivery-metrics
+  resource_group: delivery-metrics-ops
+  variables:
+    TANKA_DEPLOYMENTS_RUN: "delivery-metrics/ops"
+    DELIVERY_METRICS_TAG: $CI_COMMIT_SHORT_SHA
+  trigger:
+    project: gitlab-com/gl-infra/k8s-workloads/tanka-deployments
+    strategy: depend
+
+metrics:
+  extends: .with-bundle
+  stage: metrics
+  rules:
+    - if: '$PROMETHEUS_HOST && $PUSHGATEWAY_URL && $PUSH_METRICS'
+      when: always
+      allow_failure: true
+  tags:
+    # Internal pushgateway is only available from specific tagged runners
+    - release
+  script:
+    - bundle exec rake metrics

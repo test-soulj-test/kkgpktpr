@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?labels=Discussion&state=opened"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 26 Jun 2017 11:23:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4318'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"86d6a91e0269bb7d3503573f2ab2d93b"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?id=gitlab-org%2Fgitlab&labels=Discussion&order_by=created_at&page=1&per_page=20&sort=desc&state=opened>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?id=gitlab-org%2Fgitlab&labels=Discussion&order_by=created_at&page=1&per_page=20&sort=desc&state=opened>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - ed712f39-ec2d-43ac-b6a1-e83303fa56e4
+      X-Runtime:
+      - '3.078313'
+      X-Total:
+      - '2'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '[{"id":3976656,"iid":2246,"project_id":278964,"title":"Related Issues
+        UX improvements - loading","description":"## What does this MR do?\n\n - Move
+        the loading icon into the panel body\n - Add transition when the panel body
+        collapses away after fetching and the loading icon goes away\n - Add loading
+        icon to the submit button\n - Server-side render basic panel heading for Related
+        Issues as a placeholder until the JS kicks-in\n\n![](http://imgur.com/tlFbcFr.gif)\n\n![](http://imgur.com/I7UE3zU.gif)\n\n![](http://imgur.com/V0zjc41.gif)\n\n\n##
+        Are there points in the code the reviewer needs to double check?\n\n - Do
+        we want the loading spinner to be centered?\n    - The `loadingIcon` Vue component
+        has `text-center` in it\n\n\n## Why was this MR needed?\n\nFollow-up feedback
+        to address, https://gitlab.com/gitlab-org/gitlab-foss/issues/33533\n\n\n## Does
+        this MR meet the acceptance criteria?\n\n- [ ] [Documentation created/updated](https://gitlab.com/gitlab-org/gitlab/blob/master/doc/development/doc_styleguide.md)\n-
+        Tests\n  - [x] Added for this feature/bug\n  - [ ] All builds are passing\n-
+        [x] Conform by the [merge request performance guides](http://docs.gitlab.com/ee/development/merge_request_performance_guidelines.html)\n-
+        [x] Conform by the [style guides](https://gitlab.com/gitlab-org/gitlab/blob/master/CONTRIBUTING.md#style-guides)\n-
+        [x] Branch has no merge conflicts with `master` (if it does - rebase it please)\n-
+        [x] [Squashed related commits together](https://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits)\n\n##
+        What are the relevant issue numbers?\n\n\nCloses #33533","state":"opened","created_at":"2017-06-26T06:14:43.005Z","updated_at":"2017-06-26T07:24:16.423Z","target_branch":"master","source_branch":"33533-related-issues-ux-improvements","upvotes":0,"downvotes":0,"author":{"name":"Eric
+        Eastwood","username":"MadLittleMods","id":892863,"state":"active","avatar_url":"https://secure.gravatar.com/avatar/4d634a2b818e2265fa2924b5f4c2da71?s=80\u0026d=identicon","web_url":"https://gitlab.com/MadLittleMods"},"assignee":null,"source_project_id":278964,"target_project_id":278964,"labels":["Discussion","UI
+        polish","frontend","issues"],"work_in_progress":false,"milestone":{"id":305235,"iid":26,"project_id":278964,"title":"9.4","description":"","state":"active","created_at":"2017-04-26T13:01:26.869Z","updated_at":"2017-06-07T16:59:43.882Z","due_date":"2017-07-22","start_date":"2017-06-08"},"merge_when_pipeline_succeeds":false,"merge_status":"unchecked","sha":"29da5584e2f7a2cef38ce31adc6b65b68c8fe586","merge_commit_sha":null,"user_notes_count":0,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/2246"},{"id":696921,"iid":620,"project_id":278964,"title":"Filter
+        merge requests by approver","description":"## What does this MR do?\r\n\r\nAdd
+        a filter to the merge request lists to enable the user to filter by approver.\r\n\r\n##
+        Why was this MR needed?\r\n\r\nWhen there are many merge requests, it is very
+        inconvenient to browse through all the merge requests to view the approvers.
+        A common use case is to view all the merge requests the current user needs
+        to review/approve. \r\n\r\n## What are the relevant issue numbers?\r\n* Closes
+        #52\r\n* Partially addresses https://gitlab.com/gitlab-org/gitlab/issues/769","state":"opened","created_at":"2016-08-04T10:44:05.281Z","updated_at":"2017-06-12T09:44:14.392Z","target_branch":"master","source_branch":"52-filter-by-approver","upvotes":15,"downvotes":0,"author":{"name":"Jan
+        Heijmans","username":"heijmans","id":647088,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/647088/avatar.png","web_url":"https://gitlab.com/heijmans"},"assignee":null,"source_project_id":1475723,"target_project_id":278964,"labels":["Discussion","approvals","coach
+        will finish"],"work_in_progress":false,"milestone":null,"merge_when_pipeline_succeeds":false,"merge_status":"unchecked","sha":"aa9f8e6df142411310322c9030e5637b3d9f40cb","merge_commit_sha":null,"user_notes_count":35,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":null,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/620"}]'
+    http_version: 
+  recorded_at: Mon, 26 Jun 2017 11:23:36 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/pipelines/55053803
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 03 Apr 2019 16:26:57 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '660'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"1855a7435c795c4ae5dcfba8b1cca400"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 5FlD5n7Vw2
+      X-Runtime:
+      - '0.062064'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '5'
+      Ratelimit-Remaining:
+      - '595'
+      Ratelimit-Reset:
+      - '1554308877'
+      Ratelimit-Resettime:
+      - Thu, 03 Apr 2019 16:27:57 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803","before_sha":"b39209f34a915aed9690510b64e454c5a307135d","tag":false,"yaml_errors":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps"},"created_at":"2019-04-03T16:16:04.878Z","updated_at":"2019-04-03T16:17:03.907Z","started_at":null,"finished_at":null,"committed_at":null,"duration":null,"coverage":null}'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2019 16:26:57 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,58 @@
+<!--
+
+If you make any changes to this template in Release Tools, also make sure to
+update any existing release issues (if necessary).
+
+-->
+
+## Packaging
+
+- [ ] Tag `<%= version %>`:
+
+   ```sh
+   # In Slack:
+   /chatops run release tag <%= version %>
+   ```
+- [ ] Check progress of [EE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus(ee: true) %>) and [CE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus(ee: false) %>)
+    - This might take a while (around 80 min).
+    - We only need the EE packages to finish to continue with next steps.
+
+## Deploy
+
+### staging.gitlab.com
+
+- Staging deploys via the [deployer pipeline](https://ops.gitlab.net/gitlab-com/gl-infra/deployer) happen automatically as soon as the
+  [EE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus(ee: true) %>)
+  reaches the `gitlab_com:upload_deploy` stage of the pipeline.
+
+### canary stage gitlab.com
+
+- Canary deploys via the [deployer pipeline](https://ops.gitlab.net/gitlab-com/gl-infra/deployer) happen automatically as soon as the
+  QA jobs have completed successfully
+- [ ] Confirm that there are no errors on canary
+  - [canary errors on sentry.gitlab.net](https://sentry.gitlab.net/gitlab/gitlabcom/?query=server_name%3A%22web-cny-01-sv-gprd%22)
+  - [canary dashboard](https://dashboards.gitlab.net/d/llfd4b2ik/canary)
+
+**If there are issues on canary you should immediately stop sending traffic to it by issuing the following chatops command**:
+
+```
+/chatops run canary --drain --production
+
+```
+
+- This package shall not reach the rest of the production environment as we want to keep production on the auto-devops process
+
+## Release
+
+- [ ] Publish the packages via ChatOps:
+  ```
+  # In Slack:
+  /chatops run publish <%= version %>
+  ```
+- [ ] Verify that packages appear on [`packages.gitlab.com`](https://packages.gitlab.com/gitlab/unstable)
+- [ ] Verify that Docker images appear on `hub.docker.com`: [EE](https://hub.docker.com/r/gitlab/gitlab-ee/tags) / [CE](https://hub.docker.com/r/gitlab/gitlab-ce/tags)
+
+[Preparation MRs]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/picking-into-merge-requests.md
+[remaining merge requests]: https://gitlab.com/gitlab-org/omnibus-gitlab/merge_requests?scope=all&utf8=%E2%9C%93&state=merged&label_name[]=Pick%20into%20<%= version.to_minor %>
+[Deploy]: https://gitlab.com/gitlab-org/takeoff#deploying-gitlab
+[announce the deploy]: https://gitlab.com/gitlab-org/takeoff/blob/master/doc/announce-a-deployment.md

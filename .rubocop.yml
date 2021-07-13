@@ -1,0 +1,144 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - ./lib/rubocop/release_tools
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.6.6
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - Rakefile
+    - 'spec/fixtures/**/*'
+    - 'vendor/**/*'
+
+# Gems in consecutive lines should be alphabetically sorted
+Bundler/OrderedGems:
+  Enabled: true
+
+# Layout ######################################################################
+
+Layout/HashAlignment:
+  Exclude:
+    - 'lib/release_tools/project/**'
+    - 'spec/**/*'
+
+Layout/LineLength:
+  Enabled: false
+  IgnoreCopDirectives: true
+  Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+# Lint ########################################################################
+
+Lint/MissingSuper:
+  Enabled: false
+
+# Perfectly reasonable to only name specific captures we care about
+Lint/MixedRegexpCaptureTypes:
+  Enabled: false
+
+# Metrics #####################################################################
+
+Metrics/BlockLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+  Exclude:
+    - 'lib/tasks/**/*'
+    - 'spec/**/*'
+
+Metrics/ClassLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+
+Metrics/MethodLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ModuleLength:
+  CountAsOne: ['array', 'hash', 'heredoc']
+
+# Naming ######################################################################
+
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+Naming/MethodParameterName:
+  MinNameLength: 2
+
+Naming/RescuedExceptionsVariableName:
+  PreferredName: ex
+
+# ReleaseTools ################################################################
+
+ReleaseTools/DefaultBranchLiteral:
+  Exclude:
+    - 'lib/release_tools/project/**/*'
+    - 'spec/**/*'
+
+# RSpec #######################################################################
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/StubbedMock:
+  Enabled: false
+
+RSpec/SubjectStub:
+  Enabled: false
+
+# Style #######################################################################
+
+# Sometimes separating `attr_reader`s can improve readability
+Style/AccessorGrouping:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+# This often interferes with MaxLineLength, and we care about that more.
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/RaiseArgs:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/SlicingWithRange:
+  Enabled: false
+
+# Maybe the most pedanitc cop there is?
+Style/StringLiterals:
+  Enabled: false
+
+Style/SymbolArray:
+  Exclude:
+    - Rakefile
+    - 'lib/tasks/**/*.rake'

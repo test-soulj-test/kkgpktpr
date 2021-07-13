@@ -1,0 +1,151 @@
+#!/bin/sh
+
+set -e
+
+require_version()
+{
+  if [ -z "${RELEASE_VERSION}" ]; then
+    echo "RELEASE_VERSION required!"
+    exit 1
+  fi
+}
+
+auth_rake()
+{
+  bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1"
+}
+
+case $1 in
+  # auto_deploy namespace
+
+  "auto_deploy:prepare")
+    auth_rake "$1"
+    ;;
+  "auto_deploy:tag")
+    auth_rake "$1"
+    ;;
+
+  # release namespace
+
+  "release:issue")
+    require_version
+    auth_rake "$1[$RELEASE_VERSION]"
+    ;;
+  "release:merge")
+    require_version
+    auth_rake "$1[$RELEASE_VERSION]"
+    ;;
+  "release:prepare")
+    require_version
+    auth_rake "$1[$RELEASE_VERSION]"
+    ;;
+  "release:qa")
+    require_version
+    auth_rake "$1[$RELEASE_VERSION]"
+    ;;
+  "release:status")
+    require_version
+    # Runnable by any user
+    bundle exec rake "$1[$RELEASE_VERSION]"
+    ;;
+  "release:tag")
+    require_version
+    auth_rake "$1[$RELEASE_VERSION]"
+    ;;
+
+  "release:gitaly:tag")
+    require_version
+    bundle exec rake "$1[$RELEASE_VERSION]"
+    ;;
+  "release:helm:tag")
+    require_version
+    auth_rake "$1[$CHARTS_VERSION,$RELEASE_VERSION]"
+    ;;
+
+  # security namespace
+
+  "security:issue")
+    require_version
+    auth_rake "$1[$RELEASE_VERSION]"
+    ;;
+  "security:merge")
+    # Explicitly does not require a version
+    auth_rake "$1[$MERGE_MASTER_SECURITY_MERGE_REQUESTS]"
+    ;;
+  "security:prepare")
+    # Explicitly does not require a version
+    auth_rake "$1"
+    ;;
+  "security:qa")
+    require_version
+    auth_rake "$1[$RELEASE_VERSION]"
+    ;;
+  "security:status")
+    # Explicitly does not require a version
+    # Runnable by any user
+    bundle exec rake "$1"
+    ;;
+  "security:tag")
+    require_version
+    auth_rake "$1[$RELEASE_VERSION]"
+    ;;
+  "security:gitaly:tag")
+    require_version
+    bundle exec rake "$1[$RELEASE_VERSION]"
+    ;;
+  "security:sync_remotes")
+    # Explicitly does not require a version
+    auth_rake "$1"
+    ;;
+  "security:close_issues")
+    # Explicitly does not require a version
+    auth_rake "$1"
+    ;;
+  "security:tracking_issue")
+    # Explicitly does not require a version
+    auth_rake "$1"
+    ;;
+
+  # Deprecated commands
+
+  "cherry_pick")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "monthly_issue")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "patch_issue")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "patch_merge_request")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "publish")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "qa_issue")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "security_cherry_pick")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "security_patch_issue")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "security_qa_issue")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "tag")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+  "tag_security")
+    bundle exec rake "release_managers:auth[$RELEASE_USER]" "$1[$RELEASE_VERSION]"
+    ;;
+
+  # Fallback
+
+  *)
+    echo "Don't know what to do with $1!"
+    exit 1
+    ;;
+esac

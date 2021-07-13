@@ -1,0 +1,502 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/merge_requests/18745
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 24 May 2018 17:10:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3731'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"da37810ce5cce7356ed64e9857ff5291"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - a43a3a22-b70b-4571-bd2e-77b28639639e
+      X-Runtime:
+      - '2.313097'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527181874'
+      Ratelimit-Resettime:
+      - Fri, 24 May 2018 17:11:14 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":9638040,"iid":18745,"project_id":13083,"title":"Resolve \"Import/Export
+        (import) is broken due to the addition of a CI table\"","description":"##
+        What does this MR do?\n\n## Are there points in the code the reviewer needs
+        to double check?\n\n## Why was this MR needed?\n\n## Screenshots (if relevant)\n\n##
+        Does this MR meet the acceptance criteria?\n\n- [ ] [Changelog entry](https://docs.gitlab.com/ee/development/changelog.html)
+        added, if necessary\n- [ ] [Documentation created/updated](https://docs.gitlab.com/ee/development/doc_styleguide.html)\n-
+        [ ] API support added\n- [ ] Tests added for this feature/bug\n- Review\n  -
+        [ ] Has been reviewed by UX\n  - [ ] Has been reviewed by Frontend\n  - [
+        ] Has been reviewed by Backend\n  - [ ] Has been reviewed by Database\n- [
+        ] Conform by the [merge request performance guides](https://docs.gitlab.com/ee/development/merge_request_performance_guidelines.html)\n-
+        [ ] Conform by the [style guides](https://gitlab.com/gitlab-org/gitlab/blob/master/CONTRIBUTING.md#style-guides)\n-
+        [ ] [Squashed related commits together](https://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits)\n-
+        [ ] Internationalization required/considered\n- [ ] End-to-end tests pass
+        (`package-and-qa` manual pipeline job)\n\n## What are the relevant issue numbers?\n\n\nCloses
+        #46049","state":"merged","created_at":"2018-05-04T12:35:40.242Z","updated_at":"2018-05-09T08:58:04.795Z","target_branch":"master","source_branch":"46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table","upvotes":0,"downvotes":0,"author":{"id":273486,"name":"James
+        Lopez","username":"jameslopez","state":"active","avatar_url":"https://secure.gravatar.com/avatar/3731e7dd4f2b4fa8ae184c0a7519dd58?s=80\u0026d=identicon","web_url":"https://gitlab.com/jameslopez"},"assignee":{"id":87854,"name":"Douwe
+        Maan","username":"DouweM","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/87854/avatar.png","web_url":"https://gitlab.com/DouweM"},"source_project_id":13083,"target_project_id":13083,"labels":["Platform","import","project
+        export","regression"],"work_in_progress":false,"milestone":{"id":445863,"iid":12,"group_id":9970,"title":"10.8","description":"","state":"active","created_at":"2018-01-16T17:05:23.570Z","updated_at":"2018-01-16T17:05:23.570Z","due_date":"2018-05-22","start_date":"2018-04-08"},"merge_when_pipeline_succeeds":true,"merge_status":"can_be_merged","sha":"4f04aeec80bbfcb025e321693e6ca99b01244bb4","merge_commit_sha":"0065c449ff95cf6e0643bab17ed236c23207b537","user_notes_count":7,"discussion_locked":null,"should_remove_source_branch":true,"force_remove_source_branch":null,"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/18745","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"subscribed":false,"changes_count":"3","merged_by":{"id":87854,"name":"Douwe
+        Maan","username":"DouweM","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/87854/avatar.png","web_url":"https://gitlab.com/DouweM"},"merged_at":"2018-05-04T16:01:25.888Z","closed_by":null,"closed_at":null,"latest_build_started_at":"2018-05-04T15:22:51.675Z","latest_build_finished_at":"2018-05-04T16:00:37.614Z","first_deployed_to_production_at":null,"pipeline":{"id":21526587,"sha":"4f04aeec80bbfcb025e321693e6ca99b01244bb4","ref":"46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table","status":"success"},"diff_refs":{"base_sha":"2d23cb1b9fa9fed19ce66998c5b4177ee13ef5f3","head_sha":"4f04aeec80bbfcb025e321693e6ca99b01244bb4","start_sha":"7603beffc916d06039cac63b223d8e6234b5d666"},"approvals_before_merge":null,"squash":false}'
+    http_version: 
+  recorded_at: Thu, 24 May 2018 17:10:14 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/commits/v10.8.0-rc1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 24 May 2018 17:11:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '711'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"9eadb6800f8c1400393cc6918e34cc26"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - bcae7e02-116e-4e1b-8624-a92d32310bf2
+      X-Runtime:
+      - '0.932445'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527181979'
+      Ratelimit-Resettime:
+      - Fri, 24 May 2018 17:12:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"d36753ca4448983a4113f8e6fccdbe58d3452ecd","short_id":"d36753ca","title":"Update
+        VERSION to 10.8.0-rc1","created_at":"2018-05-02T15:02:04.000-05:00","parent_ids":["82b4983823f24f698b8e594f355ccd839a33a8ac"],"message":"Update
+        VERSION to 10.8.0-rc1\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-02T15:02:04.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-02T15:02:04.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"success","last_pipeline":{"id":21512419,"sha":"d36753ca4448983a4113f8e6fccdbe58d3452ecd","ref":"10-8-stable-prepare-rc2","status":"success"},"project_id":13083}'
+    http_version: 
+  recorded_at: Thu, 24 May 2018 17:11:59 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/commits/v10.8.0-rc2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 24 May 2018 17:12:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '711'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a236375ca1da0eaa6fcc3967c1c60f86"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 075d54b9-0a75-4360-a0a6-2599d6e4edb5
+      X-Runtime:
+      - '0.780076'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527181981'
+      Ratelimit-Resettime:
+      - Fri, 24 May 2018 17:13:01 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"7f7153301ad59d864791cb85d8abd1135962e954","short_id":"7f715330","title":"Update
+        VERSION to 10.8.0-rc2","created_at":"2018-05-04T13:02:47.000-05:00","parent_ids":["fb38c4e6457ae93794879f29ce0bf62dffc2d407"],"message":"Update
+        VERSION to 10.8.0-rc2\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T13:02:47.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T13:02:47.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"success","last_pipeline":{"id":21611089,"sha":"7f7153301ad59d864791cb85d8abd1135962e954","ref":"10-8-stable-prepare-rc3","status":"success"},"project_id":13083}'
+    http_version: 
+  recorded_at: Thu, 24 May 2018 17:12:01 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/repository/commits/v10.8.0-rc1-ee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 24 May 2018 17:12:16 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '719'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"e6320dd39da1bd993f4004eedc6e0cca"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 6c63b18d-b974-41aa-afc9-aaa4071e600f
+      X-Runtime:
+      - '0.945764'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527181996'
+      Ratelimit-Resettime:
+      - Fri, 24 May 2018 17:13:16 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"154596b91354625275177c568f2212d090360606","short_id":"154596b9","title":"Update
+        VERSION to 10.8.0-rc1-ee","created_at":"2018-05-02T14:58:16.000-05:00","parent_ids":["c739b3172ca6edce0c7e07e654c11f8a07df660b"],"message":"Update
+        VERSION to 10.8.0-rc1-ee\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-02T14:58:16.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-02T14:58:16.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"failed","last_pipeline":{"id":21512462,"sha":"154596b91354625275177c568f2212d090360606","ref":"10-8-stable-ee-prepare-rc2","status":"failed"},"project_id":278964}'
+    http_version: 
+  recorded_at: Thu, 24 May 2018 17:12:16 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/repository/commits/v10.8.0-rc2-ee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 24 May 2018 17:12:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '704'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"ffb7caa197eb540e388dcb8ea25764eb"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - e50555c6-bb58-4613-a9ed-e3f2c1355564
+      X-Runtime:
+      - '0.487733'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527181997'
+      Ratelimit-Resettime:
+      - Fri, 24 May 2018 17:13:17 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"2d9206de36f084ce78ff1d0a3fd3f436379b5d78","short_id":"2d9206de","title":"Update
+        VERSION to 10.8.0-rc2-ee","created_at":"2018-05-04T17:58:52.000Z","parent_ids":["6fdea8b36ae7317ae3284e2a4d85ca3fb2761e6c"],"message":"Update
+        VERSION to 10.8.0-rc2-ee\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T17:58:52.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T17:58:52.000Z","stats":{"additions":1,"deletions":1,"total":2},"status":"failed","last_pipeline":{"id":21611168,"sha":"2d9206de36f084ce78ff1d0a3fd3f436379b5d78","ref":"10-8-stable-ee-prepare-rc3","status":"failed"},"project_id":278964}'
+    http_version: 
+  recorded_at: Thu, 24 May 2018 17:12:17 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/compare?from=v10.8.0-rc1&to=v10.8.0-rc2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 25 May 2018 14:31:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4765'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a08782f823236dc13e73b31a39340b24"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c914397a-bd15-4caa-9689-70ddbe5050c9
+      X-Runtime:
+      - '1.569955'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527258761'
+      Ratelimit-Resettime:
+      - Sat, 25 May 2018 14:32:41 GMT
+    body:
+      encoding: UTF-8
+      string: '{"commit":{"id":"7f7153301ad59d864791cb85d8abd1135962e954","short_id":"7f715330","title":"Update
+        VERSION to 10.8.0-rc2","created_at":"2018-05-04T18:02:47.000Z","parent_ids":["fb38c4e6457ae93794879f29ce0bf62dffc2d407"],"message":"Update
+        VERSION to 10.8.0-rc2\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T18:02:47.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T18:02:47.000Z"},"commits":[{"id":"c8f70158e57213e4a813aef1e3b0ad9aa22441b0","short_id":"c8f70158","title":"Merge
+        branch ''46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table''
+        into ''master''","created_at":"2018-05-04T16:09:51.000Z","parent_ids":["d36753ca4448983a4113f8e6fccdbe58d3452ecd"],"message":"Merge
+        branch ''46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table''
+        into ''master''\n\nResolve \"Import/Export (import) is broken due to the addition
+        of a CI table\"\n\nCloses #46049\n\nSee merge request gitlab-org/gitlab-foss!18745\n","author_name":"Douwe
+        Maan","author_email":"douwe@gitlab.com","authored_date":"2018-05-04T16:00:39.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T16:09:51.000Z"},{"id":"fb38c4e6457ae93794879f29ce0bf62dffc2d407","short_id":"fb38c4e6","title":"Merge
+        branch ''10-8-stable-prepare-rc2'' into ''10-8-stable''","created_at":"2018-05-04T17:25:15.000Z","parent_ids":["d36753ca4448983a4113f8e6fccdbe58d3452ecd","c8f70158e57213e4a813aef1e3b0ad9aa22441b0"],"message":"Merge
+        branch ''10-8-stable-prepare-rc2'' into ''10-8-stable''\n\nPrepare 10.8 RC2
+        release\n\nSee merge request gitlab-org/gitlab-foss!18744","author_name":"Mayra
+        Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T17:25:15.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T17:25:15.000Z"},{"id":"7f7153301ad59d864791cb85d8abd1135962e954","short_id":"7f715330","title":"Update
+        VERSION to 10.8.0-rc2","created_at":"2018-05-04T18:02:47.000Z","parent_ids":["fb38c4e6457ae93794879f29ce0bf62dffc2d407"],"message":"Update
+        VERSION to 10.8.0-rc2\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T18:02:47.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T18:02:47.000Z"}],"diffs":[{"old_path":"VERSION","new_path":"VERSION","a_mode":"100644","b_mode":"100644","new_file":false,"renamed_file":false,"deleted_file":false,"diff":"---
+        a/VERSION\n+++ b/VERSION\n@@ -1 +1 @@\n-10.8.0-rc1\n+10.8.0-rc2\n"},{"old_path":"app/models/project.rb","new_path":"app/models/project.rb","a_mode":"100644","b_mode":"100644","new_file":false,"renamed_file":false,"deleted_file":false,"diff":"---
+        a/app/models/project.rb\n+++ b/app/models/project.rb\n@@ -236,7 +236,7 @@
+        class Project \u003c ActiveRecord::Base\n   has_many :custom_attributes, class_name:
+        ''ProjectCustomAttribute''\n \n   has_many :project_badges, class_name: ''ProjectBadge''\n-  has_one
+        :ci_cd_settings, class_name: ''ProjectCiCdSetting''\n+  has_one :ci_cd_settings,
+        class_name: ''ProjectCiCdSetting'', inverse_of: :project, autosave: true,
+        dependent: :destroy # rubocop:disable Cop/ActiveRecordDependent\n \n   accepts_nested_attributes_for
+        :variables, allow_destroy: true\n   accepts_nested_attributes_for :project_feature,
+        update_only: true\n"},{"old_path":"changelogs/unreleased/46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table.yml","new_path":"changelogs/unreleased/46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table.yml","a_mode":"0","b_mode":"100644","new_file":true,"renamed_file":false,"deleted_file":false,"diff":"---
+        /dev/null\n+++ b/changelogs/unreleased/46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table.yml\n@@
+        -0,0 +1,5 @@\n+---\n+title: Resolve Import/Export ci_cd_settings error updating
+        the project\n+merge_request: 46049\n+author:\n+type: fixed\n"},{"old_path":"spec/models/project_spec.rb","new_path":"spec/models/project_spec.rb","a_mode":"100644","b_mode":"100644","new_file":false,"renamed_file":false,"deleted_file":false,"diff":"---
+        a/spec/models/project_spec.rb\n+++ b/spec/models/project_spec.rb\n@@ -102,6
+        +102,14 @@ describe Project do\n       end\n     end\n \n+    context ''updating
+        cd_cd_settings'' do\n+      it ''does not raise an error'' do\n+        project
+        = create(:project)\n+\n+        expect { project.update(ci_cd_settings: nil)
+        }.not_to raise_exception\n+      end\n+    end\n+\n     describe ''#members
+        \u0026 #requesters'' do\n       let(:project) { create(:project, :public,
+        :access_requestable) }\n       let(:requester) { create(:user) }\n"}],"compare_timeout":false,"compare_same_ref":false}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 14:31:41 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/merge_requests/18744
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 25 May 2018 14:31:42 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3802'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"938db1f220f3df38d762f891bacd3842"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 00b3ccc9-c07c-4c44-8c81-b0c0a27f9e71
+      X-Runtime:
+      - '0.310163'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527258762'
+      Ratelimit-Resettime:
+      - Sat, 25 May 2018 14:32:42 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":9636918,"iid":18744,"project_id":13083,"title":"Prepare 10.8
+        RC2 release","description":"Main release issue: https://gitlab.com/gitlab-org/gitlab-foss/issues/45897\n\n###
+        Summary\n\nThis MR prepares `10-8-stable` for %\"10.8\" (`RC2`) by merging
+        `10-8-stable-prepare-rc2` into `10-8-stable`.\n\n### Note to leave in MRs\n\n```\nPicked
+        into https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/18744, will merge
+        into `10-8-stable` ready for `10.8 RC2`\n\n/unlabel ~\"Pick into 10.8\"\n```\n\n###
+        Steps\n\n1. Cherry-pick the fix for https://gitlab.com/gitlab-org/gitlab-foss/issues/46049\n1.
+        Merge CE-to-EE using one of the workflows described in the [Merge CE stable
+        changes to EE docs](https://gitlab.com/gitlab-org/release-tools/blob/master/doc/picking-into-merge-requests.md#merge-ce-stable-changes-to-ee)\n  -
+        *Note: Often, after a release has been tagged, the `VERSION` file in `ee`
+        will have a conflict. Accept the `-ee` one*\n1. Once this MR is green merge
+        it to stable, preferably with a manual fast-forward merge to minimize waiting
+        time, as described in [Merging preparation MRs into stable](https://gitlab.com/gitlab-org/release-tools/blob/master/doc/picking-into-merge-requests.md#merging-preparation-mrs-into-stable)\n\n###
+        Checklist\n\n- [x] Fix for #46049 has been picked\n- [x] Conflicts resolved\n-
+        [x] No new commits have introduced directly to the stable branch while this
+        MR was in progress. If there are, ensure these are merged into EE and check
+        for a green pipeline after merging this MR.","state":"merged","created_at":"2018-05-04T11:39:23.821Z","updated_at":"2018-05-04T17:26:00.716Z","target_branch":"10-8-stable","source_branch":"10-8-stable-prepare-rc2","upvotes":0,"downvotes":0,"author":{"id":482476,"name":"Filipa
+        Lacerda","username":"filipa","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/482476/avatar.png","web_url":"https://gitlab.com/filipa"},"assignee":{"id":33100,"name":"Mayra
+        Cabrera","username":"mayra-cabrera","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/33100/avatar.png","web_url":"https://gitlab.com/mayra-cabrera"},"source_project_id":13083,"target_project_id":13083,"labels":["Release"],"work_in_progress":false,"milestone":{"id":445863,"iid":12,"group_id":9970,"title":"10.8","description":"","state":"active","created_at":"2018-01-16T17:05:23.570Z","updated_at":"2018-01-16T17:05:23.570Z","due_date":"2018-05-22","start_date":"2018-04-08"},"merge_when_pipeline_succeeds":false,"merge_status":"can_be_merged","sha":"c8f70158e57213e4a813aef1e3b0ad9aa22441b0","merge_commit_sha":"fb38c4e6457ae93794879f29ce0bf62dffc2d407","user_notes_count":0,"discussion_locked":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/18744","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"subscribed":false,"changes_count":"3","merged_by":{"id":33100,"name":"Mayra
+        Cabrera","username":"mayra-cabrera","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/33100/avatar.png","web_url":"https://gitlab.com/mayra-cabrera"},"merged_at":"2018-05-04T17:26:02.545Z","closed_by":null,"closed_at":null,"latest_build_started_at":"2018-05-04T16:11:12.586Z","latest_build_finished_at":"2018-05-04T17:02:32.083Z","first_deployed_to_production_at":null,"pipeline":{"id":21529148,"sha":"c8f70158e57213e4a813aef1e3b0ad9aa22441b0","ref":"10-8-stable-prepare-rc2","status":"success"},"diff_refs":{"base_sha":"d36753ca4448983a4113f8e6fccdbe58d3452ecd","head_sha":"c8f70158e57213e4a813aef1e3b0ad9aa22441b0","start_sha":"d36753ca4448983a4113f8e6fccdbe58d3452ecd"},"approvals_before_merge":null,"squash":false}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 14:31:42 GMT
+recorded_with: VCR 2.9.3

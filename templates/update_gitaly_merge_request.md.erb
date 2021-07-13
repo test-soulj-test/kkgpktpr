@@ -1,0 +1,22 @@
+Update Gitaly to the latest green `master`
+
+## What should I do if this pipeline is red?
+
+* Look at the failure. If it looks unrelated to Gitaly, it's likely a ~"master:broken" or ~"failure::flaky-test".
+   1. Open the **Pipelines** tab and click **Run Pipeline**.
+   1. This will run a pipeline for merge result.
+* If it looks related to Gitaly, notify the Gitaly team in `#g_create_gitaly` on Slack.
+
+## What should I do in case of merge conflicts?
+
+If someone updates `GITALY_SERVER_VERSION` with another MR, we may have a merge conflict.
+
+In such unlikely circumstances, the better option will be closing this merge request and deleting [the `release-tools/update-gitaly` branch](https://gitlab.com/gitlab-org/gitlab/-/branches/all?utf8=%E2%9C%93&search=release-tools%2Fupdate-gitaly).
+
+`release-tools` will take care of creating a new merge request in about 1 hour.
+
+---
+
+:robot: This merge request was generated via [release-tools pipeline](<%= ENV.fetch('CI_JOB_URL', 'https://gitlab.com/gitlab-org/release-tools') %>).
+
+Do you want to improve this message? You can find it [here](https://gitlab.com/gitlab-org/release-tools/-/blob/master/templates/update_gitaly_merge_request.md.erb)! ~"team::Delivery" loves merge requests.

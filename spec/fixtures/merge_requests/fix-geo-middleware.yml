@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?labels=geo&state=opened"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 26 Jun 2017 11:23:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '12589'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"3b7e51dad8fba180356a3a64030ce6b5"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?id=gitlab-org%2Fgitlab&labels=geo&order_by=created_at&page=1&per_page=20&sort=desc&state=opened>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab/merge_requests?id=gitlab-org%2Fgitlab&labels=geo&order_by=created_at&page=1&per_page=20&sort=desc&state=opened>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 8a927938-ac62-4129-8784-dc7168b29432
+      X-Runtime:
+      - '4.386995'
+      X-Total:
+      - '7'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '[{"id":3969539,"iid":2241,"project_id":278964,"title":"Geo: fix removal
+        of repositories from disk on secondary nodes (Backport to 9.2)","description":"##
+        What does this MR do?\n\nBackports gitlab-org/gitlab!2210 to %9.2\n\n##
+        Are there points in the code the reviewer needs to double check?\n\n## Why
+        was this MR needed?\n\nThis is a critical fix for Geo, while we want people
+        to always use our latest versions, we understand that there are reasons why
+        people sometime keeps on the previous stable version for a while.\n\n## Does
+        this MR meet the acceptance criteria?\n\n- [ ] [Changelog entry](https://docs.gitlab.com/ce/development/changelog.html)
+        added, if necessary\n- [ ] [Documentation created/updated](https://gitlab.com/gitlab-org/gitlab/blob/master/doc/development/doc_styleguide.md)\n-
+        [ ] API support added\n- Tests\n  - [ ] Added for this feature/bug\n  - [
+        ] All builds are passing\n- [ ] Conform by the [merge request performance
+        guides](http://docs.gitlab.com/ee/development/merge_request_performance_guidelines.html)\n-
+        [ ] Conform by the [style guides](https://gitlab.com/gitlab-org/gitlab/blob/master/CONTRIBUTING.md#style-guides)\n-
+        [ ] Branch has no merge conflicts with `master` (if it does - rebase it please)\n-
+        [ ] [Squashed related commits together](https://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits)\n\n##
+        What are the relevant issue numbers?\n\n* gitlab-org/gitlab!2210\n* gitlab-org/gitlab#2701","state":"opened","created_at":"2017-06-24T01:59:51.096Z","updated_at":"2017-06-24T20:35:22.782Z","target_branch":"9-2-stable-ee","source_branch":"backport-2210-to-9-2","upvotes":0,"downvotes":0,"author":{"name":"Gabriel
+        Mazetto","username":"brodock","id":2293,"state":"active","avatar_url":"https://secure.gravatar.com/avatar/0194f7ce33ec23b1788ffe382d4a4f08?s=80\u0026d=identicon","web_url":"https://gitlab.com/brodock"},"assignee":{"name":"Douwe
+        Maan","username":"DouweM","id":87854,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/87854/avatar.png","web_url":"https://gitlab.com/DouweM"},"source_project_id":278964,"target_project_id":278964,"labels":["customer","geo","regression"],"work_in_progress":false,"milestone":{"id":269773,"iid":23,"project_id":278964,"title":"9.2","description":"","state":"active","created_at":"2017-02-20T13:55:42.958Z","updated_at":"2017-04-07T14:54:22.817Z","due_date":"2017-05-21","start_date":"2017-04-08"},"merge_when_pipeline_succeeds":false,"merge_status":"can_be_merged","sha":"2c15628547416cecd86cf4497ed61dd85d36e757","merge_commit_sha":null,"user_notes_count":1,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/2241"},{"id":3967652,"iid":2238,"project_id":278964,"title":"WIP:
+        Add Geo repository renamed event log","description":"Closes #2641","state":"opened","created_at":"2017-06-23T20:47:12.832Z","updated_at":"2017-06-23T21:34:20.390Z","target_branch":"master","source_branch":"da-geo-log-namespace-project-rename-events","upvotes":0,"downvotes":0,"author":{"name":"Douglas
+        Barbosa Alexandre","username":"dbalexandre","id":283999,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/283999/douglas.png","web_url":"https://gitlab.com/dbalexandre"},"assignee":null,"source_project_id":278964,"target_project_id":278964,"labels":["geo"],"work_in_progress":true,"milestone":null,"merge_when_pipeline_succeeds":false,"merge_status":"unchecked","sha":"1d6eb05b07bc41873e3e34ca31a5db7342083e36","merge_commit_sha":null,"user_notes_count":0,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/2238"},{"id":3844913,"iid":2130,"project_id":278964,"title":"WIP:
+        Perform Geo::RepositorySyncService for dirty projects","description":"Depends
+        on https://gitlab.com/gitlab-org/gitlab/merge_requests/1988","state":"opened","created_at":"2017-06-14T19:59:01.026Z","updated_at":"2017-06-26T00:07:50.621Z","target_branch":"2467-geo-implement-consumer-aka-geologcursor-for-event-log","source_branch":"2467-repository-sync-dirty-projects","upvotes":0,"downvotes":0,"author":{"name":"Douglas
+        Barbosa Alexandre","username":"dbalexandre","id":283999,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/283999/douglas.png","web_url":"https://gitlab.com/dbalexandre"},"assignee":{"name":"Robert
+        Speicher","username":"rspeicher","id":15139,"state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://gitlab.com/rspeicher"},"source_project_id":278964,"target_project_id":278964,"labels":["geo"],"work_in_progress":true,"milestone":{"id":305235,"iid":26,"project_id":278964,"title":"9.4","description":"","state":"active","created_at":"2017-04-26T13:01:26.869Z","updated_at":"2017-06-07T16:59:43.882Z","due_date":"2017-07-22","start_date":"2017-06-08"},"merge_when_pipeline_succeeds":false,"merge_status":"cannot_be_merged","sha":"97cb7404e91517c7af2a8e2ee13f21ad2c07fa96","merge_commit_sha":null,"user_notes_count":15,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":null,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/2130"},{"id":3834194,"iid":2126,"project_id":278964,"title":"Add
+        Geo delete event log","description":"","state":"opened","created_at":"2017-06-14T06:32:14.025Z","updated_at":"2017-06-24T21:42:39.360Z","target_branch":"master","source_branch":"sh-geo-add-project-deletion-events","upvotes":0,"downvotes":0,"author":{"name":"Stan
+        Hu","username":"stanhu","id":64248,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/64248/stanhu.jpg","web_url":"https://gitlab.com/stanhu"},"assignee":{"name":"Stan
+        Hu","username":"stanhu","id":64248,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/64248/stanhu.jpg","web_url":"https://gitlab.com/stanhu"},"source_project_id":278964,"target_project_id":278964,"labels":["geo"],"work_in_progress":false,"milestone":null,"merge_when_pipeline_succeeds":false,"merge_status":"unchecked","sha":"a07c013ecf8da1efd68847274c7f3f02ea3a2655","merge_commit_sha":null,"user_notes_count":12,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/2126"},{"id":3615638,"iid":1988,"project_id":278964,"title":"Geo:
+        Implement GeoLogCursor for event log","description":"The GeoLogCursor is a
+        daemon that reads like a cursor through existing `geo_log_events` and process
+        each one of them.\n\nIn this first iteration we want to handle repository
+        and wiki update events. Whenever the cursor process an event, it checks the
+        metadata and mark the affected repository or wiki as requiring a resync.\n\n##
+        Are there points in the code the reviewer needs to double check?\n\nThis MR
+        is rebased on top of gitlab-org/gitlab!1976, so most of the code in the
+        MR can be ignored as it''s duplicated from other. You can check the last commit
+        which includes the changes that are specific to this MR.\n\n## Why was this
+        MR needed?\n\n## Screenshots (if relevant)\n\n## Does this MR meet the acceptance
+        criteria?\n\n- [x] [Changelog entry](https://docs.gitlab.com/ce/development/changelog.html)
+        added, if necessary\n- [ ] [Documentation created/updated](https://gitlab.com/gitlab-org/gitlab/blob/master/doc/development/doc_styleguide.md)\n-
+        [ ] API support added\n- Tests\n  - [x] Added for this feature/bug\n  - [x]
+        All builds are passing\n- [ ] Conform by the [merge request performance guides](http://docs.gitlab.com/ee/development/merge_request_performance_guidelines.html)\n-
+        [ ] Conform by the [style guides](https://gitlab.com/gitlab-org/gitlab/blob/master/CONTRIBUTING.md#style-guides)\n-
+        [ ] Branch has no merge conflicts with `master` (if it does - rebase it please)\n-
+        [ ] [Squashed related commits together](https://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits)\n\n##
+        What are the relevant issue numbers?\n\n\nCloses #2467","state":"opened","created_at":"2017-05-26T01:10:46.814Z","updated_at":"2017-06-26T05:38:46.861Z","target_branch":"master","source_branch":"2467-geo-implement-consumer-aka-geologcursor-for-event-log","upvotes":0,"downvotes":0,"author":{"name":"Gabriel
+        Mazetto","username":"brodock","id":2293,"state":"active","avatar_url":"https://secure.gravatar.com/avatar/0194f7ce33ec23b1788ffe382d4a4f08?s=80\u0026d=identicon","web_url":"https://gitlab.com/brodock"},"assignee":{"name":"Douwe
+        Maan","username":"DouweM","id":87854,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/87854/avatar.png","web_url":"https://gitlab.com/DouweM"},"source_project_id":278964,"target_project_id":278964,"labels":["geo"],"work_in_progress":false,"milestone":{"id":305235,"iid":26,"project_id":278964,"title":"9.4","description":"","state":"active","created_at":"2017-04-26T13:01:26.869Z","updated_at":"2017-06-07T16:59:43.882Z","due_date":"2017-07-22","start_date":"2017-06-08"},"merge_when_pipeline_succeeds":false,"merge_status":"can_be_merged","sha":"160103f5d7658def6d69398efac10decd0666f9a","merge_commit_sha":null,"user_notes_count":58,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":null,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/1988"},{"id":3172886,"iid":1679,"project_id":278964,"title":"Delete
+        primary Geo system hook","description":"When a primary Geo node is created,
+        tag push and push events are added to the system hook. With each push to primary,
+        the primary also receives an event, which causes unnecessary work.\r\n\r\nCloses
+        #1752","state":"reopened","created_at":"2017-04-19T20:43:06.288Z","updated_at":"2017-06-25T06:16:13.915Z","target_branch":"master","source_branch":"sh-disable-geo-primary-system-hook","upvotes":0,"downvotes":0,"author":{"name":"Stan
+        Hu","username":"stanhu","id":64248,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/64248/stanhu.jpg","web_url":"https://gitlab.com/stanhu"},"assignee":{"name":"Robert
+        Speicher","username":"rspeicher","id":15139,"state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://gitlab.com/rspeicher"},"source_project_id":278964,"target_project_id":278964,"labels":["geo"],"work_in_progress":false,"milestone":null,"merge_when_pipeline_succeeds":false,"merge_status":"can_be_merged","sha":"7e5cbcd438e7a2d4162a2431729769da15b329ab","merge_commit_sha":null,"user_notes_count":19,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/1679"},{"id":3068870,"iid":1610,"project_id":278964,"title":"Add
+        a health check for the state of Geo replication lag in secondary","description":"If
+        streaming replication is not working, this MR will report that the secondary
+        node is not working. Also move the check for the tracking DB last so that
+        we can report basic Geo failures first.\r\n\r\nPartial fix to #1929","state":"opened","created_at":"2017-04-08T05:53:47.935Z","updated_at":"2017-06-01T00:53:57.492Z","target_branch":"master","source_branch":"sh-check-replication-secondary","upvotes":0,"downvotes":0,"author":{"name":"Stan
+        Hu","username":"stanhu","id":64248,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/64248/stanhu.jpg","web_url":"https://gitlab.com/stanhu"},"assignee":{"name":"Stan
+        Hu","username":"stanhu","id":64248,"state":"active","avatar_url":"https://gitlab.com/uploads/system/user/avatar/64248/stanhu.jpg","web_url":"https://gitlab.com/stanhu"},"source_project_id":278964,"target_project_id":278964,"labels":["geo"],"work_in_progress":false,"milestone":{"id":261163,"iid":22,"project_id":278964,"title":"9.1","description":"","state":"active","created_at":"2017-02-03T20:12:11.321Z","updated_at":"2017-04-07T14:54:23.322Z","due_date":"2017-04-21","start_date":"2017-03-08"},"merge_when_pipeline_succeeds":false,"merge_status":"unchecked","sha":"53440933e717028f803eded14da8441ed4206d74","merge_commit_sha":null,"user_notes_count":4,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab/merge_requests/1610"}]'
+    http_version: 
+  recorded_at: Mon, 26 Jun 2017 11:23:32 GMT
+recorded_with: VCR 2.9.3

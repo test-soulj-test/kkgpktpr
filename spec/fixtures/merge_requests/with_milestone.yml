@@ -1,0 +1,439 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "https://gitlab.com/api/v4/gitlab"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Aug 2017 21:26:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '727'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"7bdf4efc3794643bb214df2f472158bc"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - f8be0631-a7ea-44be-8bec-9cecff5320bc
+      X-Runtime:
+      - '0.092412'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"name":"James Edwards-Jones","gitlabname":"jamedjo","id":654619}'
+    http_version: 
+  recorded_at: Thu, 03 Aug 2017 21:26:42 GMT
+- request:
+    method: get
+    uri: "https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/milestones"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Aug 2017 21:26:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '9051'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a7ac59028d3f8a387665e28aff26d569"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/milestones?id=gitlab-org%2Fgitlab-foss&page=2&per_page=20&state=all>;
+        rel="next", <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/milestones?id=gitlab-org%2Fgitlab-foss&page=1&per_page=20&state=all>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/milestones?id=gitlab-org%2Fgitlab-foss&page=3&per_page=20&state=all>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - '2'
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 5897fbf4-67da-4875-9c26-5f3b505d8aae
+      X-Runtime:
+      - '0.095528'
+      X-Total:
+      - '42'
+      X-Total-Pages:
+      - '3'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOjMzOTM4NiwiaWlkIjo0NCwicHJvamVjdF9pZCI6MTMwODMsImdy
+        b3VwX2lkIjpudWxsLCJ0aXRsZSI6IjEwLjAiLCJkZXNjcmlwdGlvbiI6IiIs
+        InN0YXRlIjoiYWN0aXZlIiwiY3JlYXRlZF9hdCI6IjIwMTctMDctMDNUMTM6
+        NTU6NTAuNTIwWiIsInVwZGF0ZWRfYXQiOiIyMDE3LTA3LTI3VDE0OjQwOjA2
+        LjEyMloiLCJkdWVfZGF0ZSI6IjIwMTctMDktMjIiLCJzdGFydF9kYXRlIjoi
+        MjAxNy0wOC0wOCJ9LHsiaWQiOjMyMjYyMCwiaWlkIjo0MywicHJvamVjdF9p
+        ZCI6MTMwODMsImdyb3VwX2lkIjpudWxsLCJ0aXRsZSI6Ik5leHQgMy02IG1v
+        bnRocyIsImRlc2NyaXB0aW9uIjoiQmlnZ2VyIGlzc3VlcyB3ZSBwbGFuIHRv
+        IHNoaXAgaW4gdGhlIG5leHQgMy02IG1vbnRocywgYnV0IGRvbid0IGhhdmUg
+        YSBkZXNpZ25hdGVkIHJlbGVhc2UgeWV0LiBcclxuXHJcbkRPIE5PVCBhZGQg
+        c21hbGwgY2hhbmdlcywgYnVncywgcmVncmVzc2lvbnMgdG8gdGhpcyBtaWxl
+        c3RvbmUuIiwic3RhdGUiOiJhY3RpdmUiLCJjcmVhdGVkX2F0IjoiMjAxNy0w
+        NS0zMFQyMDowNTo1Ni43MzdaIiwidXBkYXRlZF9hdCI6IjIwMTctMDYtMDhU
+        MTU6MjU6MzEuODk3WiIsImR1ZV9kYXRlIjoiMjAyMC0wMi0wMSIsInN0YXJ0
+        X2RhdGUiOm51bGx9LHsiaWQiOjMyMjYxOCwiaWlkIjo0MiwicHJvamVjdF9p
+        ZCI6MTMwODMsImdyb3VwX2lkIjpudWxsLCJ0aXRsZSI6Ik5leHQgMi0zIG1v
+        bnRocyIsImRlc2NyaXB0aW9uIjoiQmlnZ2VyIGlzc3VlcyB3ZSBwbGFuIHRv
+        IHNoaXAgaW4gdGhlIG5leHQgMi0zIG1vbnRocywgYnV0IGRvbid0IGhhdmUg
+        YSBkZXNpZ25hdGVkIHJlbGVhc2UgeWV0LiBcclxuXHJcbkRPIE5PVCBhZGQg
+        c21hbGwgY2hhbmdlcywgYnVncywgcmVncmVzc2lvbnMgdG8gdGhpcyBtaWxl
+        c3RvbmUuIiwic3RhdGUiOiJhY3RpdmUiLCJjcmVhdGVkX2F0IjoiMjAxNy0w
+        NS0zMFQyMDowNTowNC4xMjBaIiwidXBkYXRlZF9hdCI6IjIwMTctMDYtMDhU
+        MTU6MjU6NTYuOTUwWiIsImR1ZV9kYXRlIjoiMjAyMC0wMS0wMSIsInN0YXJ0
+        X2RhdGUiOm51bGx9LHsiaWQiOjMxNTgzOSwiaWlkIjo0MSwicHJvamVjdF9p
+        ZCI6MTMwODMsImdyb3VwX2lkIjpudWxsLCJ0aXRsZSI6IjkuNSIsImRlc2Ny
+        aXB0aW9uIjoiIiwic3RhdGUiOiJhY3RpdmUiLCJjcmVhdGVkX2F0IjoiMjAx
+        Ny0wNS0xN1QxNjo1Njo0Ny4yMTZaIiwidXBkYXRlZF9hdCI6IjIwMTctMDUt
+        MTdUMTY6NTY6NDcuMjE2WiIsImR1ZV9kYXRlIjoiMjAxNy0wOC0yMiIsInN0
+        YXJ0X2RhdGUiOiIyMDE3LTA3LTA4In0seyJpZCI6Mjg2NzYyLCJpaWQiOjM5
+        LCJwcm9qZWN0X2lkIjoxMzA4MywiZ3JvdXBfaWQiOm51bGwsInRpdGxlIjoi
+        OS4zIiwiZGVzY3JpcHRpb24iOiIiLCJzdGF0ZSI6ImFjdGl2ZSIsImNyZWF0
+        ZWRfYXQiOiIyMDE3LTAzLTIxVDEwOjEwOjIwLjE1MFoiLCJ1cGRhdGVkX2F0
+        IjoiMjAxNy0wNC0wN1QxNDo1MjozMi43MTRaIiwiZHVlX2RhdGUiOiIyMDE3
+        LTA2LTIxIiwic3RhcnRfZGF0ZSI6IjIwMTctMDUtMDgifSx7ImlkIjoyNzQ3
+        MjcsImlpZCI6MzgsInByb2plY3RfaWQiOjEzMDgzLCJncm91cF9pZCI6bnVs
+        bCwidGl0bGUiOiJHaXRMYWIuY29tIG1vbmV0aXphdGlvbiIsImRlc2NyaXB0
+        aW9uIjoiIiwic3RhdGUiOiJhY3RpdmUiLCJjcmVhdGVkX2F0IjoiMjAxNy0w
+        Mi0yN1QxOTo1NTowOS44NzlaIiwidXBkYXRlZF9hdCI6IjIwMTctMDItMjdU
+        MTk6NTU6MDkuODc5WiIsImR1ZV9kYXRlIjpudWxsLCJzdGFydF9kYXRlIjpu
+        dWxsfSx7ImlkIjoyNzI0NjIsImlpZCI6MzcsInByb2plY3RfaWQiOjEzMDgz
+        LCJncm91cF9pZCI6bnVsbCwidGl0bGUiOiI5LjQiLCJkZXNjcmlwdGlvbiI6
+        IiIsInN0YXRlIjoiYWN0aXZlIiwiY3JlYXRlZF9hdCI6IjIwMTctMDItMjRU
+        MTM6NDk6MjUuNDEyWiIsInVwZGF0ZWRfYXQiOiIyMDE3LTA0LTA3VDE0OjUy
+        OjMzLjM3NloiLCJkdWVfZGF0ZSI6IjIwMTctMDctMjEiLCJzdGFydF9kYXRl
+        IjoiMjAxNy0wNi0wOCJ9LHsiaWQiOjI2OTc3NiwiaWlkIjozNiwicHJvamVj
+        dF9pZCI6MTMwODMsImdyb3VwX2lkIjpudWxsLCJ0aXRsZSI6IjkuMiIsImRl
+        c2NyaXB0aW9uIjoiIiwic3RhdGUiOiJhY3RpdmUiLCJjcmVhdGVkX2F0Ijoi
+        MjAxNy0wMi0yMFQxMzo1NTo0My4wMDlaIiwidXBkYXRlZF9hdCI6IjIwMTct
+        MDQtMDdUMTQ6NTQ6NTMuNTQ0WiIsImR1ZV9kYXRlIjoiMjAxNy0wNS0yMSIs
+        InN0YXJ0X2RhdGUiOiIyMDE3LTA0LTA4In0seyJpZCI6MjYxMTY2LCJpaWQi
+        OjM1LCJwcm9qZWN0X2lkIjoxMzA4MywiZ3JvdXBfaWQiOm51bGwsInRpdGxl
+        IjoiOS4xIiwiZGVzY3JpcHRpb24iOiIiLCJzdGF0ZSI6ImNsb3NlZCIsImNy
+        ZWF0ZWRfYXQiOiIyMDE3LTAyLTAzVDIwOjEyOjExLjM5OVoiLCJ1cGRhdGVk
+        X2F0IjoiMjAxNy0wNy0xMlQxMjozNDo0MC40MTVaIiwiZHVlX2RhdGUiOiIy
+        MDE3LTA0LTIxIiwic3RhcnRfZGF0ZSI6IjIwMTctMDMtMDgifSx7ImlkIjox
+        MzQyMzEsImlpZCI6MzQsInByb2plY3RfaWQiOjEzMDgzLCJncm91cF9pZCI6
+        bnVsbCwidGl0bGUiOiI4LjE3IiwiZGVzY3JpcHRpb24iOiIiLCJzdGF0ZSI6
+        ImNsb3NlZCIsImNyZWF0ZWRfYXQiOiIyMDE2LTEyLTAxVDE5OjUzOjI3Ljc5
+        MFoiLCJ1cGRhdGVkX2F0IjoiMjAxNy0wNC0yNlQxNjozMzoyNy44ODRaIiwi
+        ZHVlX2RhdGUiOiIyMDE3LTAyLTIxIiwic3RhcnRfZGF0ZSI6IjIwMTctMDEt
+        MDcifSx7ImlkIjoxMzQyMzAsImlpZCI6MzMsInByb2plY3RfaWQiOjEzMDgz
+        LCJncm91cF9pZCI6bnVsbCwidGl0bGUiOiI4LjE2IiwiZGVzY3JpcHRpb24i
+        OiIjIyMgKipbTWV0YSBpc3N1ZV0oaHR0cHM6Ly9naXRsYWIuY29tL2dpdGxh
+        Yi1vcmcvZ2l0bGFiLWNlL2lzc3Vlcy8yNTQxOSkqKiDigKIgKipbRW50ZXJw
+        cmlzZSBFZGl0aW9uIG1pbGVzdG9uZV0oaHR0cHM6Ly9naXRsYWIuY29tL2dp
+        dGxhYi1vcmcvZ2l0bGFiLWVlL21pbGVzdG9uZXMvMjApKipcclxuXHJcbioq
+        QnVpbGQqKjogW0lzc3Vlc10oaHR0cHM6Ly9naXRsYWIuY29tL2dpdGxhYi1v
+        cmcvZ2l0bGFiLWNlL2lzc3Vlcz9sYWJlbF9uYW1lPUJ1aWxkXHUwMDI2bWls
+        ZXN0b25lX3RpdGxlPTguMTZcdTAwMjZzdGF0ZT1hbGwpIOKAoiBbTWVyZ2Ug
+        cmVxdWVzdHNdKGh0dHBzOi8vZ2l0bGFiLmNvbS9naXRsYWItb3JnL2dpdGxh
+        Yi1jZS9tZXJnZV9yZXF1ZXN0cz9sYWJlbF9uYW1lPUJ1aWxkXHUwMDI2bWls
+        ZXN0b25lX3RpdGxlPTguMTZcdTAwMjZzY29wZT1hbGxcdTAwMjZzdGF0ZT1h
+        bGwpXHJcblxyXG4qKkNJKio6IFtCb2FyZF0oaHR0cHM6Ly9naXRsYWIuY29t
+        L2dpdGxhYi1vcmcvZ2l0bGFiLWNlL2JvYXJkcy8xMDM5MDY/YXV0aG9yX2lk
+        PVx1MDAyNmFzc2lnbmVlX2lkPVx1MDAyNm1pbGVzdG9uZV90aXRsZT04LjE2
+        XHUwMDI2c2VhcmNoPSkg4oCiIFtJc3N1ZXNdKGh0dHBzOi8vZ2l0bGFiLmNv
+        bS9naXRsYWItb3JnL2dpdGxhYi1jZS9pc3N1ZXM/bGFiZWxfbmFtZT1DSVx1
+        MDAyNm1pbGVzdG9uZV90aXRsZT04LjE2XHUwMDI2c3RhdGU9YWxsKSDigKIg
+        W01lcmdlIHJlcXVlc3RzXShodHRwczovL2dpdGxhYi5jb20vZ2l0bGFiLW9y
+        Zy9naXRsYWItY2UvbWVyZ2VfcmVxdWVzdHM/bGFiZWxfbmFtZT1DSVx1MDAy
+        Nm1pbGVzdG9uZV90aXRsZT04LjE2XHUwMDI2c2NvcGU9YWxsXHUwMDI2c3Rh
+        dGU9YWxsKVxyXG5cclxuKipEaXNjdXNzaW9uKio6IFtJc3N1ZXNdKGh0dHBz
+        Oi8vZ2l0bGFiLmNvbS9naXRsYWItb3JnL2dpdGxhYi1jZS9pc3N1ZXM/bGFi
+        ZWxfbmFtZT1EaXNjdXNzaW9uXHUwMDI2bWlsZXN0b25lX3RpdGxlPTguMTZc
+        dTAwMjZzdGF0ZT1hbGwpIOKAoiBbTWVyZ2UgcmVxdWVzdHNdKGh0dHBzOi8v
+        Z2l0bGFiLmNvbS9naXRsYWItb3JnL2dpdGxhYi1jZS9tZXJnZV9yZXF1ZXN0
+        cz9sYWJlbF9uYW1lPURpc2N1c3Npb25cdTAwMjZtaWxlc3RvbmVfdGl0bGU9
+        OC4xNlx1MDAyNnNjb3BlPWFsbFx1MDAyNnN0YXRlPWFsbClcclxuXHJcbioq
+        RG9jdW1lbnRhdGlvbioqOiBbQm9hcmRdKGh0dHBzOi8vZ2l0bGFiLmNvbS9n
+        aXRsYWItb3JnL2dpdGxhYi1jZS9ib2FyZHMvMTA2NTg5P2F1dGhvcl9pZD1c
+        dTAwMjZhc3NpZ25lZV9pZD1cdTAwMjZtaWxlc3RvbmVfdGl0bGU9OC4xNlx1
+        MDAyNnNlYXJjaD0pIOKAoiBbSXNzdWVzXShodHRwczovL2dpdGxhYi5jb20v
+        Z2l0bGFiLW9yZy9naXRsYWItY2UvaXNzdWVzP2xhYmVsX25hbWU9RG9jdW1l
+        bnRhdGlvblx1MDAyNm1pbGVzdG9uZV90aXRsZT04LjE2XHUwMDI2c3RhdGU9
+        YWxsKSDigKIgW01lcmdlIHJlcXVlc3RzXShodHRwczovL2dpdGxhYi5jb20v
+        Z2l0bGFiLW9yZy9naXRsYWItY2UvbWVyZ2VfcmVxdWVzdHM/bGFiZWxfbmFt
+        ZT1Eb2N1bWVudGF0aW9uXHUwMDI2bWlsZXN0b25lX3RpdGxlPTguMTZcdTAw
+        MjZzY29wZT1hbGxcdTAwMjZzdGF0ZT1hbGwpXHJcblxyXG4qKkVkZ2UqKjog
+        W0JvYXJkXShodHRwczovL2dpdGxhYi5jb20vZ2l0bGFiLW9yZy9naXRsYWIt
+        Y2UvYm9hcmRzLzEwMzkzMD9hdXRob3JfaWQ9XHUwMDI2YXNzaWduZWVfaWQ9
+        XHUwMDI2bWlsZXN0b25lX3RpdGxlPTguMTZcdTAwMjZzZWFyY2g9KSDigKIg
+        W0lzc3Vlc10oaHR0cHM6Ly9naXRsYWIuY29tL2dpdGxhYi1vcmcvZ2l0bGFi
+        LWNlL2lzc3Vlcz9sYWJlbF9uYW1lPUVkZ2VcdTAwMjZtaWxlc3RvbmVfdGl0
+        bGU9OC4xNlx1MDAyNnN0YXRlPWFsbCkg4oCiIFtNZXJnZSByZXF1ZXN0c10o
+        aHR0cHM6Ly9naXRsYWIuY29tL2dpdGxhYi1vcmcvZ2l0bGFiLWNlL21lcmdl
+        X3JlcXVlc3RzP2xhYmVsX25hbWU9RWRnZVx1MDAyNm1pbGVzdG9uZV90aXRs
+        ZT04LjE2XHUwMDI2c2NvcGU9YWxsXHUwMDI2c3RhdGU9YWxsKSDigKIgW1Bs
+        YW5dKGh0dHBzOi8vZ2l0bGFiLmNvbS9naXRsYWItb3JnL2dpdGxhYi1jZS9p
+        c3N1ZXMvMjYwNDYpXHJcblxyXG4qKkZyb250ZW5kKio6IFtJc3N1ZXNdKGh0
+        dHBzOi8vZ2l0bGFiLmNvbS9naXRsYWItb3JnL2dpdGxhYi1jZS9pc3N1ZXM/
+        bGFiZWxfbmFtZT1Gcm9udGVuZFx1MDAyNm1pbGVzdG9uZV90aXRsZT04LjE2
+        XHUwMDI2c3RhdGU9YWxsKSDigKIgW01lcmdlIHJlcXVlc3RzXShodHRwczov
+        L2dpdGxhYi5jb20vZ2l0bGFiLW9yZy9naXRsYWItY2UvbWVyZ2VfcmVxdWVz
+        dHM/bGFiZWxfbmFtZT1Gcm9udGVuZFx1MDAyNm1pbGVzdG9uZV90aXRsZT04
+        LjE2XHUwMDI2c2NvcGU9YWxsXHUwMDI2c3RhdGU9YWxsKVxyXG5cclxuKipQ
+        ZXJmb3JtYW5jZSoqOiBbQm9hcmRdKGh0dHBzOi8vZ2l0bGFiLmNvbS9naXRs
+        YWItb3JnL2dpdGxhYi1jZS9ib2FyZHMvMTAzMTkxP2F1dGhvcl9pZD1cdTAw
+        MjZhc3NpZ25lZV9pZD1cdTAwMjZtaWxlc3RvbmVfdGl0bGU9OC4xNlx1MDAy
+        NnNlYXJjaD0pIOKAoiBbSXNzdWVzXShodHRwczovL2dpdGxhYi5jb20vZ2l0
+        bGFiLW9yZy9naXRsYWItY2UvaXNzdWVzP2xhYmVsX25hbWU9UGVyZm9ybWFu
+        Y2VcdTAwMjZtaWxlc3RvbmVfdGl0bGU9OC4xNlx1MDAyNnN0YXRlPWFsbCkg
+        4oCiIFtNZXJnZSByZXF1ZXN0c10oaHR0cHM6Ly9naXRsYWIuY29tL2dpdGxh
+        Yi1vcmcvZ2l0bGFiLWNlL21lcmdlX3JlcXVlc3RzP2xhYmVsX25hbWU9UGVy
+        Zm9ybWFuY2VcdTAwMjZtaWxlc3RvbmVfdGl0bGU9OC4xNlx1MDAyNnNjb3Bl
+        PWFsbFx1MDAyNnN0YXRlPWFsbClcclxuXHJcbioqUGxhdGZvcm0qKjogW0lz
+        c3Vlc10oaHR0cHM6Ly9naXRsYWIuY29tL2dpdGxhYi1vcmcvZ2l0bGFiLWNl
+        L2lzc3Vlcz9sYWJlbF9uYW1lPVBsYXRmb3JtXHUwMDI2bWlsZXN0b25lX3Rp
+        dGxlPTguMTZcdTAwMjZzdGF0ZT1hbGwpIOKAoiBbTWVyZ2UgcmVxdWVzdHNd
+        KGh0dHBzOi8vZ2l0bGFiLmNvbS9naXRsYWItb3JnL2dpdGxhYi1jZS9tZXJn
+        ZV9yZXF1ZXN0cz9sYWJlbF9uYW1lPVBsYXRmb3JtXHUwMDI2bWlsZXN0b25l
+        X3RpdGxlPTguMTZcdTAwMjZzY29wZT1hbGxcdTAwMjZzdGF0ZT1hbGwpXHJc
+        blxyXG4qKlJlbGVhc2UqKjogW0lzc3Vlc10oaHR0cHM6Ly9naXRsYWIuY29t
+        L2dpdGxhYi1vcmcvZ2l0bGFiLWNlL2lzc3Vlcz9sYWJlbF9uYW1lPVJlbGVh
+        c2VcdTAwMjZtaWxlc3RvbmVfdGl0bGU9OC4xNlx1MDAyNnN0YXRlPWFsbClc
+        clxuXHJcbioqU3VwcG9ydCoqOiBbQm9hcmRdKGh0dHBzOi8vZ2l0bGFiLmNv
+        bS9naXRsYWItb3JnL2dpdGxhYi1jZS9ib2FyZHMvMTAzOTE4P2F1dGhvcl9p
+        ZD1cdTAwMjZhc3NpZ25lZV9pZD1cdTAwMjZtaWxlc3RvbmVfdGl0bGU9OC4x
+        Nlx1MDAyNnNlYXJjaD0pIOKAoiBbU1AzIElzc3Vlc10oaHR0cHM6Ly9naXRs
+        YWIuY29tL2dpdGxhYi1vcmcvZ2l0bGFiLWNlL2lzc3Vlcz9sYWJlbF9uYW1l
+        PVNQM1x1MDAyNm1pbGVzdG9uZV90aXRsZT04LjE2XHUwMDI2c3RhdGU9YWxs
+        KSDigKIgW1NQMiBJc3N1ZXNdKGh0dHBzOi8vZ2l0bGFiLmNvbS9naXRsYWIt
+        b3JnL2dpdGxhYi1jZS9pc3N1ZXM/bGFiZWxfbmFtZT1TUDJcdTAwMjZtaWxl
+        c3RvbmVfdGl0bGU9OC4xNlx1MDAyNnN0YXRlPWFsbCkg4oCiIFtTUDEgSXNz
+        dWVzXShodHRwczovL2dpdGxhYi5jb20vZ2l0bGFiLW9yZy9naXRsYWItY2Uv
+        aXNzdWVzP2xhYmVsX25hbWU9U1AxXHUwMDI2bWlsZXN0b25lX3RpdGxlPTgu
+        MTZcdTAwMjZzdGF0ZT1hbGwpXHJcblxyXG4qKlVYKio6IFtCb2FyZF0oaHR0
+        cHM6Ly9naXRsYWIuY29tL2dpdGxhYi1vcmcvZ2l0bGFiLWNlL2JvYXJkcy8x
+        MDMxNjE/YXV0aG9yX2lkPVx1MDAyNmFzc2lnbmVlX2lkPVx1MDAyNm1pbGVz
+        dG9uZV90aXRsZT04LjE2XHUwMDI2c2VhcmNoPSkg4oCiIFtJc3N1ZXNdKGh0
+        dHBzOi8vZ2l0bGFiLmNvbS9naXRsYWItb3JnL2dpdGxhYi1jZS9pc3N1ZXM/
+        bGFiZWxfbmFtZT1VWFx1MDAyNm1pbGVzdG9uZV90aXRsZT04LjE2XHUwMDI2
+        c3RhdGU9YWxsKSIsInN0YXRlIjoiY2xvc2VkIiwiY3JlYXRlZF9hdCI6IjIw
+        MTYtMTItMDFUMTk6NTM6MTYuMzI5WiIsInVwZGF0ZWRfYXQiOiIyMDE3LTAz
+        LTA4VDE2OjM0OjM3Ljg1OFoiLCJkdWVfZGF0ZSI6IjIwMTctMDEtMjIiLCJz
+        dGFydF9kYXRlIjpudWxsfSx7ImlkIjoxMTg3ODEsImlpZCI6MzIsInByb2pl
+        Y3RfaWQiOjEzMDgzLCJncm91cF9pZCI6bnVsbCwidGl0bGUiOiI4LjE1Iiwi
+        ZGVzY3JpcHRpb24iOiIiLCJzdGF0ZSI6ImNsb3NlZCIsImNyZWF0ZWRfYXQi
+        OiIyMDE2LTEwLTI0VDEyOjMwOjU5LjU3NVoiLCJ1cGRhdGVkX2F0IjoiMjAx
+        Ny0wMi0wM1QxODozMDowNS4zMjBaIiwiZHVlX2RhdGUiOiIyMDE2LTEyLTIy
+        Iiwic3RhcnRfZGF0ZSI6bnVsbH0seyJpZCI6MTA4MDE5LCJpaWQiOjMxLCJw
+        cm9qZWN0X2lkIjoxMzA4MywiZ3JvdXBfaWQiOm51bGwsInRpdGxlIjoiOC4x
+        NCIsImRlc2NyaXB0aW9uIjoiIiwic3RhdGUiOiJjbG9zZWQiLCJjcmVhdGVk
+        X2F0IjoiMjAxNi0wOS0yOFQxNDo0ODozNy45OTZaIiwidXBkYXRlZF9hdCI6
+        IjIwMTYtMTItMjdUMTI6NDI6MTYuMTMwWiIsImR1ZV9kYXRlIjoiMjAxNi0x
+        MS0yMiIsInN0YXJ0X2RhdGUiOm51bGx9LHsiaWQiOjkwNjk5LCJpaWQiOjMw
+        LCJwcm9qZWN0X2lkIjoxMzA4MywiZ3JvdXBfaWQiOm51bGwsInRpdGxlIjoi
+        OC4xMyIsImRlc2NyaXB0aW9uIjoiIiwic3RhdGUiOiJjbG9zZWQiLCJjcmVh
+        dGVkX2F0IjoiMjAxNi0wOC0yNFQxMDo1OTo0My4wNDJaIiwidXBkYXRlZF9h
+        dCI6IjIwMTYtMTEtMjNUMDU6NTU6MDguNTgzWiIsImR1ZV9kYXRlIjoiMjAx
+        Ni0xMC0yMiIsInN0YXJ0X2RhdGUiOm51bGx9LHsiaWQiOjY1MjQ5LCJpaWQi
+        OjI5LCJwcm9qZWN0X2lkIjoxMzA4MywiZ3JvdXBfaWQiOm51bGwsInRpdGxl
+        IjoiQmFja2xvZyIsImRlc2NyaXB0aW9uIjoiSXNzdWVzIHRoYXQgd2Ugd2Fu
+        dCB0byBkbywgYnV0IGFyZSBub3QgcGxhbm5lZCByaWdodCBub3cuIiwic3Rh
+        dGUiOiJhY3RpdmUiLCJjcmVhdGVkX2F0IjoiMjAxNi0wNS0xOFQyMTo1OTox
+        My44MjZaIiwidXBkYXRlZF9hdCI6IjIwMTYtMDUtMThUMjE6NTk6MTMuODI2
+        WiIsImR1ZV9kYXRlIjpudWxsLCJzdGFydF9kYXRlIjpudWxsfSx7ImlkIjo2
+        NDQwMCwiaWlkIjoyOCwicHJvamVjdF9pZCI6MTMwODMsImdyb3VwX2lkIjpu
+        dWxsLCJ0aXRsZSI6IjguMTIiLCJkZXNjcmlwdGlvbiI6IiIsInN0YXRlIjoi
+        Y2xvc2VkIiwiY3JlYXRlZF9hdCI6IjIwMTYtMDUtMTZUMjI6MDU6NDAuMTEx
+        WiIsInVwZGF0ZWRfYXQiOiIyMDE2LTEwLTIwVDE0OjE0OjUzLjIxM1oiLCJk
+        dWVfZGF0ZSI6IjIwMTYtMDktMjIiLCJzdGFydF9kYXRlIjpudWxsfSx7Imlk
+        Ijo2MjEwOSwiaWlkIjoyNywicHJvamVjdF9pZCI6MTMwODMsImdyb3VwX2lk
+        IjpudWxsLCJ0aXRsZSI6IjguMTEiLCJkZXNjcmlwdGlvbiI6IiIsInN0YXRl
+        IjoiY2xvc2VkIiwiY3JlYXRlZF9hdCI6IjIwMTYtMDUtMDlUMDg6NDY6NTMu
+        NTE0WiIsInVwZGF0ZWRfYXQiOiIyMDE2LTA5LTI2VDA3OjA5OjU5LjIyMVoi
+        LCJkdWVfZGF0ZSI6IjIwMTYtMDgtMjIiLCJzdGFydF9kYXRlIjpudWxsfSx7
+        ImlkIjo1NTUyNSwiaWlkIjoyNiwicHJvamVjdF9pZCI6MTMwODMsImdyb3Vw
+        X2lkIjpudWxsLCJ0aXRsZSI6IjguMTAiLCJkZXNjcmlwdGlvbiI6IiIsInN0
+        YXRlIjoiY2xvc2VkIiwiY3JlYXRlZF9hdCI6IjIwMTYtMDQtMTFUMjE6MjI6
+        NTMuOTI0WiIsInVwZGF0ZWRfYXQiOiIyMDE2LTA4LTIzVDIxOjQzOjI4LjMy
+        OVoiLCJkdWVfZGF0ZSI6IjIwMTYtMDctMjIiLCJzdGFydF9kYXRlIjpudWxs
+        fSx7ImlkIjo0Nzg2MywiaWlkIjoyNSwicHJvamVjdF9pZCI6MTMwODMsImdy
+        b3VwX2lkIjpudWxsLCJ0aXRsZSI6IjguOSIsImRlc2NyaXB0aW9uIjoiIiwi
+        c3RhdGUiOiJjbG9zZWQiLCJjcmVhdGVkX2F0IjoiMjAxNi0wMy0wNFQxMzoz
+        ODo0MS40MjRaIiwidXBkYXRlZF9hdCI6IjIwMTYtMDctMjVUMTc6MzM6Mzgu
+        MzgzWiIsImR1ZV9kYXRlIjoiMjAxNi0wNi0yMiIsInN0YXJ0X2RhdGUiOm51
+        bGx9LHsiaWQiOjQyNDAyLCJpaWQiOjI0LCJwcm9qZWN0X2lkIjoxMzA4Mywi
+        Z3JvdXBfaWQiOm51bGwsInRpdGxlIjoiOC44IiwiZGVzY3JpcHRpb24iOiIi
+        LCJzdGF0ZSI6ImNsb3NlZCIsImNyZWF0ZWRfYXQiOiIyMDE2LTAyLTAzVDEy
+        OjQ3OjIxLjI1MloiLCJ1cGRhdGVkX2F0IjoiMjAxNi0wNi0yMlQxNzoxMDoz
+        NC44OTlaIiwiZHVlX2RhdGUiOiIyMDE2LTA1LTIyIiwic3RhcnRfZGF0ZSI6
+        bnVsbH1d
+    http_version: 
+  recorded_at: Thu, 03 Aug 2017 21:26:43 GMT
+- request:
+    method: post
+    uri: "https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/merge_requests"
+    body:
+      encoding: UTF-8
+      string: title=WIP%3A%20Testing%20release-tools&description=&assignee_id=654619&labels=&source_branch=testing-release-tools&target_branch=master&milestone_id=272462
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Aug 2017 21:27:38 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1370'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"4837325b75291471ddb1e8d5478d447a"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 5da83f7e-b527-458b-96f6-d07f22b9b7cb
+      X-Runtime:
+      - '56.234545'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":4549924,"iid":13294,"project_id":13083,"title":"WIP: Testing
+        release-tools","description":"","state":"opened","created_at":"2017-08-03T21:26:42.337Z","updated_at":"2017-08-03T21:26:42.337Z","target_branch":"master","source_branch":"testing-release-tools","upvotes":0,"downvotes":0,"author":{"name":"James
+        Edwards-Jones","gitlabname":"jamedjo","id":654619,"state":"active","avatar_url":"https://gitlab.com/uploads/-/system/gitlab/avatar/654619/avatar.png","web_url":"https://gitlab.com/jamedjo"},"assignee":{"name":"James
+        Edwards-Jones","gitlabname":"jamedjo","id":654619,"state":"active","avatar_url":"https://gitlab.com/uploads/-/system/gitlab/avatar/654619/avatar.png","web_url":"https://gitlab.com/jamedjo"},"source_project_id":13083,"target_project_id":13083,"labels":[],"work_in_progress":true,"milestone":{"id":272462,"iid":37,"project_id":13083,"group_id":null,"title":"9.4","description":"","state":"active","created_at":"2017-02-24T13:49:25.412Z","updated_at":"2017-04-07T14:52:33.376Z","due_date":"2017-07-21","start_date":"2017-06-08"},"merge_when_pipeline_succeeds":false,"merge_status":"unchecked","sha":null,"merge_commit_sha":null,"gitlab_notes_count":0,"approvals_before_merge":null,"should_remove_source_branch":null,"force_remove_source_branch":null,"squash":false,"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/13294","subscribed":true}'
+    http_version: 
+  recorded_at: Thu, 03 Aug 2017 21:27:40 GMT
+- request:
+    method: get
+    uri: "https://gitlab.com/api/v4/groups/gitlab-org/milestones"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 03 Jan 2018 18:38:05 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2714'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a3b0b813049e38739f51831f8dbc032a"
+      Link:
+      - <https://gitlab.com/api/v4/groups/gitlab-org/milestones?id=gitlab-org&page=1&per_page=20&state=all>;
+        rel="first", <https://gitlab.com/api/v4/groups/gitlab-org/milestones?id=gitlab-org&page=1&per_page=20&state=all>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 77367c24-5a8b-44f3-868c-03f358b3923f
+      X-Runtime:
+      - '0.227178'
+      X-Total:
+      - '11'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '7'
+      Ratelimit-Remaining:
+      - '593'
+      Ratelimit-Reset:
+      - '1515004745'
+      Ratelimit-Resettime:
+      - Thu, 03 Jan 2018 18:39:05 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":427855,"iid":11,"group_id":9970,"title":"Next 3-6 months","description":"Bigger
+        issues we plan to ship in the next 3-6 months, but don''t have a designated
+        release yet. \r\n\r\nDO NOT add small changes, bugs, regressions to this milestone.","state":"active","created_at":"2017-12-11T16:26:55.828Z","updated_at":"2017-12-11T16:26:55.828Z","due_date":"2020-02-01","start_date":null},{"id":427853,"iid":10,"group_id":9970,"title":"Next
+        2-3 months","description":"Bigger issues we plan to ship in the next 2-3 months,
+        but don''t have a designated release yet. \r\n\r\nDO NOT add small changes,
+        bugs, regressions to this milestone.","state":"active","created_at":"2017-12-11T16:26:33.141Z","updated_at":"2017-12-11T16:26:33.141Z","due_date":"2020-01-01","start_date":null},{"id":424944,"iid":9,"group_id":9970,"title":"10.7","description":"","state":"active","created_at":"2017-12-06T16:45:41.880Z","updated_at":"2017-12-06T16:45:41.880Z","due_date":"2018-04-22","start_date":"2018-03-08"},{"id":416486,"iid":8,"group_id":9970,"title":"10.6","description":"","state":"active","created_at":"2017-11-21T20:05:35.697Z","updated_at":"2017-11-21T20:05:35.697Z","due_date":"2018-03-22","start_date":"2018-02-08"},{"id":404412,"iid":7,"group_id":9970,"title":"10.5","description":"","state":"active","created_at":"2017-11-02T10:41:09.107Z","updated_at":"2017-11-02T10:42:17.019Z","due_date":"2018-02-22","start_date":"2018-01-08"},{"id":381642,"iid":6,"group_id":9970,"title":"Next
+        6-12 months","description":"","state":"active","created_at":"2017-09-26T10:12:43.523Z","updated_at":"2017-10-16T19:25:05.241Z","due_date":"2020-03-01","start_date":null},{"id":362887,"iid":5,"group_id":9970,"title":"11.0","description":"","state":"active","created_at":"2017-08-22T11:26:37.313Z","updated_at":"2017-08-22T11:26:37.313Z","due_date":null,"start_date":null},{"id":360828,"iid":4,"group_id":9970,"title":"10.4","description":"","state":"active","created_at":"2017-08-16T16:52:35.085Z","updated_at":"2017-08-16T16:52:35.085Z","due_date":"2018-01-22","start_date":"2017-12-08"},{"id":360827,"iid":3,"group_id":9970,"title":"10.3","description":"","state":"active","created_at":"2017-08-16T16:51:52.890Z","updated_at":"2017-08-16T16:51:52.890Z","due_date":"2017-12-22","start_date":"2017-11-08"},{"id":349702,"iid":2,"group_id":9970,"title":"10.2","description":"","state":"active","created_at":"2017-07-24T13:53:41.702Z","updated_at":"2017-07-27T14:38:42.007Z","due_date":"2017-11-22","start_date":"2017-10-08"},{"id":349690,"iid":1,"group_id":9970,"title":"10.1","description":"","state":"active","created_at":"2017-07-24T13:26:40.259Z","updated_at":"2017-10-23T19:45:18.633Z","due_date":"2017-10-22","start_date":"2017-09-08"}]'
+    http_version: 
+  recorded_at: Wed, 03 Jan 2018 18:38:05 GMT
+recorded_with: VCR 2.9.3

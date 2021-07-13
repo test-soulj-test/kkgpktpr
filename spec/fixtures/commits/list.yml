@@ -1,0 +1,402 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits?per_page=5&ref_name=master
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 15 Apr 2019 10:59:19 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3252'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"c35d3512dd5c1fdb679f257dae964843"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fsecurity%2Fgitlab%2Dce/repository/commits?id=gitlab-org%2Fsecurity%2Fgitlab-foss&page=2&per_page=5&ref_name=master>;
+        rel="next", <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fsecurity%2Fgitlab%2Dce/repository/commits?id=gitlab-org%2Fsecurity%2Fgitlab-foss&page=1&per_page=5&ref_name=master>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fsecurity%2Fgitlab%2Dce/repository/commits?id=gitlab-org%2Fsecurity%2Fgitlab-foss&page=18464&per_page=5&ref_name=master>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - '2'
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '5'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - nSEE1H5ysp6
+      X-Runtime:
+      - '1.164073'
+      X-Total:
+      - '92317'
+      X-Total-Pages:
+      - '18464'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1555326019'
+      Ratelimit-Resettime:
+      - Tue, 15 Apr 2019 11:00:19 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOiJjMzJiMmQzZDJiN2Q0ZTJjZThiNThlZWUxMmIzMWYxZjkwN2U1N2VkIiwic2hvcnRfaWQiOiJjMzJiMmQzZCIsImNyZWF0ZWRfYXQiOiIyMDE5LTA0LTE1VDEwOjE3OjA2LjAwMFoiLCJwYXJlbnRfaWRzIjpbImQ1ZTM2NzdlMGM1ZjQ1NjVjZjQ1YzFkYTY2NmE0ZmNhNDVkOTMwZjUiLCI5M2E0NGUxMzViMGQwOWVkMGZkMzFkY2U1ZDgxODQxYTk2ZWY4ZDY3Il0sInRpdGxlIjoiTWVyZ2UgYnJhbmNoICdmcm96ZW4tc3RyaW5nLXNwZWMtc29tZScgaW50byAnbWFzdGVyJyIsIm1lc3NhZ2UiOiJNZXJnZSBicmFuY2ggJ2Zyb3plbi1zdHJpbmctc3BlYy1zb21lJyBpbnRvICdtYXN0ZXInXG5cbkFkZCBzb21lIGZyb3plbiBzdHJpbmcgdG8gc3BlYy8qKi8qLnJiXG5cblNlZSBtZXJnZSByZXF1ZXN0IGdpdGxhYi1vcmcvZ2l0bGFiLWNlITI3MzQxIiwiYXV0aG9yX25hbWUiOiJSw6lteSBDb3V0YWJsZSIsImF1dGhvcl9lbWFpbCI6InJlbXlAcnltYWkubWUiLCJhdXRob3JlZF9kYXRlIjoiMjAxOS0wNC0xNVQxMDoxNzowNi4wMDBaIiwiY29tbWl0dGVyX25hbWUiOiJSw6lteSBDb3V0YWJsZSIsImNvbW1pdHRlcl9lbWFpbCI6InJlbXlAcnltYWkubWUiLCJjb21taXR0ZWRfZGF0ZSI6IjIwMTktMDQtMTVUMTA6MTc6MDYuMDAwWiJ9LHsiaWQiOiI5M2E0NGUxMzViMGQwOWVkMGZkMzFkY2U1ZDgxODQxYTk2ZWY4ZDY3Iiwic2hvcnRfaWQiOiI5M2E0NGUxMyIsImNyZWF0ZWRfYXQiOiIyMDE5LTA0LTE1VDEwOjE3OjA1LjAwMFoiLCJwYXJlbnRfaWRzIjpbImQ1ZTM2NzdlMGM1ZjQ1NjVjZjQ1YzFkYTY2NmE0ZmNhNDVkOTMwZjUiXSwidGl0bGUiOiJBZGQgc29tZSBmcm96ZW4gc3RyaW5nIHRvIHNwZWMvKiovKi5yYiIsIm1lc3NhZ2UiOiJBZGQgc29tZSBmcm96ZW4gc3RyaW5nIHRvIHNwZWMvKiovKi5yYlxuXG5BZGRzIGZyb3plbiBzdHJpbmcgdG8gdGhlIGZvbGxvd2luZzpcblxuKiBzcGVjL2Jpbi8qKi8qLnJiXG4qIHNwZWMvY29uZmlnLyoqLyoucmJcbiogc3BlYy9jb250cm9sbGVycy8qKi8qLnJiXG5cbnhyZWYgaHR0cHM6Ly9naXRsYWIuY29tL2dpdGxhYi1vcmcvZ2l0bGFiLWNlL2lzc3Vlcy81OTc1OFxuIiwiYXV0aG9yX25hbWUiOiJnZnlvdW5nIiwiYXV0aG9yX2VtYWlsIjoiZ2Z5b3VuZzE3K2dpdGxhYkBnbWFpbC5jb20iLCJhdXRob3JlZF9kYXRlIjoiMjAxOS0wNC0xNVQxMDoxNzowNS4wMDBaIiwiY29tbWl0dGVyX25hbWUiOiJSw6lteSBDb3V0YWJsZSIsImNvbW1pdHRlcl9lbWFpbCI6InJlbXlAcnltYWkubWUiLCJjb21taXR0ZWRfZGF0ZSI6IjIwMTktMDQtMTVUMTA6MTc6MDUuMDAwWiJ9LHsiaWQiOiJkNWUzNjc3ZTBjNWY0NTY1Y2Y0NWMxZGE2NjZhNGZjYTQ1ZDkzMGY1Iiwic2hvcnRfaWQiOiJkNWUzNjc3ZSIsImNyZWF0ZWRfYXQiOiIyMDE5LTA0LTE1VDEwOjA1OjA5LjAwMFoiLCJwYXJlbnRfaWRzIjpbImE1ZjEzZTU5MWY2MTc5MzE0MzRkNjYyNjM0MThhMmYyNmFiZTNhYmUiLCJiMTNlY2RkNmNjMGQ5NzJhNDU2M2UxNTA5ZDQ5OTk2OTY3NmYxNDg4Il0sInRpdGxlIjoiTWVyZ2UgYnJhbmNoICdpbWFnZS1jb21tZW50LXJldmlld3MtY2UnIGludG8gJ21hc3RlciciLCJtZXNzYWdlIjoiTWVyZ2UgYnJhbmNoICdpbWFnZS1jb21tZW50LXJldmlld3MtY2UnIGludG8gJ21hc3RlcidcblxuQ0UgYmFja3BvcnQgb2YgaW1hZ2UtY29tbWVudC1yZXZpZXdzXG5cblNlZSBtZXJnZSByZXF1ZXN0IGdpdGxhYi1vcmcvZ2l0bGFiLWNlITI3MjcxIiwiYXV0aG9yX25hbWUiOiJGaWxpcGEgTGFjZXJkYSIsImF1dGhvcl9lbWFpbCI6ImZpbGlwYUBnaXRsYWIuY29tIiwiYXV0aG9yZWRfZGF0ZSI6IjIwMTktMDQtMTVUMTA6MDU6MDkuMDAwWiIsImNvbW1pdHRlcl9uYW1lIjoiRmlsaXBhIExhY2VyZGEiLCJjb21taXR0ZXJfZW1haWwiOiJmaWxpcGFAZ2l0bGFiLmNvbSIsImNvbW1pdHRlZF9kYXRlIjoiMjAxOS0wNC0xNVQxMDowNTowOS4wMDBaIn0seyJpZCI6ImE1ZjEzZTU5MWY2MTc5MzE0MzRkNjYyNjM0MThhMmYyNmFiZTNhYmUiLCJzaG9ydF9pZCI6ImE1ZjEzZTU5IiwiY3JlYXRlZF9hdCI6IjIwMTktMDQtMTVUMDk6NTg6MzEuMDAwWiIsInBhcmVudF9pZHMiOlsiZDgzZWI2M2JlZWYyOGE2MjI5YjRiZjg1MWVlMzRjNTE5MzhlMjljNyIsImI1YWIxZDkxZTM3Nzc4N2UwNzExZWZmZWJjZTA3M2FmNzZiZWNjNTYiXSwidGl0bGUiOiJNZXJnZSBicmFuY2ggJzEwOTIxLWRpc3BsYXktc2NvcGVkLWxhYmVscy1jZScgaW50byAnbWFzdGVyJyIsIm1lc3NhZ2UiOiJNZXJnZSBicmFuY2ggJzEwOTIxLWRpc3BsYXktc2NvcGVkLWxhYmVscy1jZScgaW50byAnbWFzdGVyJ1xuXG5EaXNwbGF5IHNjb3BlZCBsYWJlbHMgaW4gSXNzdWUgQm9hcmRzXG5cblNlZSBtZXJnZSByZXF1ZXN0IGdpdGxhYi1vcmcvZ2l0bGFiLWNlITI3MTY0IiwiYXV0aG9yX25hbWUiOiJLdXNoYWwgUGFuZHlhIiwiYXV0aG9yX2VtYWlsIjoia3VzaGFsc3BhbmR5YUBnbWFpbC5jb20iLCJhdXRob3JlZF9kYXRlIjoiMjAxOS0wNC0xNVQwOTo1ODozMS4wMDBaIiwiY29tbWl0dGVyX25hbWUiOiJLdXNoYWwgUGFuZHlhIiwiY29tbWl0dGVyX2VtYWlsIjoia3VzaGFsc3BhbmR5YUBnbWFpbC5jb20iLCJjb21taXR0ZWRfZGF0ZSI6IjIwMTktMDQtMTVUMDk6NTg6MzEuMDAwWiJ9LHsiaWQiOiJiNWFiMWQ5MWUzNzc3ODdlMDcxMWVmZmViY2UwNzNhZjc2YmVjYzU2Iiwic2hvcnRfaWQiOiJiNWFiMWQ5MSIsImNyZWF0ZWRfYXQiOiIyMDE5LTA0LTE1VDA5OjU4OjMwLjAwMFoiLCJwYXJlbnRfaWRzIjpbImQ4M2ViNjNiZWVmMjhhNjIyOWI0YmY4NTFlZTM0YzUxOTM4ZTI5YzciXSwidGl0bGUiOiJEaXNwbGF5IHNjb3BlZCBsYWJlbHMgaW4gSXNzdWUgQm9hcmRzIiwibWVzc2FnZSI6IkRpc3BsYXkgc2NvcGVkIGxhYmVscyBpbiBJc3N1ZSBCb2FyZHNcblxuVGhpcyBjaGFuZ2UgYnJpbmdzIG5ldyBTY29wZWQgbGFiZWxzIHRvIElzc3VlIGJvYXJkIGFzIHdlbGwuXG5XaXRoIHRoZSBsYXN0IGNoYW5nZSwgdGhpcyB3YXMgbWlzc2VkLlxuIiwiYXV0aG9yX25hbWUiOiJSYWphdCBKYWluIiwiYXV0aG9yX2VtYWlsIjoicmphaW5AZ2l0bGFiLmNvbSIsImF1dGhvcmVkX2RhdGUiOiIyMDE5LTA0LTE1VDA5OjU4OjMwLjAwMFoiLCJjb21taXR0ZXJfbmFtZSI6Ikt1c2hhbCBQYW5keWEiLCJjb21taXR0ZXJfZW1haWwiOiJrdXNoYWxzcGFuZHlhQGdtYWlsLmNvbSIsImNvbW1pdHRlZF9kYXRlIjoiMjAxOS0wNC0xNVQwOTo1ODozMC4wMDBaIn1d
+    http_version: 
+  recorded_at: Mon, 15 Apr 2019 10:59:19 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/c32b2d3d2b7d4e2ce8b58eee12b31f1f907e57ed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 15 Apr 2019 10:59:19 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '923'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"5104b0dd57ab49ec153a174730b4568b"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - pBZAseByxo8
+      X-Runtime:
+      - '0.089162'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1555326019'
+      Ratelimit-Resettime:
+      - Tue, 15 Apr 2019 11:00:19 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImMzMmIyZDNkMmI3ZDRlMmNlOGI1OGVlZTEyYjMxZjFmOTA3ZTU3ZWQiLCJzaG9ydF9pZCI6ImMzMmIyZDNkIiwiY3JlYXRlZF9hdCI6IjIwMTktMDQtMTVUMTA6MTc6MDYuMDAwWiIsInBhcmVudF9pZHMiOlsiZDVlMzY3N2UwYzVmNDU2NWNmNDVjMWRhNjY2YTRmY2E0NWQ5MzBmNSIsIjkzYTQ0ZTEzNWIwZDA5ZWQwZmQzMWRjZTVkODE4NDFhOTZlZjhkNjciXSwidGl0bGUiOiJNZXJnZSBicmFuY2ggJ2Zyb3plbi1zdHJpbmctc3BlYy1zb21lJyBpbnRvICdtYXN0ZXInIiwibWVzc2FnZSI6Ik1lcmdlIGJyYW5jaCAnZnJvemVuLXN0cmluZy1zcGVjLXNvbWUnIGludG8gJ21hc3RlcidcblxuQWRkIHNvbWUgZnJvemVuIHN0cmluZyB0byBzcGVjLyoqLyoucmJcblxuU2VlIG1lcmdlIHJlcXVlc3QgZ2l0bGFiLW9yZy9naXRsYWItY2UhMjczNDEiLCJhdXRob3JfbmFtZSI6IlLDqW15IENvdXRhYmxlIiwiYXV0aG9yX2VtYWlsIjoicmVteUByeW1haS5tZSIsImF1dGhvcmVkX2RhdGUiOiIyMDE5LTA0LTE1VDEwOjE3OjA2LjAwMFoiLCJjb21taXR0ZXJfbmFtZSI6IlLDqW15IENvdXRhYmxlIiwiY29tbWl0dGVyX2VtYWlsIjoicmVteUByeW1haS5tZSIsImNvbW1pdHRlZF9kYXRlIjoiMjAxOS0wNC0xNVQxMDoxNzowNi4wMDBaIiwic3RhdHMiOnsiYWRkaXRpb25zIjozMTMsImRlbGV0aW9ucyI6NCwidG90YWwiOjMxN30sInN0YXR1cyI6InJ1bm5pbmciLCJsYXN0X3BpcGVsaW5lIjp7ImlkIjo1NjgyNzY2MCwic2hhIjoiYzMyYjJkM2QyYjdkNGUyY2U4YjU4ZWVlMTJiMzFmMWY5MDdlNTdlZCIsInJlZiI6Im1hc3RlciIsInN0YXR1cyI6InJ1bm5pbmciLCJ3ZWJfdXJsIjoiaHR0cHM6Ly9naXRsYWIuY29tL2dpdGxhYi1vcmcvZ2l0bGFiLWNlL3BpcGVsaW5lcy81NjgyNzY2MCJ9LCJwcm9qZWN0X2lkIjoxMzA4M30=
+    http_version: 
+  recorded_at: Mon, 15 Apr 2019 10:59:19 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/93a44e135b0d09ed0fd31dce5d81841a96ef8d67
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 15 Apr 2019 10:59:20 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '774'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"94e5ba33894824608eee3e985d89d5d4"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - XUGfqTr7v97
+      X-Runtime:
+      - '0.073379'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '2'
+      Ratelimit-Remaining:
+      - '598'
+      Ratelimit-Reset:
+      - '1555326020'
+      Ratelimit-Resettime:
+      - Tue, 15 Apr 2019 11:00:20 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6IjkzYTQ0ZTEzNWIwZDA5ZWQwZmQzMWRjZTVkODE4NDFhOTZlZjhkNjciLCJzaG9ydF9pZCI6IjkzYTQ0ZTEzIiwiY3JlYXRlZF9hdCI6IjIwMTktMDQtMTVUMTA6MTc6MDUuMDAwWiIsInBhcmVudF9pZHMiOlsiZDVlMzY3N2UwYzVmNDU2NWNmNDVjMWRhNjY2YTRmY2E0NWQ5MzBmNSJdLCJ0aXRsZSI6IkFkZCBzb21lIGZyb3plbiBzdHJpbmcgdG8gc3BlYy8qKi8qLnJiIiwibWVzc2FnZSI6IkFkZCBzb21lIGZyb3plbiBzdHJpbmcgdG8gc3BlYy8qKi8qLnJiXG5cbkFkZHMgZnJvemVuIHN0cmluZyB0byB0aGUgZm9sbG93aW5nOlxuXG4qIHNwZWMvYmluLyoqLyoucmJcbiogc3BlYy9jb25maWcvKiovKi5yYlxuKiBzcGVjL2NvbnRyb2xsZXJzLyoqLyoucmJcblxueHJlZiBodHRwczovL2dpdGxhYi5jb20vZ2l0bGFiLW9yZy9naXRsYWItY2UvaXNzdWVzLzU5NzU4XG4iLCJhdXRob3JfbmFtZSI6ImdmeW91bmciLCJhdXRob3JfZW1haWwiOiJnZnlvdW5nMTcrZ2l0bGFiQGdtYWlsLmNvbSIsImF1dGhvcmVkX2RhdGUiOiIyMDE5LTA0LTE1VDEwOjE3OjA1LjAwMFoiLCJjb21taXR0ZXJfbmFtZSI6IlLDqW15IENvdXRhYmxlIiwiY29tbWl0dGVyX2VtYWlsIjoicmVteUByeW1haS5tZSIsImNvbW1pdHRlZF9kYXRlIjoiMjAxOS0wNC0xNVQxMDoxNzowNS4wMDBaIiwic3RhdHMiOnsiYWRkaXRpb25zIjozMTMsImRlbGV0aW9ucyI6NCwidG90YWwiOjMxN30sInN0YXR1cyI6bnVsbCwibGFzdF9waXBlbGluZSI6bnVsbCwicHJvamVjdF9pZCI6MTMwODN9
+    http_version: 
+  recorded_at: Mon, 15 Apr 2019 10:59:20 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/d5e3677e0c5f4565cf45c1da666a4fca45d930f5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 15 Apr 2019 10:59:21 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '930'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"fb67d36d7cc35a27669d3578d71d667b"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - S87hqFn64W6
+      X-Runtime:
+      - '0.062818'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '3'
+      Ratelimit-Remaining:
+      - '597'
+      Ratelimit-Reset:
+      - '1555326021'
+      Ratelimit-Resettime:
+      - Tue, 15 Apr 2019 11:00:21 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"d5e3677e0c5f4565cf45c1da666a4fca45d930f5","short_id":"d5e3677e","created_at":"2019-04-15T10:05:09.000Z","parent_ids":["a5f13e591f617931434d66263418a2f26abe3abe","b13ecdd6cc0d972a4563e1509d499969676f1488"],"title":"Merge
+        branch ''image-comment-reviews-ce'' into ''master''","message":"Merge branch
+        ''image-comment-reviews-ce'' into ''master''\n\nCE backport of image-comment-reviews\n\nSee
+        merge request gitlab-org/gitlab-foss!27271","author_name":"Filipa Lacerda","author_email":"filipa@gitlab.com","authored_date":"2019-04-15T10:05:09.000Z","committer_name":"Filipa
+        Lacerda","committer_email":"filipa@gitlab.com","committed_date":"2019-04-15T10:05:09.000Z","stats":{"additions":39,"deletions":11,"total":50},"status":"running","last_pipeline":{"id":56832777,"sha":"d5e3677e0c5f4565cf45c1da666a4fca45d930f5","ref":"master","status":"running","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/56832777"},"project_id":13083}'
+    http_version: 
+  recorded_at: Mon, 15 Apr 2019 10:59:21 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/a5f13e591f617931434d66263418a2f26abe3abe
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 15 Apr 2019 10:59:21 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '955'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"be48da54afb9405ba38550ccdd96fa09"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - m99WYhB6Lj5
+      X-Runtime:
+      - '0.067261'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '4'
+      Ratelimit-Remaining:
+      - '596'
+      Ratelimit-Reset:
+      - '1555326021'
+      Ratelimit-Resettime:
+      - Tue, 15 Apr 2019 11:00:21 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"a5f13e591f617931434d66263418a2f26abe3abe","short_id":"a5f13e59","created_at":"2019-04-15T09:58:31.000Z","parent_ids":["d83eb63beef28a6229b4bf851ee34c51938e29c7","b5ab1d91e377787e0711effebce073af76becc56"],"title":"Merge
+        branch ''10921-display-scoped-labels-ce'' into ''master''","message":"Merge
+        branch ''10921-display-scoped-labels-ce'' into ''master''\n\nDisplay scoped
+        labels in Issue Boards\n\nSee merge request gitlab-org/gitlab-foss!27164","author_name":"Kushal
+        Pandya","author_email":"kushalspandya@gmail.com","authored_date":"2019-04-15T09:58:31.000Z","committer_name":"Kushal
+        Pandya","committer_email":"kushalspandya@gmail.com","committed_date":"2019-04-15T09:58:31.000Z","stats":{"additions":181,"deletions":24,"total":205},"status":"success","last_pipeline":{"id":56824583,"sha":"a5f13e591f617931434d66263418a2f26abe3abe","ref":"master","status":"success","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/56824583"},"project_id":13083}'
+    http_version: 
+  recorded_at: Mon, 15 Apr 2019 10:59:21 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/b5ab1d91e377787e0711effebce073af76becc56
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 15 Apr 2019 11:49:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '705'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"9bf28c9bb6fe2e7a4c7075aed317662f"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - WNttnWjDSZ1
+      X-Runtime:
+      - '0.099253'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1555329003'
+      Ratelimit-Resettime:
+      - Tue, 15 Apr 2019 11:50:03 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"b5ab1d91e377787e0711effebce073af76becc56","short_id":"b5ab1d91","created_at":"2019-04-15T09:58:30.000Z","parent_ids":["d83eb63beef28a6229b4bf851ee34c51938e29c7"],"title":"Display
+        scoped labels in Issue Boards","message":"Display scoped labels in Issue Boards\n\nThis
+        change brings new Scoped labels to Issue board as well.\nWith the last change,
+        this was missed.\n","author_name":"Rajat Jain","author_email":"rjain@gitlab.com","authored_date":"2019-04-15T09:58:30.000Z","committer_name":"Kushal
+        Pandya","committer_email":"kushalspandya@gmail.com","committed_date":"2019-04-15T09:58:30.000Z","stats":{"additions":181,"deletions":24,"total":205},"status":null,"last_pipeline":null,"project_id":13083}'
+    http_version: 
+  recorded_at: Mon, 15 Apr 2019 11:49:03 GMT
+recorded_with: VCR 2.9.3

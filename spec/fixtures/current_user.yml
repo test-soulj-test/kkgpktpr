@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "https://gitlab.com/api/v4/user"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 30 Nov 2017 17:21:56 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '979'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"c7aef56001bd269b26717dee9bd2473e"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 7a23c438-8535-469e-8a89-a2a380e67690
+      X-Runtime:
+      - '0.066468'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '2'
+      Ratelimit-Remaining:
+      - '598'
+      Ratelimit-Reset:
+      - '1512062576'
+      Ratelimit-Resettime:
+      - Fri, 30 Nov 2017 17:22:56 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTI4NjMzLCJuYW1lIjoiUsOpbXkgQ291dGFibGUiLCJ1c2VybmFt
+        ZSI6InJ5bWFpIiwic3RhdGUiOiJhY3RpdmUiLCJhdmF0YXJfdXJsIjoiaHR0
+        cHM6Ly9zZWN1cmUuZ3JhdmF0YXIuY29tL2F2YXRhci8yNjNkYTIyNzkyOWNj
+        MDAzNWNiMGViYTUxMmJjZjgxYT9zPTgwJmQ9aWRlbnRpY29uIiwid2ViX3Vy
+        bCI6Imh0dHBzOi8vZ2l0bGFiLmNvbS9yeW1haSIsImNyZWF0ZWRfYXQiOiIy
+        MDE1LTA0LTA5VDEzOjE3OjMxLjAwM1oiLCJiaW8iOiJJIGxvdmUgdGhlIFdl
+        YiwgdGhlIG9wZW4tc291cmNlLCBHaXQgYW5kIFJ1YnkuIFdoZW4gbm90IHRo
+        aW5raW5nIGFib3V0IGNvZGUsIEkgbGlrZSB0byByZWFkIGFib3V0IHBoaWxv
+        c29waHksIHBvbGl0aWNzIG9yIGVjb2xvZ3kuIiwibG9jYXRpb24iOiJDYW5u
+        ZXMsIEZyYW5jZSIsInNreXBlIjoicmVteWNvdXRhYmxlIiwibGlua2VkaW4i
+        OiJyeW1haSIsInR3aXR0ZXIiOiJyeW1haSIsIndlYnNpdGVfdXJsIjoiaHR0
+        cHM6Ly93d3cucnltYWkubWUiLCJvcmdhbml6YXRpb24iOiJHaXRMYWIiLCJs
+        YXN0X3NpZ25faW5fYXQiOiIyMDE3LTExLTI4VDE3OjQ3OjI4LjEyN1oiLCJj
+        b25maXJtZWRfYXQiOiIyMDE2LTA3LTAxVDEwOjQ5OjIxLjI3MFoiLCJsYXN0
+        X2FjdGl2aXR5X29uIjoiMjAxNy0xMS0yOSIsImVtYWlsIjoicmVteUByeW1h
+        aS5tZSIsInRoZW1lX2lkIjpudWxsLCJjb2xvcl9zY2hlbWVfaWQiOjEsInBy
+        b2plY3RzX2xpbWl0IjoxMDAwMDAsImN1cnJlbnRfc2lnbl9pbl9hdCI6IjIw
+        MTctMTEtMzBUMTY6MzA6MTMuMTc4WiIsImlkZW50aXRpZXMiOlt7InByb3Zp
+        ZGVyIjoidHdpdHRlciIsImV4dGVybl91aWQiOiI2Nzk3NDYyIn1dLCJjYW5f
+        Y3JlYXRlX2dyb3VwIjp0cnVlLCJjYW5fY3JlYXRlX3Byb2plY3QiOnRydWUs
+        InR3b19mYWN0b3JfZW5hYmxlZCI6dHJ1ZSwiZXh0ZXJuYWwiOmZhbHNlLCJz
+        aGFyZWRfcnVubmVyc19taW51dGVzX2xpbWl0IjoyMDAwfQ==
+    http_version: 
+  recorded_at: Thu, 30 Nov 2017 17:21:56 GMT
+recorded_with: VCR 2.9.3

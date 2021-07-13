@@ -1,0 +1,149 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?ref=v83.7.2&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.16.1
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 16 Nov 2020 14:33:50 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?id=gitlab%2Fcharts%2Fgitlab&order_by=id&page=1&per_page=20&ref=v83.7.2&scope=tags&sort=desc>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?id=gitlab%2Fcharts%2Fgitlab&order_by=id&page=1&per_page=20&ref=v83.7.2&scope=tags&sort=desc>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Feature-Category:
+      - continuous_integration
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - KIomrqNPAe3
+      X-Runtime:
+      - '0.364434'
+      X-Total:
+      - '0'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version:
+  recorded_at: Mon, 16 Nov 2020 14:33:50 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?ref=83.7.2&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.16.1
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 16 Nov 2020 15:58:10 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?id=gitlab%2Fcharts%2Fgitlab&order_by=id&page=1&per_page=20&ref=83.7.2&scope=tags&sort=desc>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?id=gitlab%2Fcharts%2Fgitlab&order_by=id&page=1&per_page=20&ref=83.7.2&scope=tags&sort=desc>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Feature-Category:
+      - continuous_integration
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - Bl68Yp9PT23
+      X-Runtime:
+      - '0.399631'
+      X-Total:
+      - '0'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version:
+  recorded_at: Mon, 16 Nov 2020 15:58:10 GMT
+recorded_with: VCR 5.0.0

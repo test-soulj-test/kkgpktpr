@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/pipelines
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 03 Apr 2019 16:23:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3817'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"fa745f5cc044ffc6ee5f875df5d515a3"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fgitlab%2Dce/pipelines?id=gitlab-org%2Fgitlab-foss&order_by=id&page=2&per_page=20&sort=desc>;
+        rel="next", <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fgitlab%2Dce/pipelines?id=gitlab-org%2Fgitlab-foss&order_by=id&page=1&per_page=20&sort=desc>;
+        rel="first"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - '2'
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - dWUZpGyRfA4
+      X-Runtime:
+      - '0.101049'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '2'
+      Ratelimit-Remaining:
+      - '598'
+      Ratelimit-Reset:
+      - '1554308680'
+      Ratelimit-Resettime:
+      - Thu, 03 Apr 2019 16:24:40 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},{"id":55051143,"sha":"4292486402affae3a8e8ef9845eb4202a4a36abf","ref":"11-9-stable-patch-6","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55051143"},{"id":55050061,"sha":"f621ab634872c31597d779d435abab424e08f2ab","ref":"11-9-stable-patch-6","status":"canceled","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55050061"},{"id":55049188,"sha":"c7dec5ef0e162e92825a5c3c335a31eb0fc61932","ref":"qa-perf-test-mr","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55049188"},{"id":55046797,"sha":"b39209f34a915aed9690510b64e454c5a307135d","ref":"master","status":"canceled","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55046797"},{"id":55045277,"sha":"b1391fada60f7a19d8d86f6f9b98ba1644cf7a15","ref":"57482-shortcut-to-create-merge-request-from-web-ide","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55045277"},{"id":55043372,"sha":"2556799eb116c17c942f9ced22d933fab0662e7f","ref":"jprovazn-graphql-prometheus","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55043372"},{"id":55043298,"sha":"53c3e4e96408f979ae47c9b0ac05454587bd5957","ref":"57602-create-cluster-validations","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55043298"},{"id":55043157,"sha":"c072cab43f688ef7eedad8ad76cb9da84a5cf6a3","ref":"52258-labels-with-long-names-overflow-on-metrics-dashboard","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55043157"},{"id":55041977,"sha":"e2e8c9ee98852b174a6389ecd3d3f731c2ff9df7","ref":"master","status":"canceled","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55041977"},{"id":55041255,"sha":"29cb98431ef682e09e500feb345629e9833042c1","ref":"56800-enable-prometheus-in-review-apps","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55041255"},{"id":55040574,"sha":"530e7a692f39fdc027cd9e4d445ed4ac73f44c29","ref":"59162-fix-review-apps-initial-seeding","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55040574"},{"id":55038241,"sha":"f4ba6a269d2de178aae657499938c5c013ec94b3","ref":"pg-10-specs","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55038241"},{"id":55038099,"sha":"8a53884dd0f39702507da92c894f20a4a5a9ad24","ref":"ce-5292-new-user-flow-for-group-managed-accounts","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55038099"},{"id":55037973,"sha":"7b020b57e0d12d4a908695bed0676c55d72600f6","ref":"xanf/gitlab-foss-move-project-tags","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55037973"},{"id":55037694,"sha":"39192af7c840de1ea18f85e0c6d755882e856d40","ref":"xanf/gitlab-foss-improve-project-overview","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55037694"},{"id":55036585,"sha":"9899018e3af82f1f6a79e8452e3ca6f77008f3d1","ref":"pg-10-specs","status":"canceled","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55036585"},{"id":55036529,"sha":"af38f8cd1153131305048a5fbab014d745b77da6","ref":"fj-rename-terminal-to-channel","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55036529"},{"id":55036148,"sha":"4eb3078b24776857724b7eb07afd2cfcf08f6954","ref":"backport-schema-changes","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55036148"},{"id":55035954,"sha":"2aa215f683d9387644da0d6bf207a7db04b3c6bf","ref":"38564-cant-leave-subgroup","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55035954"}]'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2019 16:23:40 GMT
+recorded_with: VCR 2.9.3

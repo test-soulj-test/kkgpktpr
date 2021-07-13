@@ -1,0 +1,48 @@
+# This file controls who has access to groups required to be a Release Manager
+#
+# The format should be as follows:
+#
+#   Your Name:
+#     gitlab.com: your-gitlab-com-username
+#     gitlab.org: your-dev-gitlab-org-username
+#
+# The only required key is `gitlab.com`; the other value will fall back to that
+# if omitted.
+#
+# Try to maintain alphabetical order.
+
+
+GitLab Release Tools Bot:
+  gitlab.com: gitlab-release-tools-bot
+
+Alessio Caiazza:
+  gitlab.com: nolith
+  slack: U68SX6FCH
+
+Amy Phillips:
+  gitlab.com: amyphillips
+  slack: U015CPNSBRP
+
+Graeme Gillies:
+  gitlab.com: ggillies
+  slack: ULLPM8144
+
+Henri Philipps:
+  gitlab.com: hphilipps
+  slack: UDRUSRCS0
+
+John Skarbek:
+  gitlab.com: skarbek
+  slack: UBQ8BPT1B
+
+Marin Jankovski:
+  gitlab.com: marin
+  slack: U025925R0
+
+Mayra Cabrera:
+  gitlab.com: mayra-cabrera
+  slack: U77004QGK
+
+Robert Speicher:
+  gitlab.com: rspeicher
+  slack: U049YT99K

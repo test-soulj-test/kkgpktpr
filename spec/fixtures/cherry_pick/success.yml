@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/commits/59af98f133ee229479c6159b15391deb4782a294/cherry_pick
+    body:
+      encoding: UTF-8
+      string: branch=11-4-stable
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '689'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 17 Oct 2018 19:29:54 GMT
+      Etag:
+      - W/"46f7c46b48ca4993c329b5ee17db0816"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 7c3835ec-51bf-4221-b0b5-ed18d05b0602
+      X-Runtime:
+      - '1.294857'
+    body:
+      encoding: UTF-8
+      string: '{"id":"5251578c1e0c32c817b2d3d400c5184d25467eb3","short_id":"5251578c","title":"Merge
+        branch ''rails5-fix-utf'' into ''master''","created_at":"2018-10-17T19:29:54.000Z","parent_ids":["51e844a26d8b995884fdc68536e7f6d2ccfa1a72"],"message":"Merge
+        branch ''rails5-fix-utf'' into ''master''\n\nUse InvalidUTF8ErrorHandler only
+        for rails 4\n\nCloses #51908\n\nSee merge request gitlab-org/gitlab-foss!22340\n\n(cherry
+        picked from commit 59af98f133ee229479c6159b15391deb4782a294)","author_name":"Sean
+        McGivern","author_email":"sean@mcgivern.me.uk","authored_date":"2018-10-16T08:35:08.000Z","committer_name":"Administrator","committer_email":"admin@example.com","committed_date":"2018-10-17T19:29:54.000Z"}'
+    http_version: 
+  recorded_at: Wed, 17 Oct 2018 19:29:54 GMT
+recorded_with: VCR 2.9.3

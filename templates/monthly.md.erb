@@ -1,0 +1,164 @@
+<!--
+
+If you make any changes to this template in Release Tools, also make sure to
+update any existing release issues (if necessary).
+
+-->
+
+## First steps
+
+- [ ] Change `#f_upcoming_release` topic with `/topic <%= version.to_patch %>: <link_to_this_issue>`
+- [ ] Modify the dates below to accurately reflect the plan of action
+
+## Up until the 17th
+
+- Ensure any deploys that do not make it to canary are investigated. [Disable canary if necessary].
+- Push any successful deploy to canary into production after some time has passed (preferably 1h).
+- Should any deployment blockers prevent automatic promotions to production, this requires approval by the SRE On-Call.
+  1. Ask for permission to promote the release in #production - provide the necessary context to the Engineer
+  1. If permission is granted, utilize the following command to initiate an overridden promotion:
+    ```
+    /chatops run deploy <VERSION> --production --ignore-production-checks 'deployment approved by on call SRE'
+    ```
+  1. This will post a comment into this issue and begin the deployment
+  1. Ask the SRE On-Call to respond to the comment with their approval for auditing purposes
+
+## 17th
+
+If this date is on a weekend, do this work on the next working day
+
+- [ ] [Find the latest `sha`](https://gitlab.com/gitlab-org/release/docs/blob/master/general/deploy/auto-deploy.md#auto-deploy-status) that made it into production successfully: `sha`
+- [ ] Notify Engineering Managers and developers that this is the `sha` that is guaranteed to be released on the 22nd:
+    ```
+    /chatops run notify ":mega: This is the most recent commit running on GitLab.com and this is guaranteed to be released on the 22nd.
+    https://gitlab.com/gitlab-org/security/gitlab/commits/<SHA>
+    Please see the following documentation on what this means:
+      * `https://about.gitlab.com/handbook/engineering/releases/#how-can-i-determine-if-my-merge-request-will-make-it-into-the-monthly-release`
+      * `https://about.gitlab.com/handbook/engineering/releases/#when-do-i-need-to-have-my-mr-merged-in-order-for-it-to-be-included-into-the-monthly-release`"
+    ```
+
+## 18th
+
+If this date is on a weekend, do this work on the last Friday before the 18th.
+
+- [ ] Log latest auto-deploy branch: **BRANCH_NAME**
+- [ ] Ensure this build makes it through into production
+- [ ] Grab the `sha` from this new auto-deploy branch and notify Engineering Managers and developers that this is the candidate `sha` for the release:
+    ```
+    /chatops run notify ":mega: This is the _candidate_ commit to be released on the 22nd.
+    https://gitlab.com/gitlab-org/security/gitlab/commits/<SHA>
+    Please see the following documentation on what this means:
+      * `https://about.gitlab.com/handbook/engineering/releases/#how-can-i-determine-if-my-merge-request-will-make-it-into-the-monthly-release`
+      * `https://about.gitlab.com/handbook/engineering/releases/#when-do-i-need-to-have-my-mr-merged-in-order-for-it-to-be-included-into-the-monthly-release`"
+    ```
+
+## 20th: two working days before the release
+
+If this date is on the weekend, do this work on the last Friday before the 20th.
+
+- [ ] Determine what the last green auto deploy branch is and add it here: `BRANCH`
+- [ ] Create a RC version to ensure that the final version builds correctly
+
+   ```sh
+   # In Slack:
+   /chatops run release tag <%= version %>-rc42
+   ```
+
+This will use the latest commit deployed to production for the various
+components that we release. If a different commit is necessary for a component,
+such as GitLab, you should run the following instead:
+
+```sh
+/chatops run release tag <%= version %>-rc42 --gitlab-sha=XXX
+```
+
+This will then use `XXX` as the SHA to create the GitLab stable branches.
+
+**NOTE:** this SHA is only used if the stable branch has yet to be created. If
+it already exists, the branch is left as-is.
+
+- [ ] Verify that the [CE stable branch] contains the right commits
+  - There should be at least two commits: the last commit from the previous
+    stable branch (usually a version update), and the sync commit created by the
+    merge train.
+  - The sync commit will have the message "Add latest changes from gitlab-org/gitlab@<%= version.stable_branch(ee: true) %>"
+- [ ] Notify Engineering Managers and developers that final candidate has been created:
+    ```
+    /chatops run notify ":mega: Barring any show-stopping issues, this is the final commit to be released on the 22nd.
+    https://gitlab.com/gitlab-org/security/gitlab/-/commits/<%= version.stable_branch(ee: true) %> "
+    ```
+
+- [ ] Verify that the RC has been deployed to the [pre environment](https://pre.gitlab.com/help)
+
+## 21st: one day before the release
+
+- [ ] Confirm that final RC version has passed automated tests
+  - [ ] Ensure tests are green on [CE stable branch]
+  - [ ] Ensure tests are green on [EE stable branch]
+  - [ ] Ensure tests are green on [Omnibus]
+  - [ ] Ensure default and stable branches are synced: `/chatops run mirror status`
+- [ ] Tag `<%= version.to_patch %>`:
+    ```sh
+    # In Slack:
+    /chatops run release tag <%= version.to_patch %>
+    ```
+  - [ ] Check progress of [EE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus(ee: true) %>) and [CE packages build](https://dev.gitlab.org/gitlab/omnibus-gitlab/commits/<%= version.to_omnibus(ee: false) %>)
+- [ ] Validate `<%= version.to_patch %>` has been deployed to the [release environment](https://release.gitlab.net/help)
+
+<details><summary>Instructions for manual deploy</summary>
+
+        ```sh
+        # In Slack:
+        /chatops run deploy <%= version.to_patch %>-ee.0 --release
+        ```
+
+</details>
+
+- [ ] Validate `<%= version.to_patch %>` has been passed automated QA
+
+Past this point, no new code can be added to the release that was not included in the final RC.
+
+## 22nd: release day
+
+Final release is tagged, so any changes will have to initiate a patch release.
+
+- [ ] At 13:00 UTC, post an update about the package building status in `#f_upcoming_release`
+   ```
+   :mega: Packages for <%= version.to_patch %> are built and will be published at 13:30UTC
+   ```
+- At 13:30 UTC:
+  - :warning: **Make sure that neither packages nor the blog post get published earlier than 13:30UTC
+    without approval by the
+    [messaging lead](https://about.gitlab.com/handbook/marketing/blog/release-posts/managers/)
+    of the release post. Mind that you don't need their approval if you're on time** :warning:
+  - [ ] Publish the packages via ChatOps:
+    ```
+    # In Slack:
+    /chatops run publish <%= version.to_patch %>
+    ```
+  - If anything goes wrong and the release is delayed, ping the
+  [release post manager](https://about.gitlab.com/handbook/marketing/blog/release-posts/managers/)
+  on Slack to make them aware of the issue. Cross-post the slack message to the #marketing channel to notify them too
+- At 14:10 UTC:
+  - [ ] Verify that EE packages appear on `packages.gitlab.com`: [EE](https://packages.gitlab.com/app/gitlab/gitlab-ee/search?q=<%= version %>) (should contain 14 packages)
+  - [ ] Verify that CE packages appear on `packages.gitlab.com`: [CE](https://packages.gitlab.com/app/gitlab/gitlab-ce/search?q=<%= version %>) (should contain 13 packages)
+  - [ ] Verify that Docker images appear on `hub.docker.com`: [EE](https://hub.docker.com/r/gitlab/gitlab-ee/tags) / [CE](https://hub.docker.com/r/gitlab/gitlab-ce/tags)
+  - [ ] Post an update about the status in `#f_upcoming_release`
+  ```
+  :mega: <%= version.to_patch %> is published and publicly available
+  ```
+  - [ ] Once all packages are available publicly and GitLab.com is up and running on the release version,
+  ping the [release post manager](https://about.gitlab.com/handbook/marketing/blog/release-posts/managers/)
+  on Slack ([#release-post channel]) to give them a go to merge the release post at ~14:20 UTC, so that it will be live at 15:00 UTC
+  - [ ] Create the `<%= version.to_patch %>` version on [version.gitlab.com](https://version.gitlab.com/versions/new?version=<%= version.to_patch %>)
+
+[CE stable branch]: https://gitlab.com/gitlab-org/gitlab-foss/commits/<%= version.stable_branch %>
+[EE stable branch]: https://gitlab.com/gitlab-org/gitlab/commits/<%= version.stable_branch(ee: true) %>
+[Omnibus]: https://gitlab.com/gitlab-org/omnibus-gitlab/commits/<%= version.stable_branch %>
+[Deploy]: https://gitlab.com/gitlab-org/takeoff#deploying-gitlab
+[staging.gitlab.com]: https://staging.gitlab.com/
+[getting help]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/monthly.md#getting-help
+[#release-post channel]: https://gitlab.slack.com/messages/C3TRESYPJ
+[Disable canary if necessary]: https://gitlab.com/gitlab-org/release/docs/blob/master/general/deploy/canary.md#how-to-stop-all-production-traffic-to-canary
+
+/milestone %"<%= version.to_minor %>"

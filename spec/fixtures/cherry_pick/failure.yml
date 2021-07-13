@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/commits/396d205e5a503f9f48c223804087a80f7acc6d06/cherry_pick
+    body:
+      encoding: UTF-8
+      string: branch=11-4-stable
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '200'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 17 Oct 2018 19:28:08 GMT
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - ed6d02fc-4f94-4945-9e81-74fa5e22b0da
+      X-Runtime:
+      - '0.431244'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Sorry, we cannot cherry-pick this commit automatically.\n                   This
+        commit may already have been cherry-picked, or a more recent commit may have
+        updated some of its content."}'
+    http_version: 
+  recorded_at: Wed, 17 Oct 2018 19:28:08 GMT
+recorded_with: VCR 2.9.3

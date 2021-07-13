@@ -1,0 +1,736 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?ref=v12.1.0-ee&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 01 Jul 2019 06:04:42 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '190'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"6cd7436bc5a9703806b5979bc862af6c"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?id=gitlab%2Fcharts%2Fcomponents%2Fimages&order_by=id&page=1&per_page=100&ref=v12.1.0-ee&scope=tags&sort=desc>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?id=gitlab%2Fcharts%2Fcomponents%2Fimages&order_by=id&page=1&per_page=100&ref=v12.1.0-ee&scope=tags&sort=desc>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - xLHMV1FxAGa
+      X-Runtime:
+      - '0.060462'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":115734,"sha":"120257f5619720ed82237006995176e695982878","ref":"v12.1.0-ee","status":"success","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/115734"}]'
+    http_version: 
+  recorded_at: Mon, 01 Jul 2019 06:00:30 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/115734/jobs?per_page=100&scope=manual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 01 Jul 2019 06:04:43 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1533'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"5f5325144b9787c7db577d9403be6071"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/115734/jobs?id=gitlab%2Fcharts%2Fcomponents%2Fimages&page=1&per_page=100&pipeline_id=115734&scope%5B%5D=manual>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/115734/jobs?id=gitlab%2Fcharts%2Fcomponents%2Fimages&page=1&per_page=100&pipeline_id=115734&scope%5B%5D=manual>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - lSsEC5WReJ5
+      X-Runtime:
+      - '0.059686'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":4738743,"status":"manual","stage":"release","name":"sync-images","ref":"v12.1.0-ee","tag":true,"coverage":null,"allow_failure":true,"created_at":"2019-07-01T05:53:37.343Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":218,"name":"Balasankar
+        C","username":"balasankarc","state":"active","avatar_url":"https://secure.gravatar.com/avatar/85629995d978376f34ad25759da933e9?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/balasankarc","created_at":"2016-11-15T11:53:09.952Z","bio":"","location":"","public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":""},"commit":{"id":"120257f5619720ed82237006995176e695982878","short_id":"120257f5","created_at":"2019-07-01T05:47:50.000Z","parent_ids":["2b2961459ac1c90f7dfa3ded202026e145297542"],"title":"Tag
+        new version 12.1.0","message":"Tag new version 12.1.0\n\nSigned-off-by: Balasankar
+        \"Balu\" C \u003cbalasankar@gitlab.com\u003e\n","author_name":"Balasankar
+        \"Balu\" C","author_email":"balasankar@gitlab.com","authored_date":"2019-07-01T05:47:50.000Z","committer_name":"Balasankar
+        \"Balu\" C","committer_email":"balasankar@gitlab.com","committed_date":"2019-07-01T05:47:50.000Z"},"pipeline":{"id":115734,"sha":"120257f5619720ed82237006995176e695982878","ref":"v12.1.0-ee","status":"success","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/115734"},"web_url":"https://dev.gitlab.org/gitlab/charts/components/images/-/jobs/4738743","artifacts":[],"runner":null,"artifacts_expire_at":null}]'
+    http_version: 
+  recorded_at: Mon, 01 Jul 2019 06:00:31 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/jobs/4738743/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 01 Jul 2019 06:04:44 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1532'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"0b75a3881a5e9611b7c28cd326c388c0"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - AAiGPR86uDa
+      X-Runtime:
+      - '0.091145'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '{"id":4738743,"status":"pending","stage":"release","name":"sync-images","ref":"v12.1.0-ee","tag":true,"coverage":null,"allow_failure":true,"created_at":"2019-07-01T05:53:37.343Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":218,"name":"Balasankar
+        C","username":"balasankarc","state":"active","avatar_url":"https://secure.gravatar.com/avatar/85629995d978376f34ad25759da933e9?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/balasankarc","created_at":"2016-11-15T11:53:09.952Z","bio":"","location":"","public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":""},"commit":{"id":"120257f5619720ed82237006995176e695982878","short_id":"120257f5","created_at":"2019-07-01T05:47:50.000Z","parent_ids":["2b2961459ac1c90f7dfa3ded202026e145297542"],"title":"Tag
+        new version 12.1.0","message":"Tag new version 12.1.0\n\nSigned-off-by: Balasankar
+        \"Balu\" C \u003cbalasankar@gitlab.com\u003e\n","author_name":"Balasankar
+        \"Balu\" C","author_email":"balasankar@gitlab.com","authored_date":"2019-07-01T05:47:50.000Z","committer_name":"Balasankar
+        \"Balu\" C","committer_email":"balasankar@gitlab.com","committed_date":"2019-07-01T05:47:50.000Z"},"pipeline":{"id":115734,"sha":"120257f5619720ed82237006995176e695982878","ref":"v12.1.0-ee","status":"success","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/115734"},"web_url":"https://dev.gitlab.org/gitlab/charts/components/images/-/jobs/4738743","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Mon, 01 Jul 2019 06:00:32 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?ref=v12.1.0&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 01 Jul 2019 06:06:07 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '187'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"6ea9043d6126c7cd836b91790e5abddf"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?id=gitlab%2Fcharts%2Fcomponents%2Fimages&order_by=id&page=1&per_page=100&ref=v12.1.0&scope=tags&sort=desc>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?id=gitlab%2Fcharts%2Fcomponents%2Fimages&order_by=id&page=1&per_page=100&ref=v12.1.0&scope=tags&sort=desc>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - zZKnIQpoeG7
+      X-Runtime:
+      - '0.069253'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":115733,"sha":"120257f5619720ed82237006995176e695982878","ref":"v12.1.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/115733"}]'
+    http_version: 
+  recorded_at: Mon, 01 Jul 2019 06:01:55 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/115733/jobs?per_page=100&scope=manual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 01 Jul 2019 06:06:08 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1527'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"3152bbb8765467b9f57197f2cafe995c"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/115733/jobs?id=gitlab%2Fcharts%2Fcomponents%2Fimages&page=1&per_page=100&pipeline_id=115733&scope%5B%5D=manual>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/115733/jobs?id=gitlab%2Fcharts%2Fcomponents%2Fimages&page=1&per_page=100&pipeline_id=115733&scope%5B%5D=manual>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - rypq2smdfsa
+      X-Runtime:
+      - '0.074614'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":4738723,"status":"manual","stage":"release","name":"sync-images","ref":"v12.1.0","tag":true,"coverage":null,"allow_failure":true,"created_at":"2019-07-01T05:53:35.515Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":218,"name":"Balasankar
+        C","username":"balasankarc","state":"active","avatar_url":"https://secure.gravatar.com/avatar/85629995d978376f34ad25759da933e9?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/balasankarc","created_at":"2016-11-15T11:53:09.952Z","bio":"","location":"","public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":""},"commit":{"id":"120257f5619720ed82237006995176e695982878","short_id":"120257f5","created_at":"2019-07-01T05:47:50.000Z","parent_ids":["2b2961459ac1c90f7dfa3ded202026e145297542"],"title":"Tag
+        new version 12.1.0","message":"Tag new version 12.1.0\n\nSigned-off-by: Balasankar
+        \"Balu\" C \u003cbalasankar@gitlab.com\u003e\n","author_name":"Balasankar
+        \"Balu\" C","author_email":"balasankar@gitlab.com","authored_date":"2019-07-01T05:47:50.000Z","committer_name":"Balasankar
+        \"Balu\" C","committer_email":"balasankar@gitlab.com","committed_date":"2019-07-01T05:47:50.000Z"},"pipeline":{"id":115733,"sha":"120257f5619720ed82237006995176e695982878","ref":"v12.1.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/115733"},"web_url":"https://dev.gitlab.org/gitlab/charts/components/images/-/jobs/4738723","artifacts":[],"runner":null,"artifacts_expire_at":null}]'
+    http_version: 
+  recorded_at: Mon, 01 Jul 2019 06:01:56 GMT
+- request:
+    method: post
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/jobs/4738723/play
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 01 Jul 2019 06:06:09 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1526'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"378d58a1db04a76a6a7948cdaeda5788"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - TGC8rnEB063
+      X-Runtime:
+      - '0.085180'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '{"id":4738723,"status":"pending","stage":"release","name":"sync-images","ref":"v12.1.0","tag":true,"coverage":null,"allow_failure":true,"created_at":"2019-07-01T05:53:35.515Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":218,"name":"Balasankar
+        C","username":"balasankarc","state":"active","avatar_url":"https://secure.gravatar.com/avatar/85629995d978376f34ad25759da933e9?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/balasankarc","created_at":"2016-11-15T11:53:09.952Z","bio":"","location":"","public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":""},"commit":{"id":"120257f5619720ed82237006995176e695982878","short_id":"120257f5","created_at":"2019-07-01T05:47:50.000Z","parent_ids":["2b2961459ac1c90f7dfa3ded202026e145297542"],"title":"Tag
+        new version 12.1.0","message":"Tag new version 12.1.0\n\nSigned-off-by: Balasankar
+        \"Balu\" C \u003cbalasankar@gitlab.com\u003e\n","author_name":"Balasankar
+        \"Balu\" C","author_email":"balasankar@gitlab.com","authored_date":"2019-07-01T05:47:50.000Z","committer_name":"Balasankar
+        \"Balu\" C","committer_email":"balasankar@gitlab.com","committed_date":"2019-07-01T05:47:50.000Z"},"pipeline":{"id":115733,"sha":"120257f5619720ed82237006995176e695982878","ref":"v12.1.0","status":"success","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/115733"},"web_url":"https://dev.gitlab.org/gitlab/charts/components/images/-/jobs/4738723","artifacts":[],"runner":null,"artifacts_expire_at":null}'
+    http_version: 
+  recorded_at: Mon, 01 Jul 2019 06:01:57 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?ref=v12.6.0-rc32&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 18 Dec 2019 00:13:19 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '267'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"378d58a1db04a76a6a7948cdaeda5788"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - yNKfBCYFI56
+      X-Runtime:
+      - '0.099578'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":139875,"sha":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","ref":"v12.6.0-rc32","status":"manual","created_at":"2019-12-17T22:35:01.634Z","updated_at":"2019-12-17T22:45:22.658Z","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/139875"}]'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 00:13:19 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/139875/jobs?per_page=100&scope=manual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 18 Dec 2019 00:21:30 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1772'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"9dde81d5cb596cd56e59188fdcea7771"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - dcqmDmYOOn1
+      X-Runtime:
+      - '0.101962'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":6201356,"status":"manual","stage":"release","name":"sync-images","ref":"v12.6.0-rc32","tag":true,"coverage":null,"allow_failure":false,"created_at":"2019-12-17T22:35:03.093Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":145,"name":"GitLab
+        mirror push bot","username":"gitlab_pushbot","state":"active","avatar_url":"https://secure.gravatar.com/avatar/5ca6dda488c18eb2902862ff70fb1cd3?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/gitlab_pushbot","created_at":"2016-05-11T15:09:36.819Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","short_id":"bedf51dd","created_at":"2019-12-17T20:11:30.000+00:00","parent_ids":["3e65c73cabf1afc90e252c8fd00fee1f5b97a172","0786df8308c035c39f258ba9e926022711485ac0"],"title":"Merge
+        branch ''charts/1673-sidekiq-wait-on-pid'' into ''master''","message":"Merge
+        branch ''charts/1673-sidekiq-wait-on-pid'' into ''master''\n\nSidekiq: wait
+        on specific PID\n\nCloses gitlab-org/charts/gitlab#1673\n\nSee merge request
+        gitlab-org/build/CNG!312","author_name":"DJ Mountney","author_email":"dj@gitlab.com","authored_date":"2019-12-17T20:11:30.000+00:00","committer_name":"DJ
+        Mountney","committer_email":"dj@gitlab.com","committed_date":"2019-12-17T20:11:30.000+00:00"},"pipeline":{"id":139875,"sha":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","ref":"v12.6.0-rc32","status":"manual","created_at":"2019-12-17T22:35:01.634Z","updated_at":"2019-12-17T22:45:22.658Z","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/139875"},"web_url":"https://dev.gitlab.org/gitlab/charts/components/images/-/jobs/6201356","artifacts":[],"runner":null,"artifacts_expire_at":null}]'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 00:21:30 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?ref=v12.6.0-rc32-ee&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 18 Dec 2019 04:02:50 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '270'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"6a77e8e5fb12098e439108f67e9d03fa"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - upJuT92dJu8
+      X-Runtime:
+      - '0.124429'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":139874,"sha":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","ref":"v12.6.0-rc32-ee","status":"manual","created_at":"2019-12-17T22:33:52.833Z","updated_at":"2019-12-17T22:45:08.110Z","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/139874"}]'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 04:02:51 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/139874/jobs?per_page=100&scope=manual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 18 Dec 2019 04:07:55 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1778'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"c350dfe950ed86d7ba1a6ddc6055b632"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - TSol3CX91k4
+      X-Runtime:
+      - '0.077312'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":6201336,"status":"manual","stage":"release","name":"sync-images","ref":"v12.6.0-rc32-ee","tag":true,"coverage":null,"allow_failure":false,"created_at":"2019-12-17T22:33:53.508Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":145,"name":"GitLab
+        mirror push bot","username":"gitlab_pushbot","state":"active","avatar_url":"https://secure.gravatar.com/avatar/5ca6dda488c18eb2902862ff70fb1cd3?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/gitlab_pushbot","created_at":"2016-05-11T15:09:36.819Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","short_id":"bedf51dd","created_at":"2019-12-17T20:11:30.000+00:00","parent_ids":["3e65c73cabf1afc90e252c8fd00fee1f5b97a172","0786df8308c035c39f258ba9e926022711485ac0"],"title":"Merge
+        branch ''charts/1673-sidekiq-wait-on-pid'' into ''master''","message":"Merge
+        branch ''charts/1673-sidekiq-wait-on-pid'' into ''master''\n\nSidekiq: wait
+        on specific PID\n\nCloses gitlab-org/charts/gitlab#1673\n\nSee merge request
+        gitlab-org/build/CNG!312","author_name":"DJ Mountney","author_email":"dj@gitlab.com","authored_date":"2019-12-17T20:11:30.000+00:00","committer_name":"DJ
+        Mountney","committer_email":"dj@gitlab.com","committed_date":"2019-12-17T20:11:30.000+00:00"},"pipeline":{"id":139874,"sha":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","ref":"v12.6.0-rc32-ee","status":"manual","created_at":"2019-12-17T22:33:52.833Z","updated_at":"2019-12-17T22:45:08.110Z","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/139874"},"web_url":"https://dev.gitlab.org/gitlab/charts/components/images/-/jobs/6201336","artifacts":[],"runner":null,"artifacts_expire_at":null}]'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 04:07:55 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines?ref=v12.6.0-rc32-ubi8&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 18 Dec 2019 04:10:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"5d61c47bb98632c5a0bb4b36c7514d71"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - CYmNybCHrn4
+      X-Runtime:
+      - '0.125488'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '[{"id":139876,"sha":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","ref":"v12.6.0-rc32-ubi8","status":"manual","created_at":"2019-12-17T22:35:09.455Z","updated_at":"2019-12-17T23:35:38.289Z","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/139876"}]'
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 04:10:27 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fcomponents%2Fimages/pipelines/139876/jobs?per_page=100&scope=manual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.11.0
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 18 Dec 2019 04:13:07 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3569'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"8f242ad4ac583537a91cd0ad2df1caad"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - lFHtO9voBH3
+      X-Runtime:
+      - '0.032514'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: |
+        [{"id":6201396,"status":"manual","stage":"release","name":"sync-images","ref":"v12.6.0-rc32-ubi8","tag":true,"coverage":null,"allow_failure":false,"created_at":"2019-12-17T22:35:11.924Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":145,"name":"GitLab mirror push bot","username":"gitlab_pushbot","state":"active","avatar_url":"https://secure.gravatar.com/avatar/5ca6dda488c18eb2902862ff70fb1cd3?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/gitlab_pushbot","created_at":"2016-05-11T15:09:36.819Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","short_id":"bedf51dd","created_at":"2019-12-17T20:11:30.000+00:00","parent_ids":["3e65c73cabf1afc90e252c8fd00fee1f5b97a172","0786df8308c035c39f258ba9e926022711485ac0"],"title":"Merge branch 'charts/1673-sidekiq-wait-on-pid' into 'master'","message":"Merge branch 'charts/1673-sidekiq-wait-on-pid' into 'master'\n\nSidekiq: wait on specific PID\n\nCloses gitlab-org/charts/gitlab#1673\n\nSee merge request gitlab-org/build/CNG!312","author_name":"DJ Mountney","author_email":"dj@gitlab.com","authored_date":"2019-12-17T20:11:30.000+00:00","committer_name":"DJ Mountney","committer_email":"dj@gitlab.com","committed_date":"2019-12-17T20:11:30.000+00:00"},"pipeline":{"id":139876,"sha":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","ref":"v12.6.0-rc32-ubi8","status":"manual","created_at":"2019-12-17T22:35:09.455Z","updated_at":"2019-12-17T23:35:38.289Z","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/139876"},"web_url":"https://dev.gitlab.org/gitlab/charts/components/images/-/jobs/6201396","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":6201397,"status":"manual","stage":"release","name":"ubi-assets-release","ref":"v12.6.0-rc32-ubi8","tag":true,"coverage":null,"allow_failure":true,"created_at":"2019-12-17T22:35:11.943Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":145,"name":"GitLab mirror push bot","username":"gitlab_pushbot","state":"active","avatar_url":"https://secure.gravatar.com/avatar/5ca6dda488c18eb2902862ff70fb1cd3?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/gitlab_pushbot","created_at":"2016-05-11T15:09:36.819Z","bio":null,"location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null},"commit":{"id":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","short_id":"bedf51dd","created_at":"2019-12-17T20:11:30.000+00:00","parent_ids":["3e65c73cabf1afc90e252c8fd00fee1f5b97a172","0786df8308c035c39f258ba9e926022711485ac0"],"title":"Merge branch 'charts/1673-sidekiq-wait-on-pid' into 'master'","message":"Merge branch 'charts/1673-sidekiq-wait-on-pid' into 'master'\n\nSidekiq: wait on specific PID\n\nCloses gitlab-org/charts/gitlab#1673\n\nSee merge request gitlab-org/build/CNG!312","author_name":"DJ Mountney","author_email":"dj@gitlab.com","authored_date":"2019-12-17T20:11:30.000+00:00","committer_name":"DJ Mountney","committer_email":"dj@gitlab.com","committed_date":"2019-12-17T20:11:30.000+00:00"},"pipeline":{"id":139876,"sha":"bedf51dd2d2d4636a77efa95c6dd5cb3a1fc6bd7","ref":"v12.6.0-rc32-ubi8","status":"manual","created_at":"2019-12-17T22:35:09.455Z","updated_at":"2019-12-17T23:35:38.289Z","web_url":"https://dev.gitlab.org/gitlab/charts/components/images/pipelines/139876"},"web_url":"https://dev.gitlab.org/gitlab/charts/components/images/-/jobs/6201397","artifacts":[],"runner":null,"artifacts_expire_at":null}]
+    http_version: 
+  recorded_at: Wed, 18 Dec 2019 04:13:07 GMT
+

@@ -1,0 +1,234 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/pipelines/55053803/jobs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.10.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 03 Apr 2019 16:26:08 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '34779'
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"92434b69ebfa5ba41b7c30aa9c6007c4"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fgitlab%2Dce/pipelines/55053803/jobs?id=gitlab-org%2Fgitlab-foss&page=2&per_page=20&pipeline_id=55053803>;
+        rel="next", <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fgitlab%2Dce/pipelines/55053803/jobs?id=gitlab-org%2Fgitlab-foss&page=1&per_page=20&pipeline_id=55053803>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fgitlab%2Dce/pipelines/55053803/jobs?id=gitlab-org%2Fgitlab-foss&page=7&per_page=20&pipeline_id=55053803>;
+        rel="last"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - '2'
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - vCbd0QA6uj3
+      X-Runtime:
+      - '0.284454'
+      X-Total:
+      - '138'
+      X-Total-Pages:
+      - '7'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '4'
+      Ratelimit-Remaining:
+      - '596'
+      Ratelimit-Reset:
+      - '1554308828'
+      Ratelimit-Resettime:
+      - Thu, 03 Apr 2019 16:27:08 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":190043363,"status":"manual","stage":"build","name":"review-docs-deploy-manual","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:04.925Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043363","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043365,"status":"pending","stage":"prepare","name":"retrieve-tests-metadata","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.188Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043365","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043367,"status":"pending","stage":"prepare","name":"compile-assets","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.251Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043367","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043369,"status":"pending","stage":"prepare","name":"setup-test-env","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.328Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043369","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043372,"status":"created","stage":"test","name":"code_quality","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.495Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043372","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043374,"status":"created","stage":"test","name":"package-and-qa","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.557Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043374","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043375,"status":"created","stage":"test","name":"rspec-pg
+        1/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.603Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043375","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043376,"status":"created","stage":"test","name":"rspec-pg
+        2/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.669Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043376","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043377,"status":"created","stage":"test","name":"rspec-pg
+        3/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.706Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043377","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043378,"status":"created","stage":"test","name":"rspec-pg
+        4/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.762Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043378","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043379,"status":"created","stage":"test","name":"rspec-pg
+        5/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.831Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043379","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043380,"status":"created","stage":"test","name":"rspec-pg
+        6/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.889Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043380","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043382,"status":"created","stage":"test","name":"rspec-pg
+        7/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.924Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043382","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043387,"status":"created","stage":"test","name":"rspec-pg
+        8/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:05.998Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043387","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043388,"status":"created","stage":"test","name":"rspec-pg
+        9/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:06.060Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043388","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043390,"status":"created","stage":"test","name":"rspec-pg
+        10/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:06.173Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043390","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043395,"status":"created","stage":"test","name":"rspec-pg
+        11/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:06.367Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043395","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043401,"status":"created","stage":"test","name":"rspec-pg
+        12/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:06.444Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043401","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043405,"status":"created","stage":"test","name":"rspec-pg
+        13/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:06.521Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043405","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":190043407,"status":"created","stage":"test","name":"rspec-pg
+        14/50","ref":"master","tag":false,"coverage":null,"created_at":"2019-04-03T16:16:06.657Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":408677,"name":"Clement
+        Ho","username":"ClemMakesApps","state":"active","avatar_url":"https://secure.gravatar.com/avatar/013b4af8b474654bce8039ecd262a84a?s=80\u0026d=identicon","web_url":"https://gitlab.com/ClemMakesApps","created_at":"2016-02-13T04:08:15.532Z","bio":"Frontend
+        Engineering Manager, Monitor","location":"Austin, Texas","public_email":"","skype":"","linkedin":"https://www.linkedin.com/in/clemmakesapps/","twitter":"http://twitter.com/clemmakesapps","website_url":"","organization":"GitLab"},"commit":{"id":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","short_id":"ee72dc1b","created_at":"2019-04-03T16:15:16.000Z","parent_ids":["b39209f34a915aed9690510b64e454c5a307135d","6e61a6a73dadc758bedefb528601494469d8eac9"],"title":"Merge
+        branch ''localize-notification-dropdown'' into ''master''","message":"Merge
+        branch ''localize-notification-dropdown'' into ''master''\n\nLocalize notifications
+        dropdown\n\nCloses gitlab#10686\n\nSee merge request gitlab-org/gitlab-foss!26844","author_name":"Clement
+        Ho","author_email":"clemmakesapps@gmail.com","authored_date":"2019-04-03T16:15:16.000Z","committer_name":"Clement
+        Ho","committer_email":"clemmakesapps@gmail.com","committed_date":"2019-04-03T16:15:16.000Z"},"pipeline":{"id":55053803,"sha":"ee72dc1b34d893662fe0cb7793a1a960312b1f48","ref":"master","status":"pending","web_url":"https://gitlab.com/gitlab-org/gitlab-foss/pipelines/55053803"},"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/-/jobs/190043407","artifacts":[],"runner":null,"artifacts_expire_at":null}]'
+    http_version: 
+  recorded_at: Wed, 03 Apr 2019 16:26:08 GMT
+recorded_with: VCR 2.9.3

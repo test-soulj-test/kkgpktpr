@@ -1,0 +1,113 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {
+          "__name__": "gitlab_deployment_health:service",
+          "env": "gprd",
+          "environment": "gprd",
+          "monitor": "global",
+          "stage": "cny",
+          "tier": "sv",
+          "type": "api"
+        },
+        "value": [
+          1598279560.706,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "gitlab_deployment_health:service",
+          "env": "gprd",
+          "environment": "gprd",
+          "monitor": "global",
+          "stage": "cny",
+          "tier": "sv",
+          "type": "git"
+        },
+        "value": [
+          1598279560.706,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "gitlab_deployment_health:service",
+          "env": "gprd",
+          "environment": "gprd",
+          "monitor": "global",
+          "stage": "cny",
+          "tier": "sv",
+          "type": "web"
+        },
+        "value": [
+          1598279560.706,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "gitlab_deployment_health:service",
+          "env": "gprd",
+          "environment": "gprd",
+          "monitor": "global",
+          "stage": "main",
+          "tier": "sv",
+          "type": "api"
+        },
+        "value": [
+          1598279560.706,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "gitlab_deployment_health:service",
+          "env": "gprd",
+          "environment": "gprd",
+          "monitor": "global",
+          "stage": "main",
+          "tier": "sv",
+          "type": "git"
+        },
+        "value": [
+          1598279560.706,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "gitlab_deployment_health:service",
+          "env": "gprd",
+          "environment": "gprd",
+          "monitor": "global",
+          "stage": "main",
+          "tier": "sv",
+          "type": "sidekiq"
+        },
+        "value": [
+          1598279560.706,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "gitlab_deployment_health:service",
+          "env": "gprd",
+          "environment": "gprd",
+          "monitor": "global",
+          "stage": "main",
+          "tier": "sv",
+          "type": "web"
+        },
+        "value": [
+          1598279560.706,
+          "1"
+        ]
+      }
+    ]
+  }
+}

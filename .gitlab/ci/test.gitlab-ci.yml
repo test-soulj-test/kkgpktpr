@@ -1,0 +1,60 @@
+rubocop:
+  extends: 
+    - .with-bundle
+    - .test
+  stage: test
+  script:
+    - bundle exec rubocop
+
+specs:
+  extends: 
+    - .with-bundle
+    - .test
+  stage: test
+  script:
+    - git config --global user.email "you@example.com"
+    - git config --global user.name "Your Name"
+    - bundle exec rspec
+  artifacts:
+    paths:
+      - coverage/assets
+      - coverage/index.html
+
+go test:
+  extends:
+    - .test
+  image: golang:1.16
+  script:
+    - cd metrics
+    - go test gitlab.com/gitlab-org/release-tools/metrics/...
+      
+go linter:
+  extends:
+    - .test
+  image: registry.gitlab.com/gitlab-org/gitlab-build-images:golangci-lint-alpine
+  stage: test
+  script:
+    - cd metrics
+    # Use default .golangci.yml file from the image if one is not present in the project root.
+    - '[ -e .golangci.yml ] || cp /golangci/.golangci.yml .'
+    - golangci-lint run
+
+test docker build:
+  extends:
+    - .test
+    - .ci-image
+  script:
+    - docker build --build-arg revision=$CI_COMMIT_SHORT_SHA -t registry.ops.gitlab.net/gitlab-org/release/tools/delivery-metrics:$CI_COMMIT_SHORT_SHA metrics
+
+pages:
+  stage: coverage
+  script:
+    - mkdir -p public/
+    - mv coverage/ public/
+  dependencies:
+    - specs
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  artifacts:
+    paths:
+      - public/

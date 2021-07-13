@@ -1,0 +1,20 @@
+chatops:
+  extends: .with-bundle
+  stage: chatops
+  script:
+    - source scripts/setup_ssh.sh
+    - source scripts/setup_git.sh
+    - ./bin/chatops $TASK
+  only:
+    refs:
+      - pipelines
+      - triggers
+    variables:
+      - $TASK
+  cache:
+    key:
+      files:
+        - .ruby-version
+    paths:
+      - vendor/ruby
+    policy: pull

@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/branches?branch=release-tools-create-branch&ref=9-4-stable
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Aug 2017 20:15:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '625'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"0bfd8e1055d8129a394db1e8b2acf809"
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 5280004d-c855-4541-9ff2-6233fb206c53
+      X-Runtime:
+      - '4.072228'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"name":"release-tools-create-branch","commit":{"id":"b125d211386acf1c53e3d714055653f9386b1c2b","short_id":"b125d211","title":"Update
+        VERSION to 9.4.3","created_at":"2017-07-31T22:49:33.000-05:00","parent_ids":["3379b4fa1b779e5bc8a9d1d7fc484069cc196b49"],"message":"Update
+        VERSION to 9.4.3\n","author_name":"Jose Ivan Vargas","author_email":"jvargas@gitlab.com","authored_date":"2017-07-31T22:49:33.000-05:00","committer_name":"Jose
+        Ivan Vargas","committer_email":"jvargas@gitlab.com","committed_date":"2017-07-31T22:49:33.000-05:00"},"merged":false,"protected":false,"developers_can_push":false,"developers_can_merge":false}'
+    http_version: 
+  recorded_at: Thu, 03 Aug 2017 20:15:32 GMT
+recorded_with: VCR 2.9.3

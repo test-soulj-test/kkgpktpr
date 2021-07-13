@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/branches/9-4-stable-doesntexist"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Aug 2017 19:53:27 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '34'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 1e647a1f-9c52-4f5f-b7c2-5e0688352eaa
+      X-Runtime:
+      - '0.311354'
+    body:
+      encoding: UTF-8
+      string: '{"message":"404 Branch Not Found"}'
+    http_version: 
+  recorded_at: Thu, 03 Aug 2017 19:53:28 GMT
+recorded_with: VCR 2.9.3

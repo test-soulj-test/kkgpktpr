@@ -1,0 +1,306 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/invalid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 May 2018 00:00:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '34'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - '08d8000f-7c51-46cf-88f0-a24a079a00b0'
+      X-Runtime:
+      - '0.533447'
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527008200'
+      Ratelimit-Resettime:
+      - Wed, 22 May 2018 00:00:00 GMT
+    body:
+      encoding: UTF-8
+      string: '{"message":"404 Commit Not Found"}'
+    http_version: 
+  recorded_at: Tue, 22 May 2018 00:00:00 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/v10.8.0-rc1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 May 2018 00:00:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '711'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"9eadb6800f8c1400393cc6918e34cc26"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 598043ed-bca7-4760-93da-56aae6a7b18b
+      X-Runtime:
+      - '0.581919'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527008757'
+      Ratelimit-Resettime:
+      - Wed, 22 May 2018 00:00:00 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"d36753ca4448983a4113f8e6fccdbe58d3452ecd","short_id":"d36753ca","title":"Update
+        VERSION to 10.8.0-rc1","created_at":"2018-05-02T15:02:04.000-05:00","parent_ids":["82b4983823f24f698b8e594f355ccd839a33a8ac"],"message":"Update
+        VERSION to 10.8.0-rc1\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-02T15:02:04.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-02T15:02:04.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"success","last_pipeline":{"id":21512419,"sha":"d36753ca4448983a4113f8e6fccdbe58d3452ecd","ref":"10-8-stable-prepare-rc2","status":"success"},"project_id":13083}'
+    http_version: 
+  recorded_at: Tue, 22 May 2018 00:00:00 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/v10.8.0-rc2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 May 2018 00:00:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '696'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"0c4ec9b933a4c3d3b33979e3e12bcd3a"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 38d92830-b597-4bf0-afb0-2fbfed39e14b
+      X-Runtime:
+      - '0.132023'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527008758'
+      Ratelimit-Resettime:
+      - Wed, 22 May 2018 00:00:00 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"7f7153301ad59d864791cb85d8abd1135962e954","short_id":"7f715330","title":"Update
+        VERSION to 10.8.0-rc2","created_at":"2018-05-04T18:02:47.000Z","parent_ids":["fb38c4e6457ae93794879f29ce0bf62dffc2d407"],"message":"Update
+        VERSION to 10.8.0-rc2\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T18:02:47.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T18:02:47.000Z","stats":{"additions":1,"deletions":1,"total":2},"status":"success","last_pipeline":{"id":21611089,"sha":"7f7153301ad59d864791cb85d8abd1135962e954","ref":"10-8-stable-prepare-rc3","status":"success"},"project_id":13083}'
+    http_version: 
+  recorded_at: Tue, 22 May 2018 00:00:00 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab/repository/commits/v10.8.0-rc1-ee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 May 2018 00:00:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '719'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"e6320dd39da1bd993f4004eedc6e0cca"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 77e75a8c-c464-4656-aa78-70753543aed1
+      X-Runtime:
+      - '0.287054'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '2'
+      Ratelimit-Remaining:
+      - '598'
+      Ratelimit-Reset:
+      - '1527008758'
+      Ratelimit-Resettime:
+      - Wed, 22 May 2018 00:00:00 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"154596b91354625275177c568f2212d090360606","short_id":"154596b9","title":"Update
+        VERSION to 10.8.0-rc1-ee","created_at":"2018-05-02T14:58:16.000-05:00","parent_ids":["c739b3172ca6edce0c7e07e654c11f8a07df660b"],"message":"Update
+        VERSION to 10.8.0-rc1-ee\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-02T14:58:16.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-02T14:58:16.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"failed","last_pipeline":{"id":21512462,"sha":"154596b91354625275177c568f2212d090360606","ref":"10-8-stable-ee-prepare-rc2","status":"failed"},"project_id":278964}'
+    http_version: 
+  recorded_at: Tue, 22 May 2018 00:00:00 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab/repository/commits/v10.8.0-rc2-ee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 May 2018 00:00:00 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '719'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"27eb625b58bc8cf04991a055e18eebd0"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - eb9162ef-05da-437f-96ba-3cdf62b70dff
+      X-Runtime:
+      - '0.577867'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '2'
+      Ratelimit-Remaining:
+      - '598'
+      Ratelimit-Reset:
+      - '1527008770'
+      Ratelimit-Resettime:
+      - Wed, 22 May 2018 00:00:00 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"2d9206de36f084ce78ff1d0a3fd3f436379b5d78","short_id":"2d9206de","title":"Update
+        VERSION to 10.8.0-rc2-ee","created_at":"2018-05-04T12:58:52.000-05:00","parent_ids":["6fdea8b36ae7317ae3284e2a4d85ca3fb2761e6c"],"message":"Update
+        VERSION to 10.8.0-rc2-ee\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T12:58:52.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T12:58:52.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"failed","last_pipeline":{"id":21611168,"sha":"2d9206de36f084ce78ff1d0a3fd3f436379b5d78","ref":"10-8-stable-ee-prepare-rc3","status":"failed"},"project_id":278964}'
+    http_version: 
+  recorded_at: Tue, 22 May 2018 00:00:00 GMT
+recorded_with: VCR 2.9.3

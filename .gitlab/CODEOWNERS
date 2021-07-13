@@ -1,0 +1,4 @@
+# These are the default approvers. Additional rules after this will overwrite
+# this rule, _not_ append to it.
+
+* @gitlab-org/delivery

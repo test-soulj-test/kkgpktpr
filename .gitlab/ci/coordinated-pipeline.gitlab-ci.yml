@@ -1,0 +1,215 @@
+# Jobs associated to https://gitlab.com/groups/gitlab-com/gl-infra/-/epics/154
+
+.if-coordinated-pipeline: &if-coordinated-pipeline
+  if: '$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d{12}$/'
+
+.if-auto-deploy-tag: &if-auto-deploy-tag
+  if: '$AUTO_DEPLOY_TAG'
+
+# Create package tags in order to initiate the building process.
+#
+# This job will only run on a tagged release-tools pipeline matching a specific
+# format.
+auto_deploy:start:
+  extends: .with-bundle
+  stage: coordinated:tag
+  rules:
+    - <<: *if-coordinated-pipeline
+  script:
+    - bundle exec rake 'auto_deploy:tag'
+  artifacts:
+    reports:
+      dotenv: deploy_vars.env
+
+# Wait on an Omnibus pipeline to complete in order to ensure the package is
+# built before attempting to deploy it.
+#
+# Runs under one of two conditions:
+#
+# 1. In a tagged release-tools pipeline after `auto_deploy:start`, delayed by 60
+#    minutes since packages usually take at least this long to build.
+# 2. In the presence of an `AUTO_DEPLOY_TAG` variable, populated when we want to
+#    trigger a deploy directly from ChatOps. There is no delay in this case.
+auto_deploy:wait:omnibus:
+  extends: .with-bundle
+  stage: coordinated:build
+  rules:
+    - <<: *if-auto-deploy-tag
+    - <<: *if-coordinated-pipeline
+      when: delayed
+      start_in: 60 minutes
+  script:
+    - bundle exec rake 'auto_deploy:wait:omnibus'
+
+# Wait on a Helm chart pipeline to complete in order to ensure the image is
+# built before attempting to deploy it.
+#
+# Runs under one of two conditions:
+#
+# 1. In a tagged release-tools pipeline after `auto_deploy:start`, delayed by 45
+#    minutes since images usually take at least this long to build.
+# 2. In the presence of an `AUTO_DEPLOY_TAG` variable, populated when we want to
+#    trigger a deploy directly from ChatOps. There is no delay in this case.
+auto_deploy:wait:helm:
+  extends: .with-bundle
+  stage: coordinated:build
+  rules:
+    - <<: *if-auto-deploy-tag
+    - <<: *if-coordinated-pipeline
+      when: delayed
+      start_in: 45 minutes
+  script:
+    - bundle exec rake 'auto_deploy:wait:helm'
+
+# Registers the deployment start time and stores the value in `DEPLOY_START_TIME`.
+#
+# Runs after the auto_deploy packages have been built and before the staging
+# deployment starts.
+auto_deploy:metrics:start_time:
+  extends: .with-bundle
+  stage: coordinated:metrics:prepare
+  rules:
+    - <<: *if-auto-deploy-tag
+    - <<: *if-coordinated-pipeline
+  needs:
+    - auto_deploy:start
+    - auto_deploy:wait:omnibus
+    - auto_deploy:wait:helm
+  script:
+    - bundle exec rake 'auto_deploy:metrics:start_time'
+  allow_failure: true
+  artifacts:
+    reports:
+      dotenv: deploy_vars.env
+
+# Trigger a downstream pipeline to deploy to staging
+auto_deploy:deploy:staging:
+  stage: coordinated:deploy:staging
+  rules:
+    - <<: *if-auto-deploy-tag
+    - <<: *if-coordinated-pipeline
+  variables:
+    DEPLOY_ENVIRONMENT: 'gstg'
+    TRIGGER_REF: 'master'
+    DEPLOY_USER: 'deployer'
+    DEPLOY_VERSION: $DEPLOY_VERSION
+    SKIP_JOB_ON_COORDINATOR_PIPELINE: 'true'
+  needs:
+    - auto_deploy:start
+    - auto_deploy:wait:omnibus
+    - auto_deploy:wait:helm
+    - auto_deploy:metrics:start_time
+  trigger:
+    project: gitlab-com/gl-infra/deployer
+    strategy: depend
+
+# Trigger a downstream pipeline to deploy to canary
+auto_deploy:deploy:cny:
+  stage: coordinated:deploy:canary
+  rules:
+    - <<: *if-auto-deploy-tag
+    - <<: *if-coordinated-pipeline
+  variables:
+    DEPLOY_ENVIRONMENT: 'gprd-cny'
+    TRIGGER_REF: 'master'
+    DEPLOY_USER: 'deployer'
+    DEPLOY_VERSION: $DEPLOY_VERSION
+    SKIP_JOB_ON_COORDINATOR_PIPELINE: 'true'
+  needs:
+    - auto_deploy:start
+    - auto_deploy:wait:omnibus
+    - auto_deploy:wait:helm
+    - auto_deploy:deploy:staging
+    - auto_deploy:metrics:start_time
+  trigger:
+    project: gitlab-com/gl-infra/deployer
+    strategy: depend
+
+# Triggers production checks before authorizing a deployment to production
+#
+# Runs after 60 minutes and if a deployment to canary
+# has been completed.
+auto_deploy:baking_time:
+  tags:
+    # Internal prometheus is only available from specific tagged runners
+    - release
+  extends: .with-bundle
+  stage: coordinated:promote:production
+  rules:
+    - <<: *if-auto-deploy-tag
+      when: delayed
+      start_in: 60 minutes
+    - <<: *if-coordinated-pipeline
+      when: delayed
+      start_in: 60 minutes
+  needs:
+    - auto_deploy:deploy:cny
+  script:
+    - export LOG_LEVEL=trace  # More verbose logging while we debug
+    - unset ELASTIC_URL       # Don't send these verbose logs to Elastic
+    - bundle exec rake 'auto_deploy:baking_time'
+
+# Triggers a production check that validates if a deploy to production
+# can start
+#
+auto_deploy:promote:gprd:
+  extends: .with-bundle
+  tags:
+    - release
+  stage: coordinated:promote:production
+  rules:
+    - <<: *if-auto-deploy-tag
+      when: manual
+    - <<: *if-coordinated-pipeline
+      when: manual
+  variables:
+    RELEASE_MANAGER: '$GITLAB_USER_LOGIN'
+  script:
+    - bundle exec rake 'auto_deploy:check_production'
+
+# Triggers a downstream pipeline to deploy to production
+#
+# Runs after the deployment checks (auto_deploy:promote:gprd)
+# have been cleared
+auto_deploy:deploy:gprd:
+  stage: coordinated:deploy:production
+  rules:
+    - <<: *if-auto-deploy-tag
+    - <<: *if-coordinated-pipeline
+  variables:
+    DEPLOY_ENVIRONMENT: 'gprd'
+    TRIGGER_REF: 'master'
+    DEPLOY_USER: 'deployer'
+    DEPLOY_VERSION: $DEPLOY_VERSION
+    SKIP_JOB_ON_COORDINATOR_PIPELINE: 'true'
+  needs:
+    - auto_deploy:start
+    - auto_deploy:promote:gprd
+    - auto_deploy:metrics:start_time
+  trigger:
+    project: gitlab-com/gl-infra/deployer
+    strategy: depend
+
+# Registers the deployment end time and calculates the deployment duration
+# based on `DEPLOY_START_TIME` value. Pushes the information to Prometheus PushGateway
+#
+# Runs after the deployment to production finishes.
+auto_deploy:metrics:end_time:
+  tags:
+    # Internal prometheus is only available from specific tagged runners
+    - release
+  extends: .with-bundle
+  stage: coordinated:finish
+  rules:
+    - <<: *if-auto-deploy-tag
+    - <<: *if-coordinated-pipeline
+  variables:
+    DEPLOY_START_TIME: $DEPLOY_START_TIME
+    DEPLOY_VERSION: $DEPLOY_VERSION
+  allow_failure: true
+  needs:
+    - auto_deploy:start
+    - auto_deploy:metrics:start_time
+    - auto_deploy:deploy:gprd
+  script:
+    - bundle exec rake 'auto_deploy:metrics:end_time'

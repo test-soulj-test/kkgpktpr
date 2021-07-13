@@ -1,0 +1,9 @@
+<%= issue_presenter.present %>
+
+<% if ENV['CI_PIPELINE_TRIGGERED'] -%>
+---
+
+:robot: This issue was generated via [triggered pipeline](<%= ENV['CI_JOB_URL'] %>).
+
+/confidential
+<% end -%>

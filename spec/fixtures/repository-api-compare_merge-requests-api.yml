@@ -1,0 +1,1430 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/v10.8.0-rc1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 25 May 2018 14:42:58 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '711'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"9eadb6800f8c1400393cc6918e34cc26"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - d1c1df30-347b-4e86-9f3d-2f869da96432
+      X-Runtime:
+      - '0.939403'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527259438'
+      Ratelimit-Resettime:
+      - Sat, 25 May 2018 14:43:58 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"d36753ca4448983a4113f8e6fccdbe58d3452ecd","short_id":"d36753ca","title":"Update
+        VERSION to 10.8.0-rc1","created_at":"2018-05-02T15:02:04.000-05:00","parent_ids":["82b4983823f24f698b8e594f355ccd839a33a8ac"],"message":"Update
+        VERSION to 10.8.0-rc1\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-02T15:02:04.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-02T15:02:04.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"success","last_pipeline":{"id":21512419,"sha":"d36753ca4448983a4113f8e6fccdbe58d3452ecd","ref":"10-8-stable-prepare-rc2","status":"success"},"project_id":13083}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 14:42:58 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/v10.8.0-rc2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 25 May 2018 14:42:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '711'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a236375ca1da0eaa6fcc3967c1c60f86"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - cc26bb31-c04a-4bf8-bb66-704447f77ef7
+      X-Runtime:
+      - '0.978931'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527259439'
+      Ratelimit-Resettime:
+      - Sat, 25 May 2018 14:43:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"7f7153301ad59d864791cb85d8abd1135962e954","short_id":"7f715330","title":"Update
+        VERSION to 10.8.0-rc2","created_at":"2018-05-04T13:02:47.000-05:00","parent_ids":["fb38c4e6457ae93794879f29ce0bf62dffc2d407"],"message":"Update
+        VERSION to 10.8.0-rc2\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T13:02:47.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T13:02:47.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"success","last_pipeline":{"id":21611089,"sha":"7f7153301ad59d864791cb85d8abd1135962e954","ref":"10-8-stable-prepare-rc3","status":"success"},"project_id":13083}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 14:42:59 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/compare?from=v10.8.0-rc1&to=v10.8.0-rc2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 25 May 2018 14:43:01 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4765'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a08782f823236dc13e73b31a39340b24"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - ca9e0a55-63b0-47f3-92ad-062d762089e2
+      X-Runtime:
+      - '1.770266'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527259442'
+      Ratelimit-Resettime:
+      - Sat, 25 May 2018 14:44:02 GMT
+    body:
+      encoding: UTF-8
+      string: '{"commit":{"id":"7f7153301ad59d864791cb85d8abd1135962e954","short_id":"7f715330","title":"Update
+        VERSION to 10.8.0-rc2","created_at":"2018-05-04T18:02:47.000Z","parent_ids":["fb38c4e6457ae93794879f29ce0bf62dffc2d407"],"message":"Update
+        VERSION to 10.8.0-rc2\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T18:02:47.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T18:02:47.000Z"},"commits":[{"id":"c8f70158e57213e4a813aef1e3b0ad9aa22441b0","short_id":"c8f70158","title":"Merge
+        branch ''46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table''
+        into ''master''","created_at":"2018-05-04T16:09:51.000Z","parent_ids":["d36753ca4448983a4113f8e6fccdbe58d3452ecd"],"message":"Merge
+        branch ''46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table''
+        into ''master''\n\nResolve \"Import/Export (import) is broken due to the addition
+        of a CI table\"\n\nCloses #46049\n\nSee merge request gitlab-org/gitlab-foss!18745\n","author_name":"Douwe
+        Maan","author_email":"douwe@gitlab.com","authored_date":"2018-05-04T16:00:39.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T16:09:51.000Z"},{"id":"fb38c4e6457ae93794879f29ce0bf62dffc2d407","short_id":"fb38c4e6","title":"Merge
+        branch ''10-8-stable-prepare-rc2'' into ''10-8-stable''","created_at":"2018-05-04T17:25:15.000Z","parent_ids":["d36753ca4448983a4113f8e6fccdbe58d3452ecd","c8f70158e57213e4a813aef1e3b0ad9aa22441b0"],"message":"Merge
+        branch ''10-8-stable-prepare-rc2'' into ''10-8-stable''\n\nPrepare 10.8 RC2
+        release\n\nSee merge request gitlab-org/gitlab-foss!18744","author_name":"Mayra
+        Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T17:25:15.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T17:25:15.000Z"},{"id":"7f7153301ad59d864791cb85d8abd1135962e954","short_id":"7f715330","title":"Update
+        VERSION to 10.8.0-rc2","created_at":"2018-05-04T18:02:47.000Z","parent_ids":["fb38c4e6457ae93794879f29ce0bf62dffc2d407"],"message":"Update
+        VERSION to 10.8.0-rc2\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-04T18:02:47.000Z","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-04T18:02:47.000Z"}],"diffs":[{"old_path":"VERSION","new_path":"VERSION","a_mode":"100644","b_mode":"100644","new_file":false,"renamed_file":false,"deleted_file":false,"diff":"---
+        a/VERSION\n+++ b/VERSION\n@@ -1 +1 @@\n-10.8.0-rc1\n+10.8.0-rc2\n"},{"old_path":"app/models/project.rb","new_path":"app/models/project.rb","a_mode":"100644","b_mode":"100644","new_file":false,"renamed_file":false,"deleted_file":false,"diff":"---
+        a/app/models/project.rb\n+++ b/app/models/project.rb\n@@ -236,7 +236,7 @@
+        class Project \u003c ActiveRecord::Base\n   has_many :custom_attributes, class_name:
+        ''ProjectCustomAttribute''\n \n   has_many :project_badges, class_name: ''ProjectBadge''\n-  has_one
+        :ci_cd_settings, class_name: ''ProjectCiCdSetting''\n+  has_one :ci_cd_settings,
+        class_name: ''ProjectCiCdSetting'', inverse_of: :project, autosave: true,
+        dependent: :destroy # rubocop:disable Cop/ActiveRecordDependent\n \n   accepts_nested_attributes_for
+        :variables, allow_destroy: true\n   accepts_nested_attributes_for :project_feature,
+        update_only: true\n"},{"old_path":"changelogs/unreleased/46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table.yml","new_path":"changelogs/unreleased/46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table.yml","a_mode":"0","b_mode":"100644","new_file":true,"renamed_file":false,"deleted_file":false,"diff":"---
+        /dev/null\n+++ b/changelogs/unreleased/46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table.yml\n@@
+        -0,0 +1,5 @@\n+---\n+title: Resolve Import/Export ci_cd_settings error updating
+        the project\n+merge_request: 46049\n+author:\n+type: fixed\n"},{"old_path":"spec/models/project_spec.rb","new_path":"spec/models/project_spec.rb","a_mode":"100644","b_mode":"100644","new_file":false,"renamed_file":false,"deleted_file":false,"diff":"---
+        a/spec/models/project_spec.rb\n+++ b/spec/models/project_spec.rb\n@@ -102,6
+        +102,14 @@ describe Project do\n       end\n     end\n \n+    context ''updating
+        cd_cd_settings'' do\n+      it ''does not raise an error'' do\n+        project
+        = create(:project)\n+\n+        expect { project.update(ci_cd_settings: nil)
+        }.not_to raise_exception\n+      end\n+    end\n+\n     describe ''#members
+        \u0026 #requesters'' do\n       let(:project) { create(:project, :public,
+        :access_requestable) }\n       let(:requester) { create(:user) }\n"}],"compare_timeout":false,"compare_same_ref":false}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 14:43:02 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/merge_requests/18745
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 25 May 2018 14:43:05 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3731'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"da37810ce5cce7356ed64e9857ff5291"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - ee48c2b0-5769-4110-8607-3a69f97eb9e1
+      X-Runtime:
+      - '1.286273'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1527259445'
+      Ratelimit-Resettime:
+      - Sat, 25 May 2018 14:44:05 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":9638040,"iid":18745,"project_id":13083,"title":"Resolve \"Import/Export
+        (import) is broken due to the addition of a CI table\"","description":"##
+        What does this MR do?\n\n## Are there points in the code the reviewer needs
+        to double check?\n\n## Why was this MR needed?\n\n## Screenshots (if relevant)\n\n##
+        Does this MR meet the acceptance criteria?\n\n- [ ] [Changelog entry](https://docs.gitlab.com/ee/development/changelog.html)
+        added, if necessary\n- [ ] [Documentation created/updated](https://docs.gitlab.com/ee/development/doc_styleguide.html)\n-
+        [ ] API support added\n- [ ] Tests added for this feature/bug\n- Review\n  -
+        [ ] Has been reviewed by UX\n  - [ ] Has been reviewed by Frontend\n  - [
+        ] Has been reviewed by Backend\n  - [ ] Has been reviewed by Database\n- [
+        ] Conform by the [merge request performance guides](https://docs.gitlab.com/ee/development/merge_request_performance_guidelines.html)\n-
+        [ ] Conform by the [style guides](https://gitlab.com/gitlab-org/gitlab/blob/master/CONTRIBUTING.md#style-guides)\n-
+        [ ] [Squashed related commits together](https://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits)\n-
+        [ ] Internationalization required/considered\n- [ ] End-to-end tests pass
+        (`package-and-qa` manual pipeline job)\n\n## What are the relevant issue numbers?\n\n\nCloses
+        #46049","state":"merged","created_at":"2018-05-04T12:35:40.242Z","updated_at":"2018-05-09T08:58:04.795Z","target_branch":"master","source_branch":"46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table","upvotes":0,"downvotes":0,"author":{"id":273486,"name":"James
+        Lopez","username":"jameslopez","state":"active","avatar_url":"https://secure.gravatar.com/avatar/3731e7dd4f2b4fa8ae184c0a7519dd58?s=80\u0026d=identicon","web_url":"https://gitlab.com/jameslopez"},"assignee":{"id":87854,"name":"Douwe
+        Maan","username":"DouweM","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/87854/avatar.png","web_url":"https://gitlab.com/DouweM"},"source_project_id":13083,"target_project_id":13083,"labels":["Platform","import","project
+        export","regression"],"work_in_progress":false,"milestone":{"id":445863,"iid":12,"group_id":9970,"title":"10.8","description":"","state":"active","created_at":"2018-01-16T17:05:23.570Z","updated_at":"2018-01-16T17:05:23.570Z","due_date":"2018-05-22","start_date":"2018-04-08"},"merge_when_pipeline_succeeds":true,"merge_status":"can_be_merged","sha":"4f04aeec80bbfcb025e321693e6ca99b01244bb4","merge_commit_sha":"0065c449ff95cf6e0643bab17ed236c23207b537","user_notes_count":7,"discussion_locked":null,"should_remove_source_branch":true,"force_remove_source_branch":null,"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/18745","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"subscribed":false,"changes_count":"3","merged_by":{"id":87854,"name":"Douwe
+        Maan","username":"DouweM","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/87854/avatar.png","web_url":"https://gitlab.com/DouweM"},"merged_at":"2018-05-04T16:01:25.888Z","closed_by":null,"closed_at":null,"latest_build_started_at":"2018-05-04T15:22:51.675Z","latest_build_finished_at":"2018-05-04T16:00:37.614Z","first_deployed_to_production_at":null,"pipeline":{"id":21526587,"sha":"4f04aeec80bbfcb025e321693e6ca99b01244bb4","ref":"46049-import-export-import-is-broken-due-to-the-addition-of-a-ci-table","status":"success"},"diff_refs":{"base_sha":"2d23cb1b9fa9fed19ce66998c5b4177ee13ef5f3","head_sha":"4f04aeec80bbfcb025e321693e6ca99b01244bb4","start_sha":"7603beffc916d06039cac63b223d8e6234b5d666"},"approvals_before_merge":null,"squash":false}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 14:43:05 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/merge_requests/18744
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.3.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 25 May 2018 14:43:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3802'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"938db1f220f3df38d762f891bacd3842"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 99162340-ebcf-45a3-8e24-13d458ae534d
+      X-Runtime:
+      - '1.116574'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '2'
+      Ratelimit-Remaining:
+      - '598'
+      Ratelimit-Reset:
+      - '1527259487'
+      Ratelimit-Resettime:
+      - Sat, 25 May 2018 14:44:47 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":9636918,"iid":18744,"project_id":13083,"title":"Prepare 10.8
+        RC2 release","description":"Main release issue: https://gitlab.com/gitlab-org/gitlab-foss/issues/45897\n\n###
+        Summary\n\nThis MR prepares `10-8-stable` for %\"10.8\" (`RC2`) by merging
+        `10-8-stable-prepare-rc2` into `10-8-stable`.\n\n### Note to leave in MRs\n\n```\nPicked
+        into https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/18744, will merge
+        into `10-8-stable` ready for `10.8 RC2`\n\n/unlabel ~\"Pick into 10.8\"\n```\n\n###
+        Steps\n\n1. Cherry-pick the fix for https://gitlab.com/gitlab-org/gitlab-foss/issues/46049\n1.
+        Merge CE-to-EE using one of the workflows described in the [Merge CE stable
+        changes to EE docs](https://gitlab.com/gitlab-org/release-tools/blob/master/doc/picking-into-merge-requests.md#merge-ce-stable-changes-to-ee)\n  -
+        *Note: Often, after a release has been tagged, the `VERSION` file in `ee`
+        will have a conflict. Accept the `-ee` one*\n1. Once this MR is green merge
+        it to stable, preferably with a manual fast-forward merge to minimize waiting
+        time, as described in [Merging preparation MRs into stable](https://gitlab.com/gitlab-org/release-tools/blob/master/doc/picking-into-merge-requests.md#merging-preparation-mrs-into-stable)\n\n###
+        Checklist\n\n- [x] Fix for #46049 has been picked\n- [x] Conflicts resolved\n-
+        [x] No new commits have introduced directly to the stable branch while this
+        MR was in progress. If there are, ensure these are merged into EE and check
+        for a green pipeline after merging this MR.","state":"merged","created_at":"2018-05-04T11:39:23.821Z","updated_at":"2018-05-04T17:26:00.716Z","target_branch":"10-8-stable","source_branch":"10-8-stable-prepare-rc2","upvotes":0,"downvotes":0,"author":{"id":482476,"name":"Filipa
+        Lacerda","username":"filipa","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/482476/avatar.png","web_url":"https://gitlab.com/filipa"},"assignee":{"id":33100,"name":"Mayra
+        Cabrera","username":"mayra-cabrera","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/33100/avatar.png","web_url":"https://gitlab.com/mayra-cabrera"},"source_project_id":13083,"target_project_id":13083,"labels":["Release"],"work_in_progress":false,"milestone":{"id":445863,"iid":12,"group_id":9970,"title":"10.8","description":"","state":"active","created_at":"2018-01-16T17:05:23.570Z","updated_at":"2018-01-16T17:05:23.570Z","due_date":"2018-05-22","start_date":"2018-04-08"},"merge_when_pipeline_succeeds":false,"merge_status":"can_be_merged","sha":"c8f70158e57213e4a813aef1e3b0ad9aa22441b0","merge_commit_sha":"fb38c4e6457ae93794879f29ce0bf62dffc2d407","user_notes_count":0,"discussion_locked":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/18744","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"subscribed":false,"changes_count":"3","merged_by":{"id":33100,"name":"Mayra
+        Cabrera","username":"mayra-cabrera","state":"active","avatar_url":"https://assets.gitlab-static.net/uploads/-/system/user/avatar/33100/avatar.png","web_url":"https://gitlab.com/mayra-cabrera"},"merged_at":"2018-05-04T17:26:02.545Z","closed_by":null,"closed_at":null,"latest_build_started_at":"2018-05-04T16:11:12.586Z","latest_build_finished_at":"2018-05-04T17:02:32.083Z","first_deployed_to_production_at":null,"pipeline":{"id":21529148,"sha":"c8f70158e57213e4a813aef1e3b0ad9aa22441b0","ref":"10-8-stable-prepare-rc2","status":"success"},"diff_refs":{"base_sha":"d36753ca4448983a4113f8e6fccdbe58d3452ecd","head_sha":"c8f70158e57213e4a813aef1e3b0ad9aa22441b0","start_sha":"d36753ca4448983a4113f8e6fccdbe58d3452ecd"},"approvals_before_merge":null,"squash":false}'
+    http_version: 
+  recorded_at: Fri, 25 May 2018 14:43:47 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/v10.8.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:02:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '687'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"6e07e4f83a5710967326ad6fec0fffc8"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 7e558d3d-4715-460c-af5a-68e5ac692d37
+      X-Runtime:
+      - '0.447611'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1528704208'
+      Ratelimit-Resettime:
+      - Tue, 11 Jun 2018 08:03:28 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"21a8d61d5ca820e61ab9c8dcef48a7169683077e","short_id":"21a8d61d","title":"Update
+        VERSION to 10.8.1","created_at":"2018-05-23T14:08:04.000-05:00","parent_ids":["9badc60e1e04c7aa89c6e73f54dac29384ed2ea2"],"message":"Update
+        VERSION to 10.8.1\n","author_name":"Mayra Cabrera","author_email":"mcabrera@gitlab.com","authored_date":"2018-05-23T14:08:04.000-05:00","committer_name":"Mayra
+        Cabrera","committer_email":"mcabrera@gitlab.com","committed_date":"2018-05-23T14:08:04.000-05:00","stats":{"additions":1,"deletions":1,"total":2},"status":"success","last_pipeline":{"id":22532239,"sha":"21a8d61d5ca820e61ab9c8dcef48a7169683077e","ref":"v10.8.1","status":"success"},"project_id":13083}'
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:02:28 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/commits/v10.8.2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:02:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '680'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"9ed8a754573aa2c5f9a9a29ce89edaaf"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 6e3c3d83-036b-4068-b903-22cb53981b5a
+      X-Runtime:
+      - '0.093994'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1528704209'
+      Ratelimit-Resettime:
+      - Tue, 11 Jun 2018 08:03:29 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"d0a319c97f11ff86e60b2ebf37522c0801fb32d7","short_id":"d0a319c9","title":"Update
+        VERSION to 10.8.2","created_at":"2018-05-28T12:06:47.000Z","parent_ids":["0d27e8b3cca92b271b151bf22f9da9b747ddca41"],"message":"Update
+        VERSION to 10.8.2\n","author_name":"Filipa Lacerda","author_email":"filipa@gitlab.com","authored_date":"2018-05-28T12:06:47.000Z","committer_name":"Filipa
+        Lacerda","committer_email":"filipa@gitlab.com","committed_date":"2018-05-28T12:06:47.000Z","stats":{"additions":1,"deletions":1,"total":2},"status":"failed","last_pipeline":{"id":22854792,"sha":"d0a319c97f11ff86e60b2ebf37522c0801fb32d7","ref":"10-8-stable-patch-3","status":"failed"},"project_id":13083}'
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:02:29 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fsecurity%2Fgitlab-foss/repository/compare?from=v10.8.1&to=v10.8.2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:02:30 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '21938'
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"52994e8e248025eb52eaf8794f09ee6b"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 62d4c025-55a5-4896-8950-837adb22a5eb
+      X-Runtime:
+      - '1.215530'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '2'
+      Ratelimit-Remaining:
+      - '598'
+      Ratelimit-Reset:
+      - '1528704210'
+      Ratelimit-Resettime:
+      - Tue, 11 Jun 2018 08:03:30 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb21taXQiOnsiaWQiOiJkMGEzMTljOTdmMTFmZjg2ZTYwYjJlYmYzNzUy
+        MmMwODAxZmIzMmQ3Iiwic2hvcnRfaWQiOiJkMGEzMTljOSIsInRpdGxlIjoi
+        VXBkYXRlIFZFUlNJT04gdG8gMTAuOC4yIiwiY3JlYXRlZF9hdCI6IjIwMTgt
+        MDUtMjhUMTI6MDY6NDcuMDAwWiIsInBhcmVudF9pZHMiOlsiMGQyN2U4YjNj
+        Y2E5MmIyNzFiMTUxYmYyMmY5ZGE5Yjc0N2RkY2E0MSJdLCJtZXNzYWdlIjoi
+        VXBkYXRlIFZFUlNJT04gdG8gMTAuOC4yXG4iLCJhdXRob3JfbmFtZSI6IkZp
+        bGlwYSBMYWNlcmRhIiwiYXV0aG9yX2VtYWlsIjoiZmlsaXBhQGdpdGxhYi5j
+        b20iLCJhdXRob3JlZF9kYXRlIjoiMjAxOC0wNS0yOFQxMjowNjo0Ny4wMDBa
+        IiwiY29tbWl0dGVyX25hbWUiOiJGaWxpcGEgTGFjZXJkYSIsImNvbW1pdHRl
+        cl9lbWFpbCI6ImZpbGlwYUBnaXRsYWIuY29tIiwiY29tbWl0dGVkX2RhdGUi
+        OiIyMDE4LTA1LTI4VDEyOjA2OjQ3LjAwMFoifSwiY29tbWl0cyI6W3siaWQi
+        OiI4YTkzOTE3YjdlMmY2MWQzOGQxZGM3ZjZmYzE0YTExYzNhZDdiNzNhIiwi
+        c2hvcnRfaWQiOiI4YTkzOTE3YiIsInRpdGxlIjoiTWVyZ2UgYnJhbmNo4oCm
+        IiwiY3JlYXRlZF9hdCI6IjIwMTgtMDUtMjVUMTU6NDM6NTYuMDAwWiIsInBh
+        cmVudF9pZHMiOlsiMjFhOGQ2MWQ1Y2E4MjBlNjFhYjljOGRjZWY0OGE3MTY5
+        NjgzMDc3ZSJdLCJtZXNzYWdlIjoiTWVyZ2UgYnJhbmNoICdzZWN1cml0eS0x
+        MC04LXVzZXJzLWNhbi11cGRhdGUtdGhlaXItcGFzc3dvcmQtd2l0aG91dC1l
+        bnRlcmluZy1jdXJyZW50LXBhc3N3b3JkJyBpbnRvICdzZWN1cml0eS0xMC04
+        J1xuXG5bMTAuOF0gTm8gbG9uZ2VyIGFsbG93IHBhc3N3b3JkIGNoYW5nZSB3
+        aXRob3V0IHByZXZpb3VzIHBhc3N3b3JkIGJlaW5nIHByb3ZpZGVkXG5cblNl
+        ZSBtZXJnZSByZXF1ZXN0IGdpdGxhYi9naXRsYWJocSEyMzg4IiwiYXV0aG9y
+        X25hbWUiOiJGaWxpcGEgTGFjZXJkYSIsImF1dGhvcl9lbWFpbCI6ImZpbGlw
+        YUBnaXRsYWIuY29tIiwiYXV0aG9yZWRfZGF0ZSI6IjIwMTgtMDUtMDlUMTQ6
+        MzQ6NDMuMDAwWiIsImNvbW1pdHRlcl9uYW1lIjoiTWF5cmEgQ2FicmVyYSIs
+        ImNvbW1pdHRlcl9lbWFpbCI6Im1jYWJyZXJhQGdpdGxhYi5jb20iLCJjb21t
+        aXR0ZWRfZGF0ZSI6IjIwMTgtMDUtMjVUMTU6NDM6NTYuMDAwWiJ9LHsiaWQi
+        OiIyN2FmYzA1ZjdkNzgxNDg3ZjdjMDVmOTYzZTU2YmUzYjQxNGExZThkIiwi
+        c2hvcnRfaWQiOiIyN2FmYzA1ZiIsInRpdGxlIjoiTWVyZ2UgYnJhbmNoICdz
+        ZWN1cml0eS1kbS1kZWxldGUtZGVwbG95LWtleS0xMC04JyBpbnRvICdzZWN1
+        cml0eS0xMC04JyIsImNyZWF0ZWRfYXQiOiIyMDE4LTA1LTI1VDE1OjQ0OjE1
+        LjAwMFoiLCJwYXJlbnRfaWRzIjpbIjhhOTM5MTdiN2UyZjYxZDM4ZDFkYzdm
+        NmZjMTRhMTFjM2FkN2I3M2EiXSwibWVzc2FnZSI6Ik1lcmdlIGJyYW5jaCAn
+        c2VjdXJpdHktZG0tZGVsZXRlLWRlcGxveS1rZXktMTAtOCcgaW50byAnc2Vj
+        dXJpdHktMTAtOCdcblxuWzEwLjhdIEZpeCBBUEkgdG8gcmVtb3ZlIGRlcGxv
+        eSBrZXkgZnJvbSBwcm9qZWN0IGluc3RlYWQgb2YgZGVsZXRpbmcgaXQgZW50
+        aXJlbHlcblxuU2VlIG1lcmdlIHJlcXVlc3QgZ2l0bGFiL2dpdGxhYmhxITIz
+        ODciLCJhdXRob3JfbmFtZSI6Ik1heXJhIENhYnJlcmEiLCJhdXRob3JfZW1h
+        aWwiOiJtY2FicmVyYUBnaXRsYWIuY29tIiwiYXV0aG9yZWRfZGF0ZSI6IjIw
+        MTgtMDUtMjFUMjA6NTY6MTguMDAwWiIsImNvbW1pdHRlcl9uYW1lIjoiTWF5
+        cmEgQ2FicmVyYSIsImNvbW1pdHRlcl9lbWFpbCI6Im1jYWJyZXJhQGdpdGxh
+        Yi5jb20iLCJjb21taXR0ZWRfZGF0ZSI6IjIwMTgtMDUtMjVUMTU6NDQ6MTUu
+        MDAwWiJ9LHsiaWQiOiI1ZWJlMmViZGMxZjZiMTZkZmJhNjNjYzc4ODcwMzU5
+        YzQ5YzZiZjBkIiwic2hvcnRfaWQiOiI1ZWJlMmViZCIsInRpdGxlIjoiTWVy
+        Z2UgYnJhbmNoICdzZWN1cml0eS1mai1pbXBvcnQtZXhwb3J0LWFzc2lnbm1l
+        bnQtMTAtOCcgaW50byAnc2VjdXJpdHktMTAtOCciLCJjcmVhdGVkX2F0Ijoi
+        MjAxOC0wNS0yNVQxNTo0NDoyOS4wMDBaIiwicGFyZW50X2lkcyI6WyIyN2Fm
+        YzA1ZjdkNzgxNDg3ZjdjMDVmOTYzZTU2YmUzYjQxNGExZThkIl0sIm1lc3Nh
+        Z2UiOiJNZXJnZSBicmFuY2ggJ3NlY3VyaXR5LWZqLWltcG9ydC1leHBvcnQt
+        YXNzaWdubWVudC0xMC04JyBpbnRvICdzZWN1cml0eS0xMC04J1xuXG5bMTAu
+        OF0gQXJiaXRyYXJ5IGFzc2lnbm1lbnQgb2YgUHJvamVjdCBmaWVsZHMgdXNp
+        bmcgXCJJbXBvcnQgcHJvamVjdFwiIGZyb20gYSBHaXRsYWIgdGFyLmd6XG5c
+        blNlZSBtZXJnZSByZXF1ZXN0IGdpdGxhYi9naXRsYWJocSEyMzkwIiwiYXV0
+        aG9yX25hbWUiOiJNYXlyYSBDYWJyZXJhIiwiYXV0aG9yX2VtYWlsIjoibWNh
+        YnJlcmFAZ2l0bGFiLmNvbSIsImF1dGhvcmVkX2RhdGUiOiIyMDE4LTA1LTIx
+        VDIxOjA1OjUwLjAwMFoiLCJjb21taXR0ZXJfbmFtZSI6Ik1heXJhIENhYnJl
+        cmEiLCJjb21taXR0ZXJfZW1haWwiOiJtY2FicmVyYUBnaXRsYWIuY29tIiwi
+        Y29tbWl0dGVkX2RhdGUiOiIyMDE4LTA1LTI1VDE1OjQ0OjI5LjAwMFoifSx7
+        ImlkIjoiMGQyN2U4YjNjY2E5MmIyNzFiMTUxYmYyMmY5ZGE5Yjc0N2RkY2E0
+        MSIsInNob3J0X2lkIjoiMGQyN2U4YjMiLCJ0aXRsZSI6IlVwZGF0ZSBDSEFO
+        R0VMT0cubWQgZm9yIDEwLjguMiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA1LTI4
+        VDEyOjA2OjM2LjAwMFoiLCJwYXJlbnRfaWRzIjpbIjVlYmUyZWJkYzFmNmIx
+        NmRmYmE2M2NjNzg4NzAzNTljNDljNmJmMGQiXSwibWVzc2FnZSI6IlVwZGF0
+        ZSBDSEFOR0VMT0cubWQgZm9yIDEwLjguMlxuXG5bY2kgc2tpcF0iLCJhdXRo
+        b3JfbmFtZSI6IkZpbGlwYSBMYWNlcmRhIiwiYXV0aG9yX2VtYWlsIjoiZmls
+        aXBhQGdpdGxhYi5jb20iLCJhdXRob3JlZF9kYXRlIjoiMjAxOC0wNS0yOFQx
+        MjowNjozNi4wMDBaIiwiY29tbWl0dGVyX25hbWUiOiJGaWxpcGEgTGFjZXJk
+        YSIsImNvbW1pdHRlcl9lbWFpbCI6ImZpbGlwYUBnaXRsYWIuY29tIiwiY29t
+        bWl0dGVkX2RhdGUiOiIyMDE4LTA1LTI4VDEyOjA2OjM2LjAwMFoifSx7Imlk
+        IjoiZDBhMzE5Yzk3ZjExZmY4NmU2MGIyZWJmMzc1MjJjMDgwMWZiMzJkNyIs
+        InNob3J0X2lkIjoiZDBhMzE5YzkiLCJ0aXRsZSI6IlVwZGF0ZSBWRVJTSU9O
+        IHRvIDEwLjguMiIsImNyZWF0ZWRfYXQiOiIyMDE4LTA1LTI4VDEyOjA2OjQ3
+        LjAwMFoiLCJwYXJlbnRfaWRzIjpbIjBkMjdlOGIzY2NhOTJiMjcxYjE1MWJm
+        MjJmOWRhOWI3NDdkZGNhNDEiXSwibWVzc2FnZSI6IlVwZGF0ZSBWRVJTSU9O
+        IHRvIDEwLjguMlxuIiwiYXV0aG9yX25hbWUiOiJGaWxpcGEgTGFjZXJkYSIs
+        ImF1dGhvcl9lbWFpbCI6ImZpbGlwYUBnaXRsYWIuY29tIiwiYXV0aG9yZWRf
+        ZGF0ZSI6IjIwMTgtMDUtMjhUMTI6MDY6NDcuMDAwWiIsImNvbW1pdHRlcl9u
+        YW1lIjoiRmlsaXBhIExhY2VyZGEiLCJjb21taXR0ZXJfZW1haWwiOiJmaWxp
+        cGFAZ2l0bGFiLmNvbSIsImNvbW1pdHRlZF9kYXRlIjoiMjAxOC0wNS0yOFQx
+        MjowNjo0Ny4wMDBaIn1dLCJkaWZmcyI6W3sib2xkX3BhdGgiOiJDSEFOR0VM
+        T0cubWQiLCJuZXdfcGF0aCI6IkNIQU5HRUxPRy5tZCIsImFfbW9kZSI6IjEw
+        MDY0NCIsImJfbW9kZSI6IjEwMDY0NCIsIm5ld19maWxlIjpmYWxzZSwicmVu
+        YW1lZF9maWxlIjpmYWxzZSwiZGVsZXRlZF9maWxlIjpmYWxzZSwiZGlmZiI6
+        Ii0tLSBhL0NIQU5HRUxPRy5tZFxuKysrIGIvQ0hBTkdFTE9HLm1kXG5AQCAt
+        Miw2ICsyLDE1IEBAXG4gZG9jdW1lbnRhdGlvbl0oZG9jL2RldmVsb3BtZW50
+        L2NoYW5nZWxvZy5tZCkgZm9yIGluc3RydWN0aW9ucyBvbiBhZGRpbmcgeW91
+        ciBvd25cbiBlbnRyeS5cbiBcbisjIyAxMC44LjIgKDIwMTgtMDUtMjgpXG4r
+        XG4rIyMjIFNlY3VyaXR5ICgzIGNoYW5nZXMpXG4rXG4rLSBQcmV2ZW50IHVz
+        ZXIgcGFzc3dvcmRzIGZyb20gYmVpbmcgY2hhbmdlZCB3aXRob3V0IHByb3Zp
+        ZGluZyB0aGUgcHJldmlvdXMgcGFzc3dvcmQuXG4rLSBGaXggQVBJIHRvIHJl
+        bW92ZSBkZXBsb3kga2V5IGZyb20gcHJvamVjdCBpbnN0ZWFkIG9mIGRlbGV0
+        aW5nIGl0IGVudGlyZWx5LlxuKy0gRml4ZWQgYnVnIHRoYXQgYWxsb3dlZCBp
+        bXBvcnRpbmcgYXJiaXRyYXJ5IHByb2plY3QgYXR0cmlidXRlcy5cbitcbitc
+        biAjIyAxMC44LjEgKDIwMTgtMDUtMjMpXG4gXG4gIyMjIEZpeGVkICg5IGNo
+        YW5nZXMpXG4ifSx7Im9sZF9wYXRoIjoiVkVSU0lPTiIsIm5ld19wYXRoIjoi
+        VkVSU0lPTiIsImFfbW9kZSI6IjEwMDY0NCIsImJfbW9kZSI6IjEwMDY0NCIs
+        Im5ld19maWxlIjpmYWxzZSwicmVuYW1lZF9maWxlIjpmYWxzZSwiZGVsZXRl
+        ZF9maWxlIjpmYWxzZSwiZGlmZiI6Ii0tLSBhL1ZFUlNJT05cbisrKyBiL1ZF
+        UlNJT05cbkBAIC0xICsxIEBAXG4tMTAuOC4xXG4rMTAuOC4yXG4ifSx7Im9s
+        ZF9wYXRoIjoiYXBwL2NvbnRyb2xsZXJzL3Byb2ZpbGVzX2NvbnRyb2xsZXIu
+        cmIiLCJuZXdfcGF0aCI6ImFwcC9jb250cm9sbGVycy9wcm9maWxlc19jb250
+        cm9sbGVyLnJiIiwiYV9tb2RlIjoiMTAwNjQ0IiwiYl9tb2RlIjoiMTAwNjQ0
+        IiwibmV3X2ZpbGUiOmZhbHNlLCJyZW5hbWVkX2ZpbGUiOmZhbHNlLCJkZWxl
+        dGVkX2ZpbGUiOmZhbHNlLCJkaWZmIjoiLS0tIGEvYXBwL2NvbnRyb2xsZXJz
+        L3Byb2ZpbGVzX2NvbnRyb2xsZXIucmJcbisrKyBiL2FwcC9jb250cm9sbGVy
+        cy9wcm9maWxlc19jb250cm9sbGVyLnJiXG5AQCAtOTMsOCArOTMsNiBAQCBj
+        bGFzcyBQcm9maWxlc0NvbnRyb2xsZXIgXHUwMDNjIFByb2ZpbGVzOjpBcHBs
+        aWNhdGlvbkNvbnRyb2xsZXJcbiAgICAgICA6bGlua2VkaW4sXG4gICAgICAg
+        OmxvY2F0aW9uLFxuICAgICAgIDpuYW1lLFxuLSAgICAgIDpwYXNzd29yZCxc
+        bi0gICAgICA6cGFzc3dvcmRfY29uZmlybWF0aW9uLFxuICAgICAgIDpwdWJs
+        aWNfZW1haWwsXG4gICAgICAgOnNreXBlLFxuICAgICAgIDp0d2l0dGVyLFxu
+        In0seyJvbGRfcGF0aCI6ImxpYi9hcGkvZGVwbG95X2tleXMucmIiLCJuZXdf
+        cGF0aCI6ImxpYi9hcGkvZGVwbG95X2tleXMucmIiLCJhX21vZGUiOiIxMDA2
+        NDQiLCJiX21vZGUiOiIxMDA2NDQiLCJuZXdfZmlsZSI6ZmFsc2UsInJlbmFt
+        ZWRfZmlsZSI6ZmFsc2UsImRlbGV0ZWRfZmlsZSI6ZmFsc2UsImRpZmYiOiIt
+        LS0gYS9saWIvYXBpL2RlcGxveV9rZXlzLnJiXG4rKysgYi9saWIvYXBpL2Rl
+        cGxveV9rZXlzLnJiXG5AQCAtMTQ4LDEwICsxNDgsMTAgQEAgbW9kdWxlIEFQ
+        SVxuICAgICAgICAgcmVxdWlyZXMgOmtleV9pZCwgdHlwZTogSW50ZWdlciwg
+        ZGVzYzogJ1RoZSBJRCBvZiB0aGUgZGVwbG95IGtleSdcbiAgICAgICBlbmRc
+        biAgICAgICBkZWxldGUgXCI6aWQvZGVwbG95X2tleXMvOmtleV9pZFwiIGRv
+        XG4tICAgICAgICBrZXkgPSB1c2VyX3Byb2plY3QuZGVwbG95X2tleXMuZmlu
+        ZChwYXJhbXNbOmtleV9pZF0pXG4tICAgICAgICBub3RfZm91bmQhKCdEZXBs
+        b3kgS2V5JykgdW5sZXNzIGtleVxuKyAgICAgICAgZGVwbG95X2tleV9wcm9q
+        ZWN0ID0gdXNlcl9wcm9qZWN0LmRlcGxveV9rZXlzX3Byb2plY3RzLmZpbmRf
+        YnkoZGVwbG95X2tleV9pZDogcGFyYW1zWzprZXlfaWRdKVxuKyAgICAgICAg
+        bm90X2ZvdW5kISgnRGVwbG95IEtleScpIHVubGVzcyBkZXBsb3lfa2V5X3By
+        b2plY3RcbiBcbi0gICAgICAgIGRlc3Ryb3lfY29uZGl0aW9uYWxseSEoa2V5
+        KVxuKyAgICAgICAgZGVzdHJveV9jb25kaXRpb25hbGx5IShkZXBsb3lfa2V5
+        X3Byb2plY3QpXG4gICAgICAgZW5kXG4gICAgIGVuZFxuICAgZW5kXG4ifSx7
+        Im9sZF9wYXRoIjoibGliL2dpdGxhYi9pbXBvcnRfZXhwb3J0L2F0dHJpYnV0
+        ZV9jbGVhbmVyLnJiIiwibmV3X3BhdGgiOiJsaWIvZ2l0bGFiL2ltcG9ydF9l
+        eHBvcnQvYXR0cmlidXRlX2NsZWFuZXIucmIiLCJhX21vZGUiOiIxMDA2NDQi
+        LCJiX21vZGUiOiIxMDA2NDQiLCJuZXdfZmlsZSI6ZmFsc2UsInJlbmFtZWRf
+        ZmlsZSI6ZmFsc2UsImRlbGV0ZWRfZmlsZSI6ZmFsc2UsImRpZmYiOiItLS0g
+        YS9saWIvZ2l0bGFiL2ltcG9ydF9leHBvcnQvYXR0cmlidXRlX2NsZWFuZXIu
+        cmJcbisrKyBiL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9hdHRyaWJ1dGVf
+        Y2xlYW5lci5yYlxuQEAgLTcsMTQgKzcsMTUgQEAgbW9kdWxlIEdpdGxhYlxu
+        ICAgICAgICAgbmV3KCphcmdzKS5jbGVhblxuICAgICAgIGVuZFxuIFxuLSAg
+        ICAgIGRlZiBpbml0aWFsaXplKHJlbGF0aW9uX2hhc2g6LCByZWxhdGlvbl9j
+        bGFzczopXG4rICAgICAgZGVmIGluaXRpYWxpemUocmVsYXRpb25faGFzaDos
+        IHJlbGF0aW9uX2NsYXNzOiwgZXhjbHVkZWRfa2V5czogW10pXG4gICAgICAg
+        ICBAcmVsYXRpb25faGFzaCA9IHJlbGF0aW9uX2hhc2hcbiAgICAgICAgIEBy
+        ZWxhdGlvbl9jbGFzcyA9IHJlbGF0aW9uX2NsYXNzXG4rICAgICAgICBAZXhj
+        bHVkZWRfa2V5cyA9IGV4Y2x1ZGVkX2tleXNcbiAgICAgICBlbmRcbiBcbiAg
+        ICAgICBkZWYgY2xlYW5cbiAgICAgICAgIEByZWxhdGlvbl9oYXNoLnJlamVj
+        dCBkbyB8a2V5LCBfdmFsdWV8XG4tICAgICAgICAgIHByb2hpYml0ZWRfa2V5
+        PyhrZXkpIHx8ICFAcmVsYXRpb25fY2xhc3MuYXR0cmlidXRlX21ldGhvZD8o
+        a2V5KVxuKyAgICAgICAgICBwcm9oaWJpdGVkX2tleT8oa2V5KSB8fCAhQHJl
+        bGF0aW9uX2NsYXNzLmF0dHJpYnV0ZV9tZXRob2Q/KGtleSkgfHwgZXhjbHVk
+        ZWRfa2V5PyhrZXkpXG4gICAgICAgICBlbmQuZXhjZXB0KCdpZCcpXG4gICAg
+        ICAgZW5kXG4gXG5AQCAtMjMsNiArMjQsMTIgQEAgbW9kdWxlIEdpdGxhYlxu
+        ICAgICAgIGRlZiBwcm9oaWJpdGVkX2tleT8oa2V5KVxuICAgICAgICAga2V5
+        LmVuZF93aXRoPygnX2lkJykgXHUwMDI2XHUwMDI2ICFBTExPV0VEX1JFRkVS
+        RU5DRVMuaW5jbHVkZT8oa2V5KVxuICAgICAgIGVuZFxuK1xuKyAgICAgIGRl
+        ZiBleGNsdWRlZF9rZXk/KGtleSlcbisgICAgICAgIHJldHVybiBmYWxzZSBp
+        ZiBAZXhjbHVkZWRfa2V5cy5lbXB0eT9cbitcbisgICAgICAgIEBleGNsdWRl
+        ZF9rZXlzLmluY2x1ZGU/KGtleSlcbisgICAgICBlbmRcbiAgICAgZW5kXG4g
+        ICBlbmRcbiBlbmRcbiJ9LHsib2xkX3BhdGgiOiJsaWIvZ2l0bGFiL2ltcG9y
+        dF9leHBvcnQvYXR0cmlidXRlc19maW5kZXIucmIiLCJuZXdfcGF0aCI6Imxp
+        Yi9naXRsYWIvaW1wb3J0X2V4cG9ydC9hdHRyaWJ1dGVzX2ZpbmRlci5yYiIs
+        ImFfbW9kZSI6IjEwMDY0NCIsImJfbW9kZSI6IjEwMDY0NCIsIm5ld19maWxl
+        IjpmYWxzZSwicmVuYW1lZF9maWxlIjpmYWxzZSwiZGVsZXRlZF9maWxlIjpm
+        YWxzZSwiZGlmZiI6Ii0tLSBhL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9h
+        dHRyaWJ1dGVzX2ZpbmRlci5yYlxuKysrIGIvbGliL2dpdGxhYi9pbXBvcnRf
+        ZXhwb3J0L2F0dHJpYnV0ZXNfZmluZGVyLnJiXG5AQCAtMzIsNiArMzIsMTAg
+        QEAgbW9kdWxlIEdpdGxhYlxuICAgICAgICAgQG1ldGhvZHNba2V5XS5uaWw/
+        ID8ge30gOiB7IG1ldGhvZHM6IEBtZXRob2RzW2tleV0gfVxuICAgICAgIGVu
+        ZFxuIFxuKyAgICAgIGRlZiBmaW5kX2V4Y2x1ZGVkX2tleXMoa2xhc3NfbmFt
+        ZSlcbisgICAgICAgIEBleGNsdWRlZF9hdHRyaWJ1dGVzW2tsYXNzX25hbWUu
+        dG9fc3ltXVx1MDAyNi5tYXAoXHUwMDI2OnRvX3MpIHx8IFtdXG4rICAgICAg
+        ZW5kXG4rXG4gICAgICAgcHJpdmF0ZVxuIFxuICAgICAgIGRlZiBmaW5kX2F0
+        dHJpYnV0ZXNfb25seSh2YWx1ZSlcbiJ9LHsib2xkX3BhdGgiOiJsaWIvZ2l0
+        bGFiL2ltcG9ydF9leHBvcnQvaW1wb3J0X2V4cG9ydC55bWwiLCJuZXdfcGF0
+        aCI6ImxpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9pbXBvcnRfZXhwb3J0Lnlt
+        bCIsImFfbW9kZSI6IjEwMDY0NCIsImJfbW9kZSI6IjEwMDY0NCIsIm5ld19m
+        aWxlIjpmYWxzZSwicmVuYW1lZF9maWxlIjpmYWxzZSwiZGVsZXRlZF9maWxl
+        IjpmYWxzZSwiZGlmZiI6Ii0tLSBhL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9y
+        dC9pbXBvcnRfZXhwb3J0LnltbFxuKysrIGIvbGliL2dpdGxhYi9pbXBvcnRf
+        ZXhwb3J0L2ltcG9ydF9leHBvcnQueW1sXG5AQCAtOTgsOCArOTgsNiBAQCBl
+        eGNsdWRlZF9hdHRyaWJ1dGVzOlxuICAgICAtIDppbXBvcnRfamlkXG4gICAg
+        IC0gOmNyZWF0ZWRfYXRcbiAgICAgLSA6dXBkYXRlZF9hdFxuLSAgICAtIDpp
+        bXBvcnRfamlkXG4tICAgIC0gOmltcG9ydF9qaWRcbiAgICAgLSA6aWRcbiAg
+        ICAgLSA6c3Rhcl9jb3VudFxuICAgICAtIDpsYXN0X2FjdGl2aXR5X2F0XG4i
+        fSx7Im9sZF9wYXRoIjoibGliL2dpdGxhYi9pbXBvcnRfZXhwb3J0L3Byb2pl
+        Y3RfdHJlZV9yZXN0b3Jlci5yYiIsIm5ld19wYXRoIjoibGliL2dpdGxhYi9p
+        bXBvcnRfZXhwb3J0L3Byb2plY3RfdHJlZV9yZXN0b3Jlci5yYiIsImFfbW9k
+        ZSI6IjEwMDY0NCIsImJfbW9kZSI6IjEwMDY0NCIsIm5ld19maWxlIjpmYWxz
+        ZSwicmVuYW1lZF9maWxlIjpmYWxzZSwiZGVsZXRlZF9maWxlIjpmYWxzZSwi
+        ZGlmZiI6Ii0tLSBhL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9wcm9qZWN0
+        X3RyZWVfcmVzdG9yZXIucmJcbisrKyBiL2xpYi9naXRsYWIvaW1wb3J0X2V4
+        cG9ydC9wcm9qZWN0X3RyZWVfcmVzdG9yZXIucmJcbkBAIC04OCwxNiArODgs
+        MTggQEAgbW9kdWxlIEdpdGxhYlxuICAgICAgIGVuZFxuIFxuICAgICAgIGRl
+        ZiBwcm9qZWN0X3BhcmFtc1xuLSAgICAgICAgQHByb2plY3RfcGFyYW1zIHx8
+        PSBqc29uX3BhcmFtcy5tZXJnZShvdmVycmlkZV9wYXJhbXMpXG4rICAgICAg
+        ICBAcHJvamVjdF9wYXJhbXMgfHw9IGJlZ2luXG4rICAgICAgICAgIGF0dHJz
+        ID0ganNvbl9wYXJhbXMubWVyZ2Uob3ZlcnJpZGVfcGFyYW1zKVxuK1xuKyAg
+        ICAgICAgICAjIENsZWFuaW5nIGFsbCBpbXBvcnRlZCBhbmQgb3ZlcnJpZGRl
+        biBwYXJhbXNcbisgICAgICAgICAgR2l0bGFiOjpJbXBvcnRFeHBvcnQ6OkF0
+        dHJpYnV0ZUNsZWFuZXIuY2xlYW4ocmVsYXRpb25faGFzaDogYXR0cnMsXG4r
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgIHJlbGF0aW9uX2NsYXNzOiBQcm9qZWN0LFxuKyAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICBleGNsdWRlZF9rZXlzOiBleGNsdWRlZF9rZXlzX2Zvcl9yZWxhdGlvbig6
+        cHJvamVjdCkpXG4rICAgICAgICBlbmRcbiAgICAgICBlbmRcbiBcbiAgICAg
+        ICBkZWYgb3ZlcnJpZGVfcGFyYW1zXG4tICAgICAgICByZXR1cm4ge30gdW5s
+        ZXNzIHBhcmFtcyA9IEBwcm9qZWN0LmltcG9ydF9kYXRhXHUwMDI2LmRhdGFc
+        dTAwMjYuZmV0Y2goJ292ZXJyaWRlX3BhcmFtcycsIG5pbClcbi1cbi0gICAg
+        ICAgIEBvdmVycmlkZV9wYXJhbXMgfHw9IHBhcmFtcy5zZWxlY3QgZG8gfGtl
+        eSwgX3ZhbHVlfFxuLSAgICAgICAgICBQcm9qZWN0LmNvbHVtbl9uYW1lcy5p
+        bmNsdWRlPyhrZXkudG9fcykgXHUwMDI2XHUwMDI2XG4tICAgICAgICAgICAg
+        IXJlYWRlci5wcm9qZWN0X3RyZWVbOmV4Y2VwdF0uaW5jbHVkZT8oa2V5LnRv
+        X3N5bSlcbi0gICAgICAgIGVuZFxuKyAgICAgICAgQG92ZXJyaWRlX3BhcmFt
+        cyB8fD0gQHByb2plY3QuaW1wb3J0X2RhdGFcdTAwMjYuZGF0YVx1MDAyNi5m
+        ZXRjaCgnb3ZlcnJpZGVfcGFyYW1zJywgbmlsKSB8fCB7fVxuICAgICAgIGVu
+        ZFxuIFxuICAgICAgIGRlZiBqc29uX3BhcmFtc1xuQEAgLTE3MSw3ICsxNzMs
+        OCBAQCBtb2R1bGUgR2l0bGFiXG4gICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJlbGF0aW9uX2hhc2g6
+        IHBhcnNlZF9yZWxhdGlvbl9oYXNoKHJlbGF0aW9uX2hhc2gsIHJlbGF0aW9u
+        LnRvX3N5bSksXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIG1lbWJlcnNfbWFwcGVyOiBtZW1iZXJz
+        X21hcHBlcixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgdXNlcjogQHVzZXIsXG4tICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+        IHByb2plY3Q6IEByZXN0b3JlZF9wcm9qZWN0KVxuKyAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwcm9q
+        ZWN0OiBAcmVzdG9yZWRfcHJvamVjdCxcbisgICAgICAgICAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZXhjbHVkZWRf
+        a2V5czogZXhjbHVkZWRfa2V5c19mb3JfcmVsYXRpb24ocmVsYXRpb24pKVxu
+        ICAgICAgICAgZW5kLmNvbXBhY3RcbiBcbiAgICAgICAgIHJlbGF0aW9uX2hh
+        c2hfbGlzdC5pc19hPyhBcnJheSkgPyByZWxhdGlvbl9hcnJheSA6IHJlbGF0
+        aW9uX2FycmF5LmZpcnN0XG5AQCAtMTkyLDYgKzE5NSwxMCBAQCBtb2R1bGUg
+        R2l0bGFiXG4gICAgICAgZGVmIHJlYWRlclxuICAgICAgICAgQHJlYWRlciB8
+        fD0gR2l0bGFiOjpJbXBvcnRFeHBvcnQ6OlJlYWRlci5uZXcoc2hhcmVkOiBA
+        c2hhcmVkKVxuICAgICAgIGVuZFxuK1xuKyAgICAgIGRlZiBleGNsdWRlZF9r
+        ZXlzX2Zvcl9yZWxhdGlvbihyZWxhdGlvbilcbisgICAgICAgIEByZWFkZXIu
+        YXR0cmlidXRlc19maW5kZXIuZmluZF9leGNsdWRlZF9rZXlzKHJlbGF0aW9u
+        KVxuKyAgICAgIGVuZFxuICAgICBlbmRcbiAgIGVuZFxuIGVuZFxuIn0seyJv
+        bGRfcGF0aCI6ImxpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9yZWFkZXIucmIi
+        LCJuZXdfcGF0aCI6ImxpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9yZWFkZXIu
+        cmIiLCJhX21vZGUiOiIxMDA2NDQiLCJiX21vZGUiOiIxMDA2NDQiLCJuZXdf
+        ZmlsZSI6ZmFsc2UsInJlbmFtZWRfZmlsZSI6ZmFsc2UsImRlbGV0ZWRfZmls
+        ZSI6ZmFsc2UsImRpZmYiOiItLS0gYS9saWIvZ2l0bGFiL2ltcG9ydF9leHBv
+        cnQvcmVhZGVyLnJiXG4rKysgYi9saWIvZ2l0bGFiL2ltcG9ydF9leHBvcnQv
+        cmVhZGVyLnJiXG5AQCAtMSw3ICsxLDcgQEBcbiBtb2R1bGUgR2l0bGFiXG4g
+        ICBtb2R1bGUgSW1wb3J0RXhwb3J0XG4gICAgIGNsYXNzIFJlYWRlclxuLSAg
+        ICAgIGF0dHJfcmVhZGVyIDp0cmVlXG4rICAgICAgYXR0cl9yZWFkZXIgOnRy
+        ZWUsIDphdHRyaWJ1dGVzX2ZpbmRlclxuIFxuICAgICAgIGRlZiBpbml0aWFs
+        aXplKHNoYXJlZDopXG4gICAgICAgICBAc2hhcmVkID0gc2hhcmVkXG4ifSx7
+        Im9sZF9wYXRoIjoibGliL2dpdGxhYi9pbXBvcnRfZXhwb3J0L3JlbGF0aW9u
+        X2ZhY3RvcnkucmIiLCJuZXdfcGF0aCI6ImxpYi9naXRsYWIvaW1wb3J0X2V4
+        cG9ydC9yZWxhdGlvbl9mYWN0b3J5LnJiIiwiYV9tb2RlIjoiMTAwNjQ0Iiwi
+        Yl9tb2RlIjoiMTAwNjQ0IiwibmV3X2ZpbGUiOmZhbHNlLCJyZW5hbWVkX2Zp
+        bGUiOmZhbHNlLCJkZWxldGVkX2ZpbGUiOmZhbHNlLCJkaWZmIjoiLS0tIGEv
+        bGliL2dpdGxhYi9pbXBvcnRfZXhwb3J0L3JlbGF0aW9uX2ZhY3RvcnkucmJc
+        bisrKyBiL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9yZWxhdGlvbl9mYWN0
+        b3J5LnJiXG5AQCAtMzYsMTMgKzM2LDIxIEBAIG1vZHVsZSBHaXRsYWJcbiAg
+        ICAgICAgIG5ldygqYXJncykuY3JlYXRlXG4gICAgICAgZW5kXG4gXG4tICAg
+        ICAgZGVmIGluaXRpYWxpemUocmVsYXRpb25fc3ltOiwgcmVsYXRpb25faGFz
+        aDosIG1lbWJlcnNfbWFwcGVyOiwgdXNlcjosIHByb2plY3Q6KVxuKyAgICAg
+        IGRlZiBpbml0aWFsaXplKHJlbGF0aW9uX3N5bTosIHJlbGF0aW9uX2hhc2g6
+        LCBtZW1iZXJzX21hcHBlcjosIHVzZXI6LCBwcm9qZWN0OiwgZXhjbHVkZWRf
+        a2V5czogW10pXG4gICAgICAgICBAcmVsYXRpb25fbmFtZSA9IE9WRVJSSURF
+        U1tyZWxhdGlvbl9zeW1dIHx8IHJlbGF0aW9uX3N5bVxuICAgICAgICAgQHJl
+        bGF0aW9uX2hhc2ggPSByZWxhdGlvbl9oYXNoLmV4Y2VwdCgnbm90ZWFibGVf
+        aWQnKVxuICAgICAgICAgQG1lbWJlcnNfbWFwcGVyID0gbWVtYmVyc19tYXBw
+        ZXJcbiAgICAgICAgIEB1c2VyID0gdXNlclxuICAgICAgICAgQHByb2plY3Qg
+        PSBwcm9qZWN0XG4gICAgICAgICBAaW1wb3J0ZWRfb2JqZWN0X3JldHJpZXMg
+        PSAwXG4rXG4rICAgICAgICAjIFJlbW92ZSBleGNsdWRlZCBrZXlzIGZyb20g
+        cmVsYXRpb25faGFzaFxuKyAgICAgICAgIyBXZSBkb24ndCBkbyB0aGlzIGlu
+        IHRoZSBwYXJzZWRfcmVsYXRpb25faGFzaCBiZWNhdXNlIG9mIHRoZSAndHJh
+        bnNmb3JtZWQgYXR0cmlidXRlcydcbisgICAgICAgICMgRm9yIGV4YW1wbGUs
+        IE1lcmdlUmVxdWVzdERpZmZGaWxlcyBleHBvcnRzIGl0cyBkaWZmIGF0dHJp
+        YnV0ZSBhcyB1dGY4X2RpZmYuIFRoZW4sXG4rICAgICAgICAjIGluIHRoZSBj
+        cmVhdGUgbWV0aG9kIHRoYXQgYXR0cmlidXRlIGlzIHJlbmFtZWQgdG8gZGlm
+        Zi4gQW5kIGJlY2F1c2UgZGlmZiBpcyBhbiBleGNsdWRlZCBrZXksXG4rICAg
+        ICAgICAjIGlmIHdlIGNsZWFuIHRoZSBleGNsdWRlZCBrZXlzIGluIHRoZSBw
+        YXJzZWRfcmVsYXRpb25faGFzaCwgaXQgd2lsbCBiZSByZW1vdmVkXG4rICAg
+        ICAgICAjIGZyb20gdGhlIG9iamVjdCBhdHRyaWJ1dGVzIGFuZCB0aGUgZXhw
+        b3J0IHdpbGwgZmFpbC5cbisgICAgICAgIEByZWxhdGlvbl9oYXNoLmV4Y2Vw
+        dCEoKmV4Y2x1ZGVkX2tleXMpXG4gICAgICAgZW5kXG4gXG4gICAgICAgIyBD
+        cmVhdGVzIGFuIG9iamVjdCBmcm9tIGFuIGFjdHVhbCBtb2RlbCB3aXRoIG5h
+        bWUgXCJyZWxhdGlvbl9zeW1cIiB3aXRoIHBhcmFtcyBmcm9tXG4ifSx7Im9s
+        ZF9wYXRoIjoic3BlYy9jb250cm9sbGVycy9wcm9maWxlc19jb250cm9sbGVy
+        X3NwZWMucmIiLCJuZXdfcGF0aCI6InNwZWMvY29udHJvbGxlcnMvcHJvZmls
+        ZXNfY29udHJvbGxlcl9zcGVjLnJiIiwiYV9tb2RlIjoiMTAwNjQ0IiwiYl9t
+        b2RlIjoiMTAwNjQ0IiwibmV3X2ZpbGUiOmZhbHNlLCJyZW5hbWVkX2ZpbGUi
+        OmZhbHNlLCJkZWxldGVkX2ZpbGUiOmZhbHNlLCJkaWZmIjoiLS0tIGEvc3Bl
+        Yy9jb250cm9sbGVycy9wcm9maWxlc19jb250cm9sbGVyX3NwZWMucmJcbisr
+        KyBiL3NwZWMvY29udHJvbGxlcnMvcHJvZmlsZXNfY29udHJvbGxlcl9zcGVj
+        LnJiXG5AQCAtMyw2ICszLDE5IEBAIHJlcXVpcmUoJ3NwZWNfaGVscGVyJylc
+        biBkZXNjcmliZSBQcm9maWxlc0NvbnRyb2xsZXIsIDpyZXF1ZXN0X3N0b3Jl
+        IGRvXG4gICBsZXQoOnVzZXIpIHsgY3JlYXRlKDp1c2VyKSB9XG4gXG4rICBk
+        ZXNjcmliZSAnUE9TVCB1cGRhdGUnIGRvXG4rICAgIGl0ICdkb2VzIG5vdCB1
+        cGRhdGUgcGFzc3dvcmQnIGRvXG4rICAgICAgc2lnbl9pbih1c2VyKVxuK1xu
+        KyAgICAgIGV4cGVjdCBkb1xuKyAgICAgICAgcG9zdCA6dXBkYXRlLFxuKyAg
+        ICAgICAgICB1c2VyOiB7IHBhc3N3b3JkOiAnaGVsbG8xMjM0NScsIHBhc3N3
+        b3JkX2NvbmZpcm1hdGlvbjogJ2hlbGxvMTIzNDUnIH1cbisgICAgICBlbmQu
+        bm90X3RvIGNoYW5nZSB7IHVzZXIucmVsb2FkLmVuY3J5cHRlZF9wYXNzd29y
+        ZCB9XG4rXG4rICAgICAgZXhwZWN0KHJlc3BvbnNlLnN0YXR1cykudG8gZXEo
+        MzAyKVxuKyAgICBlbmRcbisgIGVuZFxuK1xuICAgZGVzY3JpYmUgJ1BVVCB1
+        cGRhdGUnIGRvXG4gICAgIGl0ICdhbGxvd3MgYW4gZW1haWwgdXBkYXRlIGZy
+        b20gYSB1c2VyIHdpdGhvdXQgYW4gZXh0ZXJuYWwgZW1haWwgYWRkcmVzcycg
+        ZG9cbiAgICAgICBzaWduX2luKHVzZXIpXG4ifSx7Im9sZF9wYXRoIjoic3Bl
+        Yy9saWIvZ2l0bGFiL2ltcG9ydF9leHBvcnQvYXR0cmlidXRlX2NsZWFuZXJf
+        c3BlYy5yYiIsIm5ld19wYXRoIjoic3BlYy9saWIvZ2l0bGFiL2ltcG9ydF9l
+        eHBvcnQvYXR0cmlidXRlX2NsZWFuZXJfc3BlYy5yYiIsImFfbW9kZSI6IjEw
+        MDY0NCIsImJfbW9kZSI6IjEwMDY0NCIsIm5ld19maWxlIjpmYWxzZSwicmVu
+        YW1lZF9maWxlIjpmYWxzZSwiZGVsZXRlZF9maWxlIjpmYWxzZSwiZGlmZiI6
+        Ii0tLSBhL3NwZWMvbGliL2dpdGxhYi9pbXBvcnRfZXhwb3J0L2F0dHJpYnV0
+        ZV9jbGVhbmVyX3NwZWMucmJcbisrKyBiL3NwZWMvbGliL2dpdGxhYi9pbXBv
+        cnRfZXhwb3J0L2F0dHJpYnV0ZV9jbGVhbmVyX3NwZWMucmJcbkBAIC0xNSw3
+        ICsxNSwxMCBAQCBkZXNjcmliZSBHaXRsYWI6OkltcG9ydEV4cG9ydDo6QXR0
+        cmlidXRlQ2xlYW5lciBkb1xuICAgICAgICdwcm9qZWN0X2lkJyA9XHUwMDNl
+        IDk5LFxuICAgICAgICd1c2VyX2lkJyA9XHUwMDNlIDk5LFxuICAgICAgICdy
+        YW5kb21faWRfaW5fdGhlX21pZGRsZScgPVx1MDAzZSA5OSxcbi0gICAgICAn
+        bm90aWQnID1cdTAwM2UgOTlcbisgICAgICAnbm90aWQnID1cdTAwM2UgOTks
+        XG4rICAgICAgJ2ltcG9ydF9zb3VyY2UnID1cdTAwM2UgJ3doYXRldmVyJyxc
+        bisgICAgICAnaW1wb3J0X3R5cGUnID1cdTAwM2UgJ3doYXRldmVyJyxcbisg
+        ICAgICAnbm9uX2V4aXN0ZW50X2F0dHInID1cdTAwM2UgJ3doYXRldmVyJ1xu
+        ICAgICB9XG4gICBlbmRcbiBcbkBAIC0yOCwxMCArMzEsMzAgQEAgZGVzY3Jp
+        YmUgR2l0bGFiOjpJbXBvcnRFeHBvcnQ6OkF0dHJpYnV0ZUNsZWFuZXIgZG9c
+        biAgICAgfVxuICAgZW5kXG4gXG4rICBsZXQoOmV4Y2x1ZGVkX2tleXMpIHsg
+        JXdbaW1wb3J0X3NvdXJjZSBpbXBvcnRfdHlwZV0gfVxuK1xuKyAgc3ViamVj
+        dCB7IGRlc2NyaWJlZF9jbGFzcy5jbGVhbihyZWxhdGlvbl9oYXNoOiB1bnNh
+        ZmVfaGFzaCwgcmVsYXRpb25fY2xhc3M6IHJlbGF0aW9uX2NsYXNzLCBleGNs
+        dWRlZF9rZXlzOiBleGNsdWRlZF9rZXlzKSB9XG4rXG4rICBiZWZvcmUgZG9c
+        bisgICAgYWxsb3cocmVsYXRpb25fY2xhc3MpLnRvIHJlY2VpdmUoOmF0dHJp
+        YnV0ZV9tZXRob2Q/KS5hbmRfcmV0dXJuKHRydWUpXG4rICAgIGFsbG93KHJl
+        bGF0aW9uX2NsYXNzKS50byByZWNlaXZlKDphdHRyaWJ1dGVfbWV0aG9kPyku
+        d2l0aCgnbm9uX2V4aXN0ZW50X2F0dHInKS5hbmRfcmV0dXJuKGZhbHNlKVxu
+        KyAgZW5kXG4rXG4gICBpdCAncmVtb3ZlcyB1bndhbnRlZCBhdHRyaWJ1dGVz
+        IGZyb20gdGhlIGhhc2gnIGRvXG4tICAgICMgYWxsb3cocmVsYXRpb25fY2xh
+        c3MpLnRvIHJlY2VpdmUoOmF0dHJpYnV0ZV9tZXRob2Q/KS5hbmRfcmV0dXJu
+        KHRydWUpXG4rICAgIGV4cGVjdChzdWJqZWN0KS50byBlcShwb3N0X3NhZmVf
+        aGFzaClcbisgIGVuZFxuK1xuKyAgaXQgJ3JlbW92ZXMgYXR0cmlidXRlcyBu
+        b3QgcHJlc2VudCBpbiByZWxhdGlvbl9jbGFzcycgZG9cbisgICAgZXhwZWN0
+        KHN1YmplY3Qua2V5cykubm90X3RvIGluY2x1ZGUgJ25vbl9leGlzdGVudF9h
+        dHRyJ1xuKyAgZW5kXG4rXG4rICBpdCAncmVtb3ZlcyBleGNsdWRlZCBrZXlz
+        IGZyb20gdGhlIGhhc2gnIGRvXG4rICAgIGV4cGVjdChzdWJqZWN0LmtleXMp
+        Lm5vdF90byBpbmNsdWRlIGV4Y2x1ZGVkX2tleXNcbisgIGVuZFxuK1xuKyAg
+        aXQgJ2RvZXMgbm90IHJlbW92ZSBleGNsdWRlZCBrZXkgaWYgbm90IGxpc3Rl
+        ZCcgZG9cbiAgICAgcGFyc2VkX2hhc2ggPSBkZXNjcmliZWRfY2xhc3MuY2xl
+        YW4ocmVsYXRpb25faGFzaDogdW5zYWZlX2hhc2gsIHJlbGF0aW9uX2NsYXNz
+        OiByZWxhdGlvbl9jbGFzcylcbiBcbi0gICAgZXhwZWN0KHBhcnNlZF9oYXNo
+        KS50byBlcShwb3N0X3NhZmVfaGFzaClcbisgICAgZXhwZWN0KHBhcnNlZF9o
+        YXNoLmtleXMpLnRvIGVxIHBvc3Rfc2FmZV9oYXNoLmtleXMgKyBleGNsdWRl
+        ZF9rZXlzXG4gICBlbmRcbiBlbmRcbiJ9LHsib2xkX3BhdGgiOiJzcGVjL2xp
+        Yi9naXRsYWIvaW1wb3J0X2V4cG9ydC9wcm9qZWN0Lmpzb24iLCJuZXdfcGF0
+        aCI6InNwZWMvbGliL2dpdGxhYi9pbXBvcnRfZXhwb3J0L3Byb2plY3QuanNv
+        biIsImFfbW9kZSI6IjEwMDY0NCIsImJfbW9kZSI6IjEwMDY0NCIsIm5ld19m
+        aWxlIjpmYWxzZSwicmVuYW1lZF9maWxlIjpmYWxzZSwiZGVsZXRlZF9maWxl
+        IjpmYWxzZSwiZGlmZiI6Ii0tLSBhL3NwZWMvbGliL2dpdGxhYi9pbXBvcnRf
+        ZXhwb3J0L3Byb2plY3QuanNvblxuKysrIGIvc3BlYy9saWIvZ2l0bGFiL2lt
+        cG9ydF9leHBvcnQvcHJvamVjdC5qc29uXG5AQCAtMSw1ICsxLDcgQEBcbiB7
+        XG4gICBcImRlc2NyaXB0aW9uXCI6IFwiTmlzaSBldCByZXBlbGxlbmR1cyB1
+        dCBlbmltIHF1byBhY2N1c2FtdXMgdmVsIG1hZ25hbS5cIixcbisgIFwiaW1w
+        b3J0X3R5cGVcIjogXCJnaXRsYWJfcHJvamVjdFwiLFxuKyAgXCJjcmVhdG9y
+        X2lkXCI6IDEyMyxcbiAgIFwidmlzaWJpbGl0eV9sZXZlbFwiOiAxMCxcbiAg
+        IFwiYXJjaGl2ZWRcIjogZmFsc2UsXG4gICBcImxhYmVsc1wiOiBbXG4ifSx7
+        Im9sZF9wYXRoIjoic3BlYy9saWIvZ2l0bGFiL2ltcG9ydF9leHBvcnQvcHJv
+        amVjdC5saWdodC5qc29uIiwibmV3X3BhdGgiOiJzcGVjL2xpYi9naXRsYWIv
+        aW1wb3J0X2V4cG9ydC9wcm9qZWN0LmxpZ2h0Lmpzb24iLCJhX21vZGUiOiIx
+        MDA2NDQiLCJiX21vZGUiOiIxMDA2NDQiLCJuZXdfZmlsZSI6ZmFsc2UsInJl
+        bmFtZWRfZmlsZSI6ZmFsc2UsImRlbGV0ZWRfZmlsZSI6ZmFsc2UsImRpZmYi
+        OiItLS0gYS9zcGVjL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9wcm9qZWN0
+        LmxpZ2h0Lmpzb25cbisrKyBiL3NwZWMvbGliL2dpdGxhYi9pbXBvcnRfZXhw
+        b3J0L3Byb2plY3QubGlnaHQuanNvblxuQEAgLTEsNSArMSw3IEBAXG4ge1xu
+        ICAgXCJkZXNjcmlwdGlvblwiOiBcIk5pc2kgZXQgcmVwZWxsZW5kdXMgdXQg
+        ZW5pbSBxdW8gYWNjdXNhbXVzIHZlbCBtYWduYW0uXCIsXG4rICBcImltcG9y
+        dF90eXBlXCI6IFwiZ2l0bGFiX3Byb2plY3RcIixcbisgIFwiY3JlYXRvcl9p
+        ZFwiOiAxMjMsXG4gICBcInZpc2liaWxpdHlfbGV2ZWxcIjogMTAsXG4gICBc
+        ImFyY2hpdmVkXCI6IGZhbHNlLFxuICAgXCJtaWxlc3RvbmVzXCI6IFtcbiJ9
+        LHsib2xkX3BhdGgiOiJzcGVjL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9w
+        cm9qZWN0X3RyZWVfcmVzdG9yZXJfc3BlYy5yYiIsIm5ld19wYXRoIjoic3Bl
+        Yy9saWIvZ2l0bGFiL2ltcG9ydF9leHBvcnQvcHJvamVjdF90cmVlX3Jlc3Rv
+        cmVyX3NwZWMucmIiLCJhX21vZGUiOiIxMDA2NDQiLCJiX21vZGUiOiIxMDA2
+        NDQiLCJuZXdfZmlsZSI6ZmFsc2UsInJlbmFtZWRfZmlsZSI6ZmFsc2UsImRl
+        bGV0ZWRfZmlsZSI6ZmFsc2UsImRpZmYiOiItLS0gYS9zcGVjL2xpYi9naXRs
+        YWIvaW1wb3J0X2V4cG9ydC9wcm9qZWN0X3RyZWVfcmVzdG9yZXJfc3BlYy5y
+        YlxuKysrIGIvc3BlYy9saWIvZ2l0bGFiL2ltcG9ydF9leHBvcnQvcHJvamVj
+        dF90cmVlX3Jlc3RvcmVyX3NwZWMucmJcbkBAIC0yMyw2ICsyMywxMCBAQCBk
+        ZXNjcmliZSBHaXRsYWI6OkltcG9ydEV4cG9ydDo6UHJvamVjdFRyZWVSZXN0
+        b3JlciBkb1xuICAgICAgICAgYWxsb3dfYW55X2luc3RhbmNlX29mKEdpdGxh
+        Yjo6R2l0OjpSZXBvc2l0b3J5KS50byByZWNlaXZlKDpjcmVhdGVfYnJhbmNo
+        KVxuIFxuICAgICAgICAgcHJvamVjdF90cmVlX3Jlc3RvcmVyID0gZGVzY3Jp
+        YmVkX2NsYXNzLm5ldyh1c2VyOiBAdXNlciwgc2hhcmVkOiBAc2hhcmVkLCBw
+        cm9qZWN0OiBAcHJvamVjdClcbitcbisgICAgICAgIGV4cGVjdChHaXRsYWI6
+        OkltcG9ydEV4cG9ydDo6UmVsYXRpb25GYWN0b3J5KS50byByZWNlaXZlKDpj
+        cmVhdGUpLndpdGgoaGFzaF9pbmNsdWRpbmcoZXhjbHVkZWRfa2V5czogWyd3
+        aGF0ZXZlciddKSkuYW5kX2NhbGxfb3JpZ2luYWwuYXRfbGVhc3QoOm9uY2Up
+        XG4rICAgICAgICBhbGxvdyhwcm9qZWN0X3RyZWVfcmVzdG9yZXIpLnRvIHJl
+        Y2VpdmUoOmV4Y2x1ZGVkX2tleXNfZm9yX3JlbGF0aW9uKS5hbmRfcmV0dXJu
+        KFsnd2hhdGV2ZXInXSlcbitcbiAgICAgICAgIEByZXN0b3JlZF9wcm9qZWN0
+        X2pzb24gPSBwcm9qZWN0X3RyZWVfcmVzdG9yZXIucmVzdG9yZVxuICAgICAg
+        IGVuZFxuICAgICBlbmRcbkBAIC0yNDgsNiArMjUyLDExIEBAIGRlc2NyaWJl
+        IEdpdGxhYjo6SW1wb3J0RXhwb3J0OjpQcm9qZWN0VHJlZVJlc3RvcmVyIGRv
+        XG4gICAgICAgZXhwZWN0KGxhYmVscy53aGVyZSh0eXBlOiBcIlByb2plY3RM
+        YWJlbFwiKS5jb3VudCkudG8gZXEocmVzdWx0cy5mZXRjaCg6Zmlyc3RfaXNz
+        dWVfbGFiZWxzLCAwKSlcbiAgICAgICBleHBlY3QobGFiZWxzLndoZXJlKHR5
+        cGU6IFwiUHJvamVjdExhYmVsXCIpLndoZXJlLm5vdChncm91cF9pZDogbmls
+        KS5jb3VudCkudG8gZXEoMClcbiAgICAgZW5kXG4rXG4rICAgIGl0ICdkb2Vz
+        IG5vdCBzZXQgcGFyYW1zIHRoYXQgYXJlIGV4Y2x1ZGVkIGZyb20gaW1wb3J0
+        X2V4cG9ydCBzZXR0aW5ncycgZG9cbisgICAgICBleHBlY3QocHJvamVjdC5p
+        bXBvcnRfdHlwZSkudG8gYmVfbmlsXG4rICAgICAgZXhwZWN0KHByb2plY3Qu
+        Y3JlYXRvcl9pZCkubm90X3RvIGVxIDEyM1xuKyAgICBlbmRcbiAgIGVuZFxu
+        IFxuICAgc2hhcmVkX2V4YW1wbGVzICdyZXN0b3JlcyBncm91cCBjb3JyZWN0
+        bHknIGRvIHwqKnJlc3VsdHN8XG4ifSx7Im9sZF9wYXRoIjoic3BlYy9saWIv
+        Z2l0bGFiL2ltcG9ydF9leHBvcnQvcmVsYXRpb25fZmFjdG9yeV9zcGVjLnJi
+        IiwibmV3X3BhdGgiOiJzcGVjL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9y
+        ZWxhdGlvbl9mYWN0b3J5X3NwZWMucmIiLCJhX21vZGUiOiIxMDA2NDQiLCJi
+        X21vZGUiOiIxMDA2NDQiLCJuZXdfZmlsZSI6ZmFsc2UsInJlbmFtZWRfZmls
+        ZSI6ZmFsc2UsImRlbGV0ZWRfZmlsZSI6ZmFsc2UsImRpZmYiOiItLS0gYS9z
+        cGVjL2xpYi9naXRsYWIvaW1wb3J0X2V4cG9ydC9yZWxhdGlvbl9mYWN0b3J5
+        X3NwZWMucmJcbisrKyBiL3NwZWMvbGliL2dpdGxhYi9pbXBvcnRfZXhwb3J0
+        L3JlbGF0aW9uX2ZhY3Rvcnlfc3BlYy5yYlxuQEAgLTQsMTIgKzQsMTQgQEAg
+        ZGVzY3JpYmUgR2l0bGFiOjpJbXBvcnRFeHBvcnQ6OlJlbGF0aW9uRmFjdG9y
+        eSBkb1xuICAgbGV0KDpwcm9qZWN0KSB7IGNyZWF0ZSg6cHJvamVjdCkgfVxu
+        ICAgbGV0KDptZW1iZXJzX21hcHBlcikgeyBkb3VibGUoJ21lbWJlcnNfbWFw
+        cGVyJykuYXNfbnVsbF9vYmplY3QgfVxuICAgbGV0KDp1c2VyKSB7IGNyZWF0
+        ZSg6YWRtaW4pIH1cbisgIGxldCg6ZXhjbHVkZWRfa2V5cykgeyBbXSB9XG4g
+        ICBsZXQoOmNyZWF0ZWRfb2JqZWN0KSBkb1xuICAgICBkZXNjcmliZWRfY2xh
+        c3MuY3JlYXRlKHJlbGF0aW9uX3N5bTogcmVsYXRpb25fc3ltLFxuICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIHJlbGF0aW9uX2hhc2g6IHJlbGF0aW9u
+        X2hhc2gsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbWVtYmVyc19t
+        YXBwZXI6IG1lbWJlcnNfbWFwcGVyLFxuICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgIHVzZXI6IHVzZXIsXG4tICAgICAgICAgICAgICAgICAgICAgICAg
+        ICAgcHJvamVjdDogcHJvamVjdClcbisgICAgICAgICAgICAgICAgICAgICAg
+        ICAgICBwcm9qZWN0OiBwcm9qZWN0LFxuKyAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgIGV4Y2x1ZGVkX2tleXM6IGV4Y2x1ZGVkX2tleXMpXG4gICBlbmRc
+        biBcbiAgIGNvbnRleHQgJ2hvb2sgb2JqZWN0JyBkb1xuQEAgLTY3LDYgKzY5
+        LDE0IEBAIGRlc2NyaWJlIEdpdGxhYjo6SW1wb3J0RXhwb3J0OjpSZWxhdGlv
+        bkZhY3RvcnkgZG9cbiAgICAgICAgIGV4cGVjdChjcmVhdGVkX29iamVjdC5z
+        ZXJ2aWNlX2lkKS5ub3RfdG8gZXEoc2VydmljZV9pZClcbiAgICAgICBlbmRc
+        biAgICAgZW5kXG4rXG4rICAgIGNvbnRleHQgJ2V4Y2x1ZGVkIGF0dHJpYnV0
+        ZXMnIGRvXG4rICAgICAgbGV0KDpleGNsdWRlZF9rZXlzKSB7ICV3W3VybF0g
+        fVxuK1xuKyAgICAgIGl0ICdhcmUgcmVtb3ZlZCBmcm9tIHRoZSBpbXBvcnRl
+        ZCBvYmplY3QnIGRvXG4rICAgICAgICBleHBlY3QoY3JlYXRlZF9vYmplY3Qu
+        dXJsKS50byBiZV9uaWxcbisgICAgICBlbmRcbisgICAgZW5kXG4gICBlbmRc
+        biBcbiAgICMgTW9ja3MgYW4gQWN0aXZlUmVjb3JkaXNoIG9iamVjdCB3aXRo
+        IHRoZSBkb2RneSBjb2x1bW5zXG4ifSx7Im9sZF9wYXRoIjoic3BlYy9yZXF1
+        ZXN0cy9hcGkvZGVwbG95X2tleXNfc3BlYy5yYiIsIm5ld19wYXRoIjoic3Bl
+        Yy9yZXF1ZXN0cy9hcGkvZGVwbG95X2tleXNfc3BlYy5yYiIsImFfbW9kZSI6
+        IjEwMDY0NCIsImJfbW9kZSI6IjEwMDY0NCIsIm5ld19maWxlIjpmYWxzZSwi
+        cmVuYW1lZF9maWxlIjpmYWxzZSwiZGVsZXRlZF9maWxlIjpmYWxzZSwiZGlm
+        ZiI6Ii0tLSBhL3NwZWMvcmVxdWVzdHMvYXBpL2RlcGxveV9rZXlzX3NwZWMu
+        cmJcbisrKyBiL3NwZWMvcmVxdWVzdHMvYXBpL2RlcGxveV9rZXlzX3NwZWMu
+        cmJcbkBAIC0xNzEsNyArMTcxLDcgQEAgZGVzY3JpYmUgQVBJOjpEZXBsb3lL
+        ZXlzIGRvXG4gICAgICAgZGVwbG95X2tleVxuICAgICBlbmRcbiBcbi0gICAg
+        aXQgJ2RlbGV0ZXMgZXhpc3Rpbmcga2V5JyBkb1xuKyAgICBpdCAncmVtb3Zl
+        cyBleGlzdGluZyBrZXkgZnJvbSBwcm9qZWN0JyBkb1xuICAgICAgIGV4cGVj
+        dCBkb1xuICAgICAgICAgZGVsZXRlIGFwaShcIi9wcm9qZWN0cy8je3Byb2pl
+        Y3QuaWR9L2RlcGxveV9rZXlzLyN7ZGVwbG95X2tleS5pZH1cIiwgYWRtaW4p
+        XG4gXG5AQCAtMTc5LDYgKzE3OSw0NCBAQCBkZXNjcmliZSBBUEk6OkRlcGxv
+        eUtleXMgZG9cbiAgICAgICBlbmQudG8gY2hhbmdlIHsgcHJvamVjdC5kZXBs
+        b3lfa2V5cy5jb3VudCB9LmJ5KC0xKVxuICAgICBlbmRcbiBcbisgICAgY29u
+        dGV4dCAnd2hlbiB0aGUgZGVwbG95IGtleSBpcyBwdWJsaWMnIGRvXG4rICAg
+        ICAgaXQgJ2RvZXMgbm90IGRlbGV0ZSB0aGUgZGVwbG95IGtleScgZG9cbisg
+        ICAgICAgIGV4cGVjdCBkb1xuKyAgICAgICAgICBkZWxldGUgYXBpKFwiL3By
+        b2plY3RzLyN7cHJvamVjdC5pZH0vZGVwbG95X2tleXMvI3tkZXBsb3lfa2V5
+        LmlkfVwiLCBhZG1pbilcbitcbisgICAgICAgICAgZXhwZWN0KHJlc3BvbnNl
+        KS50byBoYXZlX2dpdGxhYl9odHRwX3N0YXR1cygyMDQpXG4rICAgICAgICBl
+        bmQubm90X3RvIGNoYW5nZSB7IERlcGxveUtleS5jb3VudCB9XG4rICAgICAg
+        ZW5kXG4rICAgIGVuZFxuK1xuKyAgICBjb250ZXh0ICd3aGVuIHRoZSBkZXBs
+        b3kga2V5IGlzIG5vdCBwdWJsaWMnIGRvXG4rICAgICAgbGV0ISg6ZGVwbG95
+        X2tleSkgeyBjcmVhdGUoOmRlcGxveV9rZXksIHB1YmxpYzogZmFsc2UpIH1c
+        bitcbisgICAgICBjb250ZXh0ICd3aGVuIHRoZSBkZXBsb3kga2V5IGlzIG9u
+        bHkgdXNlZCBieSB0aGlzIHByb2plY3QnIGRvXG4rICAgICAgICBpdCAnZGVs
+        ZXRlcyB0aGUgZGVwbG95IGtleScgZG9cbisgICAgICAgICAgZXhwZWN0IGRv
+        XG4rICAgICAgICAgICAgZGVsZXRlIGFwaShcIi9wcm9qZWN0cy8je3Byb2pl
+        Y3QuaWR9L2RlcGxveV9rZXlzLyN7ZGVwbG95X2tleS5pZH1cIiwgYWRtaW4p
+        XG4rXG4rICAgICAgICAgICAgZXhwZWN0KHJlc3BvbnNlKS50byBoYXZlX2dp
+        dGxhYl9odHRwX3N0YXR1cygyMDQpXG4rICAgICAgICAgIGVuZC50byBjaGFu
+        Z2UgeyBEZXBsb3lLZXkuY291bnQgfS5ieSgtMSlcbisgICAgICAgIGVuZFxu
+        KyAgICAgIGVuZFxuK1xuKyAgICAgIGNvbnRleHQgJ3doZW4gdGhlIGRlcGxv
+        eSBrZXkgaXMgdXNlZCBieSBvdGhlciBwcm9qZWN0cycgZG9cbisgICAgICAg
+        IGJlZm9yZSBkb1xuKyAgICAgICAgICBjcmVhdGUoOmRlcGxveV9rZXlzX3By
+        b2plY3QsIHByb2plY3Q6IHByb2plY3QyLCBkZXBsb3lfa2V5OiBkZXBsb3lf
+        a2V5KVxuKyAgICAgICAgZW5kXG4rXG4rICAgICAgICBpdCAnZG9lcyBub3Qg
+        ZGVsZXRlIHRoZSBkZXBsb3kga2V5JyBkb1xuKyAgICAgICAgICBleHBlY3Qg
+        ZG9cbisgICAgICAgICAgICBkZWxldGUgYXBpKFwiL3Byb2plY3RzLyN7cHJv
+        amVjdC5pZH0vZGVwbG95X2tleXMvI3tkZXBsb3lfa2V5LmlkfVwiLCBhZG1p
+        bilcbitcbisgICAgICAgICAgICBleHBlY3QocmVzcG9uc2UpLnRvIGhhdmVf
+        Z2l0bGFiX2h0dHBfc3RhdHVzKDIwNClcbisgICAgICAgICAgZW5kLm5vdF90
+        byBjaGFuZ2UgeyBEZXBsb3lLZXkuY291bnQgfVxuKyAgICAgICAgZW5kXG4r
+        ICAgICAgZW5kXG4rICAgIGVuZFxuK1xuICAgICBpdCAncmV0dXJucyA0MDQg
+        Tm90IEZvdW5kIHdpdGggaW52YWxpZCBJRCcgZG9cbiAgICAgICBkZWxldGUg
+        YXBpKFwiL3Byb2plY3RzLyN7cHJvamVjdC5pZH0vZGVwbG95X2tleXMvNDA0
+        XCIsIGFkbWluKVxuIFxuIn1dLCJjb21wYXJlX3RpbWVvdXQiOmZhbHNlLCJj
+        b21wYXJlX3NhbWVfcmVmIjpmYWxzZX0=
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:02:30 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab%2Fgitlabhq/merge_requests/2388
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:02:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 207fb401-0a4f-4009-815a-01d7aee82132
+      X-Runtime:
+      - '0.030198'
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1528704211'
+      Ratelimit-Resettime:
+      - Tue, 11 Jun 2018 08:03:31 GMT
+    body:
+      encoding: UTF-8
+      string: '{"message":"404 Project Not Found"}'
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:02:31 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fgitlabhq/merge_requests/2388
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - aRqmrBNaciSbVsi7C1C4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:08:25 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2246'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"d8fa17625ff727177f2ac9f073c1ba4d"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c7ef253d-a808-4f91-a29f-3e49ba60c3e2
+      X-Runtime:
+      - '2.515587'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":7232,"iid":2388,"project_id":15,"title":"[10.8] No longer allow
+        password change without previous password being provided","description":"#2680","state":"merged","created_at":"2018-05-09T12:41:31.685Z","updated_at":"2018-05-25T15:51:32.247Z","target_branch":"security-10-8","source_branch":"security-10-8-users-can-update-their-password-without-entering-current-password","upvotes":0,"downvotes":0,"author":{"id":136,"name":"Tiago
+        Botelho","username":"tiago","state":"active","avatar_url":"https://secure.gravatar.com/avatar/5028f68d6a2bda8a484be1906d59fb9c?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/tiago"},"assignee":{"id":182,"name":"Filipa
+        Lacerda","username":"filipa","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/182/avatar.png","web_url":"https://dev.gitlab.org/filipa"},"source_project_id":15,"target_project_id":15,"labels":["security"],"work_in_progress":false,"milestone":{"id":258,"iid":86,"project_id":15,"title":"10.8","description":"","state":"active","created_at":"2018-05-03T07:55:42.709Z","updated_at":"2018-05-03T07:55:42.709Z","due_date":null,"start_date":null},"merge_when_pipeline_succeeds":false,"merge_status":"can_be_merged","sha":"645860e4df824824dfd37a8465812d9146b9412a","merge_commit_sha":"19893c15a9f177fa86d9b3ba6a52d1aa4c84ab52","user_notes_count":1,"discussion_locked":null,"should_remove_source_branch":null,"force_remove_source_branch":false,"web_url":"https://dev.gitlab.org/gitlab/gitlabhq/merge_requests/2388","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"squash":false,"subscribed":false,"changes_count":"3","merged_by":{"id":182,"name":"Filipa
+        Lacerda","username":"filipa","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/182/avatar.png","web_url":"https://dev.gitlab.org/filipa"},"merged_at":"2018-05-09T14:34:47.351Z","closed_by":null,"closed_at":null,"latest_build_started_at":null,"latest_build_finished_at":null,"first_deployed_to_production_at":null,"pipeline":null,"diff_refs":{"base_sha":"4babf79aa1e8e2ec315f31fba0d3646825322d91","head_sha":"645860e4df824824dfd37a8465812d9146b9412a","start_sha":"4babf79aa1e8e2ec315f31fba0d3646825322d91"}}'
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:08:25 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab%2Fgitlabhq/merge_requests/2387
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:08:25 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 3edf8905-193f-418f-9dac-3c4428668fef
+      X-Runtime:
+      - '0.086598'
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1528704565'
+      Ratelimit-Resettime:
+      - Tue, 11 Jun 2018 08:09:25 GMT
+    body:
+      encoding: UTF-8
+      string: '{"message":"404 Project Not Found"}'
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:08:25 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fgitlabhq/merge_requests/2387
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - aRqmrBNaciSbVsi7C1C4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:08:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2404'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"affe93b3379aac448057933c97e7512e"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - fb29a180-3d48-41e1-9d97-860d6b6d0cfd
+      X-Runtime:
+      - '2.536352'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"id":7223,"iid":2387,"project_id":15,"title":"[10.8] Fix API to remove
+        deploy key from project instead of deleting it entirely","description":"","state":"merged","created_at":"2018-05-08T14:18:34.805Z","updated_at":"2018-05-25T15:51:32.201Z","target_branch":"security-10-8","source_branch":"security-dm-delete-deploy-key-10-8","upvotes":0,"downvotes":0,"author":{"id":48,"name":"Douwe
+        Maan","username":"douwe","state":"active","avatar_url":"https://dev.gitlab.org/uploads/-/system/user/avatar/48/avatar.png","web_url":"https://dev.gitlab.org/douwe"},"assignee":{"id":354,"name":"Mayra
+        Cabrera","username":"mayra-cabrera","state":"active","avatar_url":"https://secure.gravatar.com/avatar/12f643baf39b22b7920293600a50a143?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/mayra-cabrera"},"source_project_id":15,"target_project_id":15,"labels":["security"],"work_in_progress":false,"milestone":{"id":258,"iid":86,"project_id":15,"title":"10.8","description":"","state":"active","created_at":"2018-05-03T07:55:42.709Z","updated_at":"2018-05-03T07:55:42.709Z","due_date":null,"start_date":null},"merge_when_pipeline_succeeds":false,"merge_status":"can_be_merged","sha":"03d27beea1f101de2b12d73776dabebfd121085a","merge_commit_sha":"aa9b047ee4cf4a7931e0cd131f590504db443923","user_notes_count":1,"discussion_locked":null,"should_remove_source_branch":null,"force_remove_source_branch":false,"web_url":"https://dev.gitlab.org/gitlab/gitlabhq/merge_requests/2387","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"squash":false,"subscribed":false,"changes_count":"3","merged_by":{"id":354,"name":"Mayra
+        Cabrera","username":"mayra-cabrera","state":"active","avatar_url":"https://secure.gravatar.com/avatar/12f643baf39b22b7920293600a50a143?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/mayra-cabrera"},"merged_at":"2018-05-21T20:56:20.535Z","closed_by":null,"closed_at":null,"latest_build_started_at":"2018-05-08T14:17:41.960Z","latest_build_finished_at":"2018-05-08T14:57:40.606Z","first_deployed_to_production_at":null,"pipeline":{"id":82159,"sha":"03d27beea1f101de2b12d73776dabebfd121085a","ref":"security-dm-delete-deploy-key-10-8","status":"success"},"diff_refs":{"base_sha":"4babf79aa1e8e2ec315f31fba0d3646825322d91","head_sha":"03d27beea1f101de2b12d73776dabebfd121085a","start_sha":"4babf79aa1e8e2ec315f31fba0d3646825322d91"}}'
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:08:28 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab%2Fgitlabhq/merge_requests/2390
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:08:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 15ab4b51-511b-4526-a527-6ed5af9bceb9
+      X-Runtime:
+      - '0.044216'
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '2'
+      Ratelimit-Remaining:
+      - '598'
+      Ratelimit-Reset:
+      - '1528704569'
+      Ratelimit-Resettime:
+      - Tue, 11 Jun 2018 08:09:29 GMT
+    body:
+      encoding: UTF-8
+      string: '{"message":"404 Project Not Found"}'
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:08:29 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fgitlabhq/merge_requests/2390
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - aRqmrBNaciSbVsi7C1C4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 11 Jun 2018 08:08:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2398'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"c286abe2b98a4e4306dce72e1391e442"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 4007416e-a963-489a-bdfb-6537288dad52
+      X-Runtime:
+      - '3.199794'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NzI0NCwiaWlkIjoyMzkwLCJwcm9qZWN0X2lkIjoxNSwidGl0bGUi
+        OiJbMTAuOF0gQXJiaXRyYXJ5IGFzc2lnbm1lbnQgb2YgUHJvamVjdCBmaWVs
+        ZHMgdXNpbmcgXCJJbXBvcnQgcHJvamVjdFwiIGZyb20gYSBHaXRsYWIgdGFy
+        Lmd6IiwiZGVzY3JpcHRpb24iOiJQb3J0IG9mIGh0dHBzOi8vZGV2LmdpdGxh
+        Yi5vcmcvZ2l0bGFiL2dpdGxhYmhxL21lcmdlX3JlcXVlc3RzLzIzNzhcclxu
+        XHJcbk1lbnRpb25zICMyNjc4Iiwic3RhdGUiOiJtZXJnZWQiLCJjcmVhdGVk
+        X2F0IjoiMjAxOC0wNS0xNFQwODowNjowNS41MDVaIiwidXBkYXRlZF9hdCI6
+        IjIwMTgtMDUtMjVUMTU6NTE6MzIuNjQyWiIsInRhcmdldF9icmFuY2giOiJz
+        ZWN1cml0eS0xMC04Iiwic291cmNlX2JyYW5jaCI6InNlY3VyaXR5LWZqLWlt
+        cG9ydC1leHBvcnQtYXNzaWdubWVudC0xMC04IiwidXB2b3RlcyI6MCwiZG93
+        bnZvdGVzIjowLCJhdXRob3IiOnsiaWQiOjM1NSwibmFtZSI6IkZyYW5jaXNj
+        byBKYXZpZXIgTMOzcGV6IiwidXNlcm5hbWUiOiJmamxvcGV6Iiwic3RhdGUi
+        OiJhY3RpdmUiLCJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9zZWN1cmUuZ3JhdmF0
+        YXIuY29tL2F2YXRhci80OTZhYjhlNjFkZGIzNzdjOGQxZDdjMmJkZWM5MmYx
+        Yz9zPTgwXHUwMDI2ZD1pZGVudGljb24iLCJ3ZWJfdXJsIjoiaHR0cHM6Ly9k
+        ZXYuZ2l0bGFiLm9yZy9mamxvcGV6In0sImFzc2lnbmVlIjp7ImlkIjozNTQs
+        Im5hbWUiOiJNYXlyYSBDYWJyZXJhIiwidXNlcm5hbWUiOiJtYXlyYS1jYWJy
+        ZXJhIiwic3RhdGUiOiJhY3RpdmUiLCJhdmF0YXJfdXJsIjoiaHR0cHM6Ly9z
+        ZWN1cmUuZ3JhdmF0YXIuY29tL2F2YXRhci8xMmY2NDNiYWYzOWIyMmI3OTIw
+        MjkzNjAwYTUwYTE0Mz9zPTgwXHUwMDI2ZD1pZGVudGljb24iLCJ3ZWJfdXJs
+        IjoiaHR0cHM6Ly9kZXYuZ2l0bGFiLm9yZy9tYXlyYS1jYWJyZXJhIn0sInNv
+        dXJjZV9wcm9qZWN0X2lkIjoxNSwidGFyZ2V0X3Byb2plY3RfaWQiOjE1LCJs
+        YWJlbHMiOlsiSW1wb3J0Iiwic2VjdXJpdHkiXSwid29ya19pbl9wcm9ncmVz
+        cyI6ZmFsc2UsIm1pbGVzdG9uZSI6eyJpZCI6MjU4LCJpaWQiOjg2LCJwcm9q
+        ZWN0X2lkIjoxNSwidGl0bGUiOiIxMC44IiwiZGVzY3JpcHRpb24iOiIiLCJz
+        dGF0ZSI6ImFjdGl2ZSIsImNyZWF0ZWRfYXQiOiIyMDE4LTA1LTAzVDA3OjU1
+        OjQyLjcwOVoiLCJ1cGRhdGVkX2F0IjoiMjAxOC0wNS0wM1QwNzo1NTo0Mi43
+        MDlaIiwiZHVlX2RhdGUiOm51bGwsInN0YXJ0X2RhdGUiOm51bGx9LCJtZXJn
+        ZV93aGVuX3BpcGVsaW5lX3N1Y2NlZWRzIjpmYWxzZSwibWVyZ2Vfc3RhdHVz
+        IjoiY2FuX2JlX21lcmdlZCIsInNoYSI6ImE0NjM0NmQ4MWE5MzhjYTY3NTQ2
+        ZTEyYzA3ZThlZjM2NTViNjMxNDgiLCJtZXJnZV9jb21taXRfc2hhIjoiZTY0
+        MzhlZWI4ZDExMjIzYjM1YjUxMzU0YjNkOGFhY2JhN2RkMjNjOCIsInVzZXJf
+        bm90ZXNfY291bnQiOjIsImRpc2N1c3Npb25fbG9ja2VkIjpudWxsLCJzaG91
+        bGRfcmVtb3ZlX3NvdXJjZV9icmFuY2giOm51bGwsImZvcmNlX3JlbW92ZV9z
+        b3VyY2VfYnJhbmNoIjp0cnVlLCJ3ZWJfdXJsIjoiaHR0cHM6Ly9kZXYuZ2l0
+        bGFiLm9yZy9naXRsYWIvZ2l0bGFiaHEvbWVyZ2VfcmVxdWVzdHMvMjM5MCIs
+        InRpbWVfc3RhdHMiOnsidGltZV9lc3RpbWF0ZSI6MCwidG90YWxfdGltZV9z
+        cGVudCI6MCwiaHVtYW5fdGltZV9lc3RpbWF0ZSI6bnVsbCwiaHVtYW5fdG90
+        YWxfdGltZV9zcGVudCI6bnVsbH0sInNxdWFzaCI6ZmFsc2UsInN1YnNjcmli
+        ZWQiOmZhbHNlLCJjaGFuZ2VzX2NvdW50IjoiMTIiLCJtZXJnZWRfYnkiOnsi
+        aWQiOjM1NCwibmFtZSI6Ik1heXJhIENhYnJlcmEiLCJ1c2VybmFtZSI6Im1h
+        eXJhLWNhYnJlcmEiLCJzdGF0ZSI6ImFjdGl2ZSIsImF2YXRhcl91cmwiOiJo
+        dHRwczovL3NlY3VyZS5ncmF2YXRhci5jb20vYXZhdGFyLzEyZjY0M2JhZjM5
+        YjIyYjc5MjAyOTM2MDBhNTBhMTQzP3M9ODBcdTAwMjZkPWlkZW50aWNvbiIs
+        IndlYl91cmwiOiJodHRwczovL2Rldi5naXRsYWIub3JnL21heXJhLWNhYnJl
+        cmEifSwibWVyZ2VkX2F0IjoiMjAxOC0wNS0yMVQyMTowNTo1MS42MzRaIiwi
+        Y2xvc2VkX2J5IjpudWxsLCJjbG9zZWRfYXQiOm51bGwsImxhdGVzdF9idWls
+        ZF9zdGFydGVkX2F0IjpudWxsLCJsYXRlc3RfYnVpbGRfZmluaXNoZWRfYXQi
+        Om51bGwsImZpcnN0X2RlcGxveWVkX3RvX3Byb2R1Y3Rpb25fYXQiOm51bGws
+        InBpcGVsaW5lIjpudWxsLCJkaWZmX3JlZnMiOnsiYmFzZV9zaGEiOiIxOTg5
+        M2MxNWE5ZjE3N2ZhODZkOWIzYmE2YTUyZDFhYTRjODRhYjUyIiwiaGVhZF9z
+        aGEiOiJhNDYzNDZkODFhOTM4Y2E2NzU0NmUxMmMwN2U4ZWYzNjU1YjYzMTQ4
+        Iiwic3RhcnRfc2hhIjoiMTk4OTNjMTVhOWYxNzdmYTg2ZDliM2JhNmE1MmQx
+        YWE0Yzg0YWI1MiJ9fQ==
+    http_version: 
+  recorded_at: Mon, 11 Jun 2018 08:08:32 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/branches
+    body:
+      encoding: UTF-8
+      string: branch=9-4-stable-patch-1&ref=9-4-stable
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 03 Aug 2017 20:17:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c6f55968-d8f5-434c-bc35-a3f3d6446893
+      X-Runtime:
+      - '0.165468'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Branch already exists"}'
+    http_version: 
+  recorded_at: Thu, 03 Aug 2017 20:17:35 GMT
+- request:
+    method: post
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/repository/branches?branch=9-4-stable-patch-1&ref=9-4-stable
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.4.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 22 Jun 2018 16:25:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '35'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 43f8c29e-8b54-4c49-8196-35412c795552
+      X-Runtime:
+      - '0.081543'
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1529684762'
+      Ratelimit-Resettime:
+      - Sat, 22 Jun 2018 16:26:02 GMT
+    body:
+      encoding: UTF-8
+      string: '{"message":"Branch already exists"}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 16:25:02 GMT
+recorded_with: VCR 2.9.3

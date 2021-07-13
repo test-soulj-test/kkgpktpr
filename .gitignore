@@ -1,0 +1,7 @@
+/.env
+/.bundle
+/coverage/
+/spec/fixtures/repositories/
+/tags
+spec/examples.txt
+log/test.log

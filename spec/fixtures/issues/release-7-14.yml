@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/issues?labels=Release&milestone=7.14
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 21 Apr 2016 08:28:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"d751713988987e9331980363e24189ce"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/issues?id=gitlab-org%2Fgitlab-foss&labels=Release&milestone=7.14&page=1&per_page=20>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/issues?id=gitlab-org%2Fgitlab-foss&labels=Release&milestone=7.14&page=0&per_page=20>;
+        rel="last"
+      Status:
+      - 200 OK
+      Vary:
+      - Origin
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 93ee6516-695e-4266-9958-c7629c2b0f93
+      X-Runtime:
+      - '0.191329'
+      X-Total:
+      - '0'
+      X-Total-Pages:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Thu, 21 Apr 2016 08:28:31 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/issues?labels=Release&milestone=7.14&search=Release%207.14
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 01 May 2018 17:47:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"d751713988987e9331980363e24189ce"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/issues?id=gitlab-org%2Fgitlab-foss&labels=Release&milestone=7.14&order_by=created_at&page=1&per_page=20&search=Release+7.14&sort=desc&state=all>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/issues?id=gitlab-org%2Fgitlab-foss&labels=Release&milestone=7.14&order_by=created_at&page=1&per_page=20&search=Release+7.14&sort=desc&state=all>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - dd214420-3f23-4158-88b9-e92d14dc120e
+      X-Runtime:
+      - '0.114486'
+      X-Total:
+      - '0'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '1'
+      Ratelimit-Remaining:
+      - '599'
+      Ratelimit-Reset:
+      - '1525196919'
+      Ratelimit-Resettime:
+      - Wed, 01 May 2018 17:48:39 GMT
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 01 May 2018 17:47:39 GMT
+recorded_with: VCR 2.9.3

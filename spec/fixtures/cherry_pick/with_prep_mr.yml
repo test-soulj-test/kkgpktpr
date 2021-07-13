@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v4/projects/gitlab-org%2Fgitlab-foss/merge_requests?labels=Delivery&state=opened
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.5.0
+      Private-Token:
+      - "[RELEASE_BOT_PRODUCTION_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 17 Oct 2018 19:54:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '7235'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"3f56d79281214e6f17412d98883a330e"
+      Link:
+      - <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fgitlab%2Dce/merge_requests?id=gitlab-org%2Fgitlab-foss&labels=Delivery&order_by=created_at&page=1&per_page=20&sort=desc&state=opened>;
+        rel="first", <https://gitlab.com/api/v4/projects/gitlab%2Dorg%2Fgitlab%2Dce/merge_requests?id=gitlab-org%2Fgitlab-foss&labels=Delivery&order_by=created_at&page=1&per_page=20&sort=desc&state=opened>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - adbc6029-e316-460a-80ab-474e75a5b009
+      X-Runtime:
+      - '0.118593'
+      X-Total:
+      - '2'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Ratelimit-Limit:
+      - '600'
+      Ratelimit-Observed:
+      - '6'
+      Ratelimit-Remaining:
+      - '594'
+      Ratelimit-Reset:
+      - '1539806117'
+      Ratelimit-Resettime:
+      - Thu, 17 Oct 2018 19:55:17 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":17911191,"iid":22431,"project_id":13083,"title":"WIP: Prepare
+        11.4.0-rc8 release","description":"Main release issue: https://gitlab.com/gitlab-org/release/tasks/issues/460\n\n###
+        Summary\n\nThis MR prepares `11-4-stable` for %\"11.4\" (`RC8`) by merging
+        `11-4-stable-prepare-rc8` into `11-4-stable`.\n\n### Before the 7th\n\nMerge
+        master into the preparation branch\n\n### After the 7th\n\n#### MR Filter
+        for ~\"Pick into 11.4\" MRs\n\nhttps://gitlab.com/gitlab-org/gitlab-foss/merge_requests?label_name%5B%5D=Pick+into+11.4\u0026scope=all\u0026state=merged\n\n####
+        Note to leave in MRs\n\n```\nPicked into https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/MERGE_REQUEST_ID,
+        will merge into `11-4-stable` ready for `11.4 RC8`\n\n/unlabel ~\"Pick into
+        11.4\"\n```\n\n### Steps\n\n1. Cherry-pick commits into this MR using the
+        link for ~\"Pick into 11.4\" above.\n    - This can be done by checking out
+        `11-4-stable-prepare-rc8` locally and using `git cherry-pick -m1 MERGE_COMMIT_SHA`\n    -
+        *Note: The quickest way to check the `MERGE_COMMIT_SHA` is to go the Discussion
+        tab in the Merge Request. The merge commit SHA will be visible right before
+        the comment of it being merged. Sometimes the merge commit SHA will not be
+        available in the Discussion tab, in those cases you have to look for it in
+        the commits tab for `master`*\n1. Push changes every so often and verify that
+        the MR has been included\n1. Leave a note in the MR so others can easily see
+        that it is on track to be included in a release.\n    - Remove the ~\"Pick
+        into 11.4\" label.\n1. If there are any conflicts while picking MRs then attempt
+        to resolve them; otherwise, create a new MR against the `11-4-stable-prepare-rc8`
+        branch and assign it to the author of the conflicting files.\n\n1. Once this
+        MR is green merge it to stable, preferably with a manual fast-forward merge
+        to minimize waiting time, as described in [Merging preparation MRs into stable](https://gitlab.com/gitlab-org/release/docs/blob/master/general/picking-into-merge-requests.md#merging-preparation-mrs-into-stable)\n\n###
+        Checklist\n\n- [ ] Add changes into the preparation branches:\n  - Before
+        the 7th: Master has been merged into the preparation branch\n  - After the
+        7th: Changes marked ~\"Pick into 11.4\" have been picked\n\n- [ ] Conflicts
+        resolved\n- [ ] No new commits have introduced directly to the stable branch
+        while this MR was in progress. If there are, ensure these are merged into
+        EE and check for a green pipeline after merging this MR.","state":"opened","created_at":"2018-10-17T19:54:06.769Z","updated_at":"2018-10-17T19:54:14.003Z","target_branch":"11-4-stable","source_branch":"11-4-stable-prepare-rc8","upvotes":0,"downvotes":0,"author":{"id":15139,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://gitlab.com/rspeicher"},"assignee":{"id":15139,"name":"Robert
+        Speicher","username":"rspeicher","state":"active","avatar_url":"https://secure.gravatar.com/avatar/19c928bc60c7b0d10e708c429e389523?s=80\u0026d=identicon","web_url":"https://gitlab.com/rspeicher"},"source_project_id":13083,"target_project_id":13083,"labels":["Release"],"work_in_progress":true,"milestone":{"id":567670,"iid":19,"group_id":9970,"title":"11.4","description":"","state":"active","created_at":"2018-06-14T17:31:41.249Z","updated_at":"2018-06-14T17:31:41.249Z","due_date":"2018-10-22","start_date":"2018-09-08","web_url":"https://gitlab.com/groups/gitlab-org/-/milestones/19"},"merge_when_pipeline_succeeds":false,"merge_status":"cannot_be_merged","sha":"59613191221eef91cd7fb2fe055c7bf1cc9982dc","merge_commit_sha":null,"user_notes_count":0,"discussion_locked":null,"should_remove_source_branch":null,"force_remove_source_branch":true,"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/22431","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"squash":false,"approvals_before_merge":null},{"id":17083558,"iid":21975,"project_id":13083,"title":"Remove
+        duplicate primary button from environments empty state","description":"##
+        What does this MR do?\r\n\r\nRemoves duplicate primary button from environments
+        empty state\r\n\r\n## Screenshots\r\n\r\n| Before | After |\r\n| --------
+        | -------- |\r\n| ![Screen_Shot_2018-10-11_at_19.31.02](/uploads/862d9ece9f2636fa5014711ca0ff01f1/Screen_Shot_2018-10-11_at_19.31.02.png)
+        | ![Screen_Shot_2018-10-11_at_19.29.38](/uploads/8e9e8a32a63c9e6b00cd9cd6f7944a15/Screen_Shot_2018-10-11_at_19.29.38.png)
+        |\r\n\r\n## What are the relevant issue numbers?\r\n\r\n#51813\r\n\r\n## Does
+        this MR meet the acceptance criteria?\r\n\r\n- [x] [Changelog entry](https://docs.gitlab.com/ee/development/changelog.html)
+        added, if necessary\r\n- [ ] [Documentation created/updated](https://docs.gitlab.com/ee/development/documentation/index.html#contributing-to-docs)\r\n-
+        [ ] [Tests added for this feature/bug](https://docs.gitlab.com/ee/development/testing_guide/index.html)\r\n-
+        [X] Conforms to the [code review guidelines](https://docs.gitlab.com/ee/development/code_review.html)\r\n-
+        [X] Conforms to the [merge request performance guidelines](https://docs.gitlab.com/ee/development/merge_request_performance_guidelines.html)\r\n-
+        [X] Conforms to the [style guides](https://gitlab.com/gitlab-org/gitlab/blob/master/CONTRIBUTING.md#style-guides)\r\n-
+        [ ] Conforms to the [database guides](https://docs.gitlab.com/ee/development/README.html#databases-guides)","state":"opened","created_at":"2018-09-27T21:33:11.798Z","updated_at":"2018-10-17T10:33:05.963Z","target_branch":"master","source_branch":"update-environments-empty-state","upvotes":0,"downvotes":0,"author":{"id":1474048,"name":"George
+        Tsiolis","username":"gtsiolis","state":"active","avatar_url":"https://secure.gravatar.com/avatar/fde4d3b543cdd1b26fe63c1938773d70?s=80\u0026d=identicon","web_url":"https://gitlab.com/gtsiolis"},"assignee":{"id":1474048,"name":"George
+        Tsiolis","username":"gtsiolis","state":"active","avatar_url":"https://secure.gravatar.com/avatar/fde4d3b543cdd1b26fe63c1938773d70?s=80\u0026d=identicon","web_url":"https://gitlab.com/gtsiolis"},"source_project_id":4581232,"target_project_id":13083,"labels":["CI/CD","Community
+        contribution","Hackathon","Release","UX","bug","devops:release","frontend"],"work_in_progress":false,"milestone":{"id":567670,"iid":19,"group_id":9970,"title":"11.4","description":"","state":"active","created_at":"2018-06-14T17:31:41.249Z","updated_at":"2018-06-14T17:31:41.249Z","due_date":"2018-10-22","start_date":"2018-09-08","web_url":"https://gitlab.com/groups/gitlab-org/-/milestones/19"},"merge_when_pipeline_succeeds":false,"merge_status":"can_be_merged","sha":"0ab0f0bcf72cbb5a73d111fc0a97e2b239bd4690","merge_commit_sha":null,"user_notes_count":37,"discussion_locked":null,"should_remove_source_branch":null,"force_remove_source_branch":false,"allow_collaboration":false,"allow_maintainer_to_push":false,"web_url":"https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/21975","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null},"squash":false,"approvals_before_merge":null}]'
+    http_version:
+  recorded_at: Wed, 17 Oct 2018 19:54:17 GMT
+recorded_with: VCR 2.9.3

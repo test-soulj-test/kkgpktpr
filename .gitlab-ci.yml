@@ -1,0 +1,36 @@
+stages:
+  - test
+  - build
+  - coverage
+  - coordinated:tag
+  - coordinated:build
+  - coordinated:metrics:prepare
+  - coordinated:deploy:staging
+  - coordinated:deploy:canary
+  - coordinated:promote:production
+  - coordinated:deploy:production
+  - coordinated:finish
+  - automation
+  - chatops
+  - metrics:deploy
+  - metrics
+
+default:
+  image: "dev.gitlab.org:5005/gitlab/gitlab-build-images:release-tools"
+  cache:
+    key:
+      files:
+        - .ruby-version
+    paths:
+      - vendor/ruby
+  tags:
+    - gitlab-org
+
+include:
+  - local: .gitlab/ci/templates.gitlab-ci.yml
+  - local: .gitlab/ci/test.gitlab-ci.yml
+  - local: .gitlab/ci/automation.gitlab-ci.yml
+  - local: .gitlab/ci/chatops.gitlab-ci.yml
+  - local: .gitlab/ci/metrics.gitlab-ci.yml
+  - local: .gitlab/ci/auto-deploy.gitlab-ci.yml
+  - local: .gitlab/ci/coordinated-pipeline.gitlab-ci.yml

@@ -1,0 +1,163 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?ref=v4.6.0&scope=tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.16.1
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 22 Nov 2020 15:02:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"8adf6ca12ff2e4e5f23dba5aeed5fc34"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?id=gitlab%2Fcharts%2Fgitlab&order_by=id&page=1&per_page=100&ref=v4.6.0&scope=tags&sort=desc>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines?id=gitlab%2Fcharts%2Fgitlab&order_by=id&page=1&per_page=100&ref=v4.6.0&scope=tags&sort=desc>;
+        rel="last"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Feature-Category:
+      - continuous_integration
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - t2cBKBS3i79
+      X-Runtime:
+      - '0.417572'
+      X-Total:
+      - '1'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":177625,"sha":"deb6fef494eccbe499c19d911e9409fdbe8f1971","ref":"v4.6.0","status":"success","created_at":"2020-11-22T13:36:53.761Z","updated_at":"2020-11-22T13:53:00.215Z","web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/pipelines/177625"}]'
+    http_version: 
+  recorded_at: Sun, 22 Nov 2020 15:02:15 GMT
+- request:
+    method: get
+    uri: https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines/177625/jobs?per_page=100&scope=manual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Gitlab Ruby Gem 4.16.1
+      Private-Token:
+      - "[RELEASE_BOT_DEV_TOKEN]"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 22 Nov 2020 15:02:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Origin
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"7ae1b6dd4fb2696060c3695fb17d6f1b"
+      Link:
+      - <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines/177625/jobs?id=gitlab%2Fcharts%2Fgitlab&page=1&per_page=100&pipeline_id=177625&scope%5B%5D=manual>;
+        rel="first", <https://dev.gitlab.org/api/v4/projects/gitlab%2Fcharts%2Fgitlab/pipelines/177625/jobs?id=gitlab%2Fcharts%2Fgitlab&page=1&per_page=100&pipeline_id=177625&scope%5B%5D=manual>;
+        rel="last"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Feature-Category:
+      - continuous_integration
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - sNrBuJzzjh
+      X-Runtime:
+      - '0.070520'
+      X-Total:
+      - '3'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":9073110,"status":"manual","stage":"package","name":"release_package","ref":"v4.6.0","tag":true,"coverage":null,"allow_failure":true,"created_at":"2020-11-22T13:36:54.792Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":145,"name":"GitLab
+        mirror push bot","username":"gitlab_pushbot","state":"active","avatar_url":"https://secure.gravatar.com/avatar/5ca6dda488c18eb2902862ff70fb1cd3?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/gitlab_pushbot","created_at":"2016-05-11T15:09:36.819Z","bio":"","bio_html":"","location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null,"job_title":"","work_information":null},"commit":{"id":"deb6fef494eccbe499c19d911e9409fdbe8f1971","short_id":"deb6fef4","created_at":"2020-11-22T13:35:58.000+00:00","parent_ids":["8b3db798a546740cbb365f4beef2188f1f6abca8"],"title":"Update
+        version mapping for 4.6.0","message":"Update version mapping for 4.6.0","author_name":"GitLab
+        Release Tools Bot","author_email":"delivery-team+release-tools@gitlab.com","authored_date":"2020-11-22T13:35:58.000+00:00","committer_name":"GitLab
+        Release Tools Bot","committer_email":"delivery-team+release-tools@gitlab.com","committed_date":"2020-11-22T13:35:58.000+00:00","web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/commit/deb6fef494eccbe499c19d911e9409fdbe8f1971"},"pipeline":{"id":177625,"sha":"deb6fef494eccbe499c19d911e9409fdbe8f1971","ref":"v4.6.0","status":"success","created_at":"2020-11-22T13:36:53.761Z","updated_at":"2020-11-22T13:53:00.215Z","web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/pipelines/177625"},"web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/jobs/9073110","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":9073108,"status":"manual","stage":"review","name":"review-docs-cleanup","ref":"v4.6.0","tag":true,"coverage":null,"allow_failure":true,"created_at":"2020-11-22T13:36:54.589Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":145,"name":"GitLab
+        mirror push bot","username":"gitlab_pushbot","state":"active","avatar_url":"https://secure.gravatar.com/avatar/5ca6dda488c18eb2902862ff70fb1cd3?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/gitlab_pushbot","created_at":"2016-05-11T15:09:36.819Z","bio":"","bio_html":"","location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null,"job_title":"","work_information":null},"commit":{"id":"deb6fef494eccbe499c19d911e9409fdbe8f1971","short_id":"deb6fef4","created_at":"2020-11-22T13:35:58.000+00:00","parent_ids":["8b3db798a546740cbb365f4beef2188f1f6abca8"],"title":"Update
+        version mapping for 4.6.0","message":"Update version mapping for 4.6.0","author_name":"GitLab
+        Release Tools Bot","author_email":"delivery-team+release-tools@gitlab.com","authored_date":"2020-11-22T13:35:58.000+00:00","committer_name":"GitLab
+        Release Tools Bot","committer_email":"delivery-team+release-tools@gitlab.com","committed_date":"2020-11-22T13:35:58.000+00:00","web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/commit/deb6fef494eccbe499c19d911e9409fdbe8f1971"},"pipeline":{"id":177625,"sha":"deb6fef494eccbe499c19d911e9409fdbe8f1971","ref":"v4.6.0","status":"success","created_at":"2020-11-22T13:36:53.761Z","updated_at":"2020-11-22T13:53:00.215Z","web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/pipelines/177625"},"web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/jobs/9073108","artifacts":[],"runner":null,"artifacts_expire_at":null},{"id":9073107,"status":"manual","stage":"review","name":"review-docs-deploy","ref":"v4.6.0","tag":true,"coverage":null,"allow_failure":true,"created_at":"2020-11-22T13:36:54.405Z","started_at":null,"finished_at":null,"duration":null,"user":{"id":145,"name":"GitLab
+        mirror push bot","username":"gitlab_pushbot","state":"active","avatar_url":"https://secure.gravatar.com/avatar/5ca6dda488c18eb2902862ff70fb1cd3?s=80\u0026d=identicon","web_url":"https://dev.gitlab.org/gitlab_pushbot","created_at":"2016-05-11T15:09:36.819Z","bio":"","bio_html":"","location":null,"public_email":"","skype":"","linkedin":"","twitter":"","website_url":"","organization":null,"job_title":"","work_information":null},"commit":{"id":"deb6fef494eccbe499c19d911e9409fdbe8f1971","short_id":"deb6fef4","created_at":"2020-11-22T13:35:58.000+00:00","parent_ids":["8b3db798a546740cbb365f4beef2188f1f6abca8"],"title":"Update
+        version mapping for 4.6.0","message":"Update version mapping for 4.6.0","author_name":"GitLab
+        Release Tools Bot","author_email":"delivery-team+release-tools@gitlab.com","authored_date":"2020-11-22T13:35:58.000+00:00","committer_name":"GitLab
+        Release Tools Bot","committer_email":"delivery-team+release-tools@gitlab.com","committed_date":"2020-11-22T13:35:58.000+00:00","web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/commit/deb6fef494eccbe499c19d911e9409fdbe8f1971"},"pipeline":{"id":177625,"sha":"deb6fef494eccbe499c19d911e9409fdbe8f1971","ref":"v4.6.0","status":"success","created_at":"2020-11-22T13:36:53.761Z","updated_at":"2020-11-22T13:53:00.215Z","web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/pipelines/177625"},"web_url":"https://dev.gitlab.org/gitlab/charts/gitlab/-/jobs/9073107","artifacts":[],"runner":null,"artifacts_expire_at":null}]'
+    http_version: 
+  recorded_at: Sun, 22 Nov 2020 15:02:15 GMT
+recorded_with: VCR 5.0.0
